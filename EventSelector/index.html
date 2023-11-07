@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Document</title>
+    <title>timer</title>
 </head>
-<body onload="setTimeout(revealCard, Math.random())">
-    <h1>Random Intel summoner</h1>
-    <p>A random card every 3-4 min</p>
-    <button onclick="changeTimer(4000, 8000)">Change to 4-8sec</button>
-    <button onclick="changeTimer(180000, 240000)">Change to 3-4min</button>
-    <p>note: it changes after the current timer runs out</p>
-    <div class="card"><img src="pictures/Level1/park.jpg"><h1>Park</h1></div>
-    <div class="card"><img src="pictures/Level1/townSquare.jpg"></div>
-    <div class="card"><img src="pictures/Level1/market.jpg"></div>
-    <div class="card"><img src="pictures/Level1/horseTheft.jpg"></div>
-    <div class="card"><img src="pictures/Level1/manslaughter.jpg"></div>
+<body>
+    <button onclick="startTimer()">Start timer</button>
+    <p id="timer text" style="font-size: xx-large;">00</p>
+    <script>
+        let time = 0;
 
-    <div class="card"><img src="pictures/Level2/appartement.jpg"></div>
-    <div class="card"><img src="pictures/Level2/company.jpg"></div>
-    <div class="card"><img src="pictures/Level2/store.jpg"></div>
-    <div class="card"><img src="pictures/Level2/triple homicide.jpg"></div>
+        function startTimer() {
+            console.log("started this function");
+            time = 30; // sec
+            timer();
+        }
 
-
+        function timer() {
+            if (time > 0) {
+                time--;
+                document.getElementById("timer text").innerHTML = time;
+                setTimeout(timer, 1000);
+            }
+        }
+    </script>
 </body>
 </html>
