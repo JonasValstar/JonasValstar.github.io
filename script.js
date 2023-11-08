@@ -14,7 +14,11 @@ function loadFunctions() {
 
 // Show credits
 function credits() {
-    alert("Background image by wirestock on Freepik");
+    alert("Background image by wirestock on Freepik \nBanner images by wirestock and eberhardgross on freepik");
+}
+
+function wipAlert() {
+    alert("This page is currently being developed. \nplease take a look around, but keep in mind that the website is not finished");
 }
 
 // change slide
