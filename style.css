@@ -262,7 +262,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 #blogPost {
-    background-color: #2D3339;
+    background-color: lightslategray;
     width: 100vw;
     margin: 5vh;
     margin-top: 2vh;
@@ -276,17 +276,14 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 #blogPost > h1 {
+    text-justify:;
     text-align: left;
     color: whitesmoke;
-    padding-top: 2vh;
-    padding-left: 2vh;
-    font-size: 4vh;
+    height: 7vh;
 }
 
 #blogPost > p {
-    font-size: 1.75vh;
-    padding-left: 3vh;
-    color: grey;
+    color: gainsboro;
     height: 3vh;
 }
 
