@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
     <title>Jonas Valstar</title>
     <link rel="icon" type="image/x-icon" href="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/external-link-icon.png">
 </head>
-<body onload="loadFunctions(); wipAlert()">
+<body onload="loadFunctions()">
     <div id="container">
         <div id="topBar"> 
             <div class="logo">
-                <h1><a href="index.html">Jonas Valstar</a></h1>
+                <h1><a href="../index.html">Jonas Valstar</a></h1>
             </div>
             <div class="slideshow">
                 <a class="prev" onclick="showSlide(1)">&#10094;</a>
@@ -30,16 +30,16 @@
         </div>
         <div id="sideBar">
             <div class="navigation">
-                <a href="games.html">Games</a>
-                <a href="#about.html">About</a>
-                <a href="#contact.html">Contact</a>
-                <a href="blog.html">Blog</a>
+                <a href="../games.html">Games</a>
+                <a href="#../about.html">About</a>
+                <a href="#../contact.html">Contact</a>
+                <a href="../blog.html">Blog</a>
             </div>
             <div class="footer">
                 <div class="links">
-                    <a target="_blank" href="https://github.com/JonasValstar"><img src="pictures/logos/github.png"></a>
-                    <a target="_blank" href="https://jvalstar.itch.io/"><img src="pictures/logos/itchio.png"></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/jonas-valstar-379112243"><img src="pictures/logos/linkedIn.png"></a>
+                    <a target="_blank" href="https://github.com/JonasValstar"><img src="../pictures/logos/github.png"></a>
+                    <a target="_blank" href="https://jvalstar.itch.io/"><img src="../pictures/logos/itchio.png"></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/jonas-valstar-379112243"><img src="../pictures/logos/linkedIn.png"></a>
                 </div>
                 <div class="info" onclick="credits()">
                     <p>&copy;Jonas Valstar, 2023</p>
@@ -48,18 +48,32 @@
         </div>
         <div id="content">
             <div class="tree">
-                <a href="index.html">jonasvalstar.github.io</a>
+                <a href="../index.html">jonasvalstar.github.io</a>
                 <p>/</p>
-                <a href="index.html">home</a>
+                <a href="../games.html">projects</a>
+                <p>/</p>
+                <a href="posters.html">posters</a>
                 <p>/</p>
             </div>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            
+            <table class="picTable">
+                <tr class="picTR">
+                    <td class="picTD" onclick="displayPic('DnD poster.png', 'Hivemind DND', 'Jonas Valstar', 'Photoshop')"><img src="../pictures/posters/DnD poster.png"/></td>
+                    <td class="picTD" onclick="displayPic('GTFO Poster.png', 'GTFO', 'Jonas Valstar', 'Photoshop')"><img src="../pictures/posters/GTFO Poster.png"/></td>
+                    <td class="picTD" onclick="displayPic('DRG Poster 1.png', 'DRG', 'Jonas Valstar', 'Photoshop')"><img src="../pictures/posters/DRG Poster 1.png"/></td>
+                </tr>
+                <tr class="picTR">
+                    <td class="picTD" onclick="displayPic('Poor Four Poster.png', 'The Poor Four', 'Jonas Valstar', 'Gimp')"><img src="../pictures/posters/Poor Four Poster.png"/></td>
+                    <td class="picTD" onclick="displayPic('Database poster.png', 'The Database', 'Jonas Valstar', 'Word')"><img src="../pictures/posters/Database poster.png"/></td>
+                    <td class="picTD" onclick="displayPic('Game poster.png', 'The Game', 'Jonas Valstar', 'Word')"><img src="../pictures/posters/Game poster.png"/></td>
+                    
+                </tr>
+            </table>           
         </div>
     </div> 
     <div id="shadow"></div> 
+    <div id="overlay" onclick="displayPic('turnOff')">
+        <img id="overlayImg" src="#setByScript" alt="Picture might be missing">
+        <p id="overlayTxt">changed in script</p>
+    </div>
 </body>
 </html>
