@@ -58,3 +58,8 @@ function autoSlider() {
         setTimeout(autoSlider, 7500);
     }
 }
+
+function clickBlog(pageID) {
+    console.log("Click detected");
+    window.open("blog/1.html", "_self")
+}
