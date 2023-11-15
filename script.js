@@ -61,5 +61,5 @@ function autoSlider() {
 
 function clickBlog(pageID) {
     console.log("Click detected");
-    window.open("blog/1.html", "_self")
+    window.open("blog/" + pageID + ".html", "_self")
 }
