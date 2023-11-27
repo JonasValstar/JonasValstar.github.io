@@ -1,18 +1,18 @@
 @font-face {
     font-family: ErasBoldITC;
-    src: url(_fonts/ERASBD.TTF);
+    src: url(!fonts/ERASBD.TTF);
 }
 @font-face {
     font-family: ErasDemiITC;
-    src: url(_fonts/ERASDEMI.TTF);
+    src: url(!fonts/ERASDEMI.TTF);
 }
 @font-face {
     font-family: ErasLightITC;
-    src: url(_fonts/ERASLGHT.TTF);
+    src: url(!fonts/ERASLGHT.TTF);
 }
 @font-face {
     font-family: ErasMedITC;
-    src: url(_fonts/ERASMD.TTF);
+    src: url(!fonts/ERASMD.TTF);
 }
 
 ::selection {
