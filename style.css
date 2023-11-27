@@ -22,7 +22,7 @@
 
 body, html {
     /*background-color: #284762;*/
-    background-image: url('_pictures/Background.jpg');
+    background-image: url('!pictures/Background.jpg');
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
