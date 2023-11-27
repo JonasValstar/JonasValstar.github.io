@@ -65,15 +65,20 @@ function displayPic(link, title, author, program) {
         overlay.style.display = "flex";
         document.getElementById("overlayImg").src = "../pictures/posters/" + link;
         document.getElementById("overlayTxt").innerHTML = "<b>" + title + "</b>&nbsp;|&nbsp;by:&nbsp;<a href='#Input link to all people page'>" + author + "</a>&nbsp;|&nbsp;<i>made in:&nbsp;" + program + "</i>";
-        setTimeout(startSlide, 1);
     } else {
-
         overlay.style.display = "none";
-        overlay.classList.toggle("overlayPos1");
     }
 }
 
-function startSlide() {
-    overlay.classList.toggle("overlayPos1");
+// collapsible code
+function openColl(collID) {
+    coll = document.getElementById('coll_' + collID);
+    callElem = document.getElementById(collID);
+    if (coll.style.display != "block") {
+        coll.style.display = "block";
+        callElem.classList.add("activeCB");
+    } else {
+        coll.style.display = "none";
+        callElem.classList.remove("activeCB");
+    }
 }
-

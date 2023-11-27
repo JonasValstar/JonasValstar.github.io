@@ -1,18 +1,18 @@
 @font-face {
     font-family: ErasBoldITC;
-    src: url(fonts/ERASBD.TTF);
+    src: url(_fonts/ERASBD.TTF);
 }
 @font-face {
     font-family: ErasDemiITC;
-    src: url(fonts/ERASDEMI.TTF);
+    src: url(_fonts/ERASDEMI.TTF);
 }
 @font-face {
     font-family: ErasLightITC;
-    src: url(fonts/ERASLGHT.TTF);
+    src: url(_fonts/ERASLGHT.TTF);
 }
 @font-face {
     font-family: ErasMedITC;
-    src: url(fonts/ERASMD.TTF);
+    src: url(_fonts/ERASMD.TTF);
 }
 
 ::selection {
@@ -22,7 +22,7 @@
 
 body, html {
     /*background-color: #284762;*/
-    background-image: url('pictures/Background.jpg');
+    background-image: url('_pictures/Background.jpg');
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
@@ -33,14 +33,34 @@ body, html {
     color: gainsboro;
 }
 
+body {
+    overflow-y: scroll;
+}
+
 a {
     color: gainsboro;
 }
 
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6 {
+    font-family: ErasDemiITC;
+    margin: 0;
+    padding: 0;
+}
+
+p, a {
     font-family: ErasMedITC;
     margin: 0;
     padding: 0;
+}
+
+.pixelArt {
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: pixelated;                 /* Universal support since 2021   */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
 }
 
 #overlay {
@@ -55,19 +75,10 @@ h1, h2, h3, h4, h5, h6, p, a {
     left: 0;
     right: 0;
     bottom: 0;
-
-    /*! decide which one to use*/
-    background-image: url("pictures/overlay.png");
-    /*background-color: rgba(0,0,0,0.75);*/
-
+    background-color: rgba(0,0,0,0.75);
     background-repeat: repeat;
     z-index: 10;
     cursor: pointer;
-}
-
-.overlayPos1 {
-    transition: 3600s linear;
-    background-position: 5000% 0%;
 }
 
 #overlayImg {
@@ -348,6 +359,96 @@ h1, h2, h3, h4, h5, h6, p, a {
 .picTD > img:hover {
     transition: 0.2s;
     scale: 1.1;
+}
+
+#gameTable {
+    width: 100vw;
+    max-width: 94vh;
+}
+
+#descInfo {
+    vertical-align:top;
+    width: 70%;
+}
+
+#techInfo {
+    vertical-align:top;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    position: relative;
+    background-color: #424b54;
+    width: 30%;
+}
+
+#descInfo > img {
+    width: 100%;
+}
+
+#techInfo > p {
+    margin-top: 5px;
+}
+
+.collButton {
+    background-color: inherit;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.activeCB, .collButton:hover {
+    padding-bottom: 10px;
+    border-bottom: 5px solid gainsboro;
+}
+
+.collButton::before {
+    content: '>';
+    color: white;
+    font-weight: bold;
+    float: left;
+    margin-right: 18px;
+}
+
+.activeCB::before {
+    content: "V";
+}
+
+.collContent {
+    padding: 10px 15px;
+    display: none;
+    transition: max-height 0.2s ease-out;
+    background-color: inherit;
+}
+
+.collContent > table {
+    width: 100%;
+}
+
+.versionTab {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #2D3339;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    
+}
+
+.versionTab > div > p {
+    margin-left: 15px;
+    font-size: 1.75vh;
+}
+
+.versionTab > div > a {
+    margin-right: 15px;
+    margin-left: -10px;
 }
 
 /*
