@@ -338,10 +338,6 @@ p, a {
     height: 3vh;
 }
 
-.picTable {
-
-}
-
 .picTD {
     align-content: center;
     max-width: 25vh;
@@ -359,6 +355,27 @@ p, a {
 .picTD > img:hover {
     transition: 0.2s;
     scale: 1.1;
+}
+
+.picTD > a > img {
+    transition: 0.2s;
+    box-shadow: 3px 3px 10px black;
+    max-width: 25vh;
+    min-width: 25vh;
+}
+
+.picTD > a > img:hover {
+    transition: 0.2s;
+    scale: 1.1;
+}
+
+.gameMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 25vh;
+    background-color: #2D3339;
+    align-items: center;
 }
 
 #gameTable {
@@ -449,6 +466,12 @@ p, a {
 .versionTab > div > a {
     margin-right: 15px;
     margin-left: -10px;
+}
+
+#canvasHolder {
+    width: 100%;
+    max-width: 94vh;
+    height: 75vh;
 }
 
 /*

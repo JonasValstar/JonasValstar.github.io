@@ -11,8 +11,9 @@ let colorGreen = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 let colorBlue = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 // canvas size
-let canvasHeight = 1000;
-let canvasWidth = 1000;
+let parentDiv = document.getElementById("canvasHolder").getBoundingClientRect();
+let canvasHeight = parentDiv.height;
+let canvasWidth = parentDiv.width;
 
 // setup function
 function setup() {
@@ -20,7 +21,8 @@ function setup() {
     
 
     // creating canvas
-    createCanvas(canvasWidth, canvasHeight); //? currently spawns after the content. It needs to be somewhere in the content if thats possible.
+    let canv = createCanvas(canvasWidth, canvasHeight); //? currently spawns after the content. It needs to be somewhere in the content if thats possible.
+    canv.parent("canvasHolder");
 
     // assigning sizes, starting positions and velocities
     for (let i = 0; i < balls.length; i++) {
@@ -53,8 +55,8 @@ function setup() {
             validSpawn = true;
 
             // setting spawn
-            Xpos[i] = Math.random() * (1000 - (balls[i])) + (balls[i] / 2);
-            Ypos[i] = Math.random() * (1000 - (balls[i])) + (balls[i] / 2);
+            Xpos[i] = Math.random() * (canvasWidth - (balls[i])) + (balls[i] / 2);
+            Ypos[i] = Math.random() * (canvasHeight - (balls[i])) + (balls[i] / 2);
 
             // looping through all previous circles
             if (i != 0) {
@@ -72,6 +74,12 @@ function setup() {
 
 // looping draw function
 function draw() {
+    // sizing the canvas
+    parentDiv = document.getElementById("canvasHolder").getBoundingClientRect();
+    canvasWidth = parentDiv.width;
+    canvasHeight = parentDiv.height;
+    resizeCanvas(canvasWidth, canvasHeight);
+
     // calculating new frame positions
     for (let i = 0; i < Xpos.length; i++) {
         Xpos[i] += Xvel[i];

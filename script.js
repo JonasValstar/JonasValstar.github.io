@@ -63,7 +63,7 @@ function displayPic(link, title, author, program) {
     overlay = document.getElementById("overlay");
     if (link != "turnOff") {
         overlay.style.display = "flex";
-        document.getElementById("overlayImg").src = "../pictures/posters/" + link;
+        document.getElementById("overlayImg").src = "../!pictures/posters/" + link;
         document.getElementById("overlayTxt").innerHTML = "<b>" + title + "</b>&nbsp;|&nbsp;by:&nbsp;<a href='#Input link to all people page'>" + author + "</a>&nbsp;|&nbsp;<i>made in:&nbsp;" + program + "</i>";
     } else {
         overlay.style.display = "none";
