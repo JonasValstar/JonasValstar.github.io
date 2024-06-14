@@ -338,6 +338,34 @@ p, a {
     height: 3vh;
 }
 
+.MainPic {
+    margin: 2vh;
+    margin-right: 4vh;
+    background-color: #2d3339;
+    padding: 0;
+}
+
+.MainPicImg {
+    padding: 0;
+    margin: 0;
+}
+
+.MainPicImg > a {
+    padding: 0;
+    margin: 0;
+}
+
+.MainPicImg > a > img{
+    min-width: 25vh;
+    max-width: 25vh;
+    display: block;
+}
+
+.MainPicText {
+    padding: 1vh;
+    vertical-align: top;
+}
+
 .picTD {
     align-content: center;
     max-width: 25vh;
