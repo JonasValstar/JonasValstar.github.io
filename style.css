@@ -1,18 +1,18 @@
 @font-face {
     font-family: ErasBoldITC;
-    src: url(!fonts/ERASBD.TTF);
+    src: url(a_fonts/ERASBD.TTF);
 }
 @font-face {
     font-family: ErasDemiITC;
-    src: url(!fonts/ERASDEMI.TTF);
+    src: url(a_fonts/ERASDEMI.TTF);
 }
 @font-face {
     font-family: ErasLightITC;
-    src: url(!fonts/ERASLGHT.TTF);
+    src: url(a_fonts/ERASLGHT.TTF);
 }
 @font-face {
     font-family: ErasMedITC;
-    src: url(!fonts/ERASMD.TTF);
+    src: url(a_fonts/ERASMD.TTF);
 }
 
 ::selection {
@@ -22,7 +22,7 @@
 
 body, html {
     /*background-color: #284762;*/
-    background-image: url('!pictures/Background.jpg');
+    background-image: url('a_pictures/Background.jpg');
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
@@ -211,14 +211,18 @@ p, a {
 }
 
 #content > img {
-    margin-top: -38px;
+    /*margin-top: -38px;*/
     width: 100vw;
     max-width: 94vh;
 }
 
-#content > p, #content > a {
+#content > p, #content > a, #content > h1 {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+#content > h1 {
+    font-size: 6vh;
 }
 
 .artShadow {
@@ -338,32 +342,47 @@ p, a {
     height: 3vh;
 }
 
-.MainPic {
+.sectionHeader {
+    text-align: center;
+    align-items: center;
+}
+
+.mainPic {
     margin: 2vh;
     margin-right: 4vh;
     background-color: #2d3339;
     padding: 0;
 }
 
-.MainPicImg {
+.mainPicImg {
     padding: 0;
     margin: 0;
 }
 
-.MainPicImg > a {
+.mainPicImg > a {
     padding: 0;
     margin: 0;
 }
 
-.MainPicImg > a > img{
-    min-width: 25vh;
-    max-width: 25vh;
+.mainPicImg > a > img{
+    transition: 0.2s;
+    min-width: 30vh;
+    max-width: 30vh;
     display: block;
 }
 
-.MainPicText {
+.mainPicImg > a > img:hover{
+    transition: 0.2s;
+    scale: 1.1;
+}
+
+.mainPicText {
     padding: 1vh;
     vertical-align: top;
+}
+
+.mainPicText > a {
+    text-decoration: none;
 }
 
 .picTD {
