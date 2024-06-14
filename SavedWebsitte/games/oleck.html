@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+    <title>Jonas Valstar</title>
+    <link rel="icon" type="image/x-icon" href="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/external-link-icon.png">
+</head>
+<body onload="loadFunctions();">
+    <div id="container">
+        <div id="topBar"> 
+            <div class="logo">
+                <h1><a href="../index.html">Jonas Valstar</a></h1>
+            </div>
+            <div class="slideshow">
+                <a class="prev" onclick="showSlide(1)">&#10094;</a>
+                <div class="slide">
+                    <a href="#link_to_blogpost_or_sbg_page">Simple Ball Game version 1 released</a> <!--!Make actual link-->
+                </div>
+                <div class="slide">
+                    <a href="#link_to_blogpost_or_sampi_page">Sampi update 1.1 released</a> <!--!Make actual link-->
+                </div>
+                <div class="slide">
+                    <a href="#link_to_blogpost_or_uc_page">Udder Chaos released</a> <!--!Make actual link-->
+                </div>
+                <a class="next" onclick="showSlide(2)">&#10095;</a>
+            </div>
+        </div>
+        <div id="sideBar">
+            <div class="navigation">
+                <a href="#../welcheusi"><b>Welcheusi Universe</b></a>
+                <a href="../games.html"><b>My Games</b></a>
+                <a href="#../projects.html">All Projects</a>
+                <a href="#../about.html">About</a>
+                <a href="#../contact.html">Contact</a>
+                <a href="../blog.html">Blog</a>
+            </div>
+            <div class="footer">
+                <div class="links">
+                    <a target="_blank" href="https://github.com/JonasValstar"><img src="../!pictures/logos/github.png"></a>
+                    <a target="_blank" href="https://jvalstar.itch.io/"><img src="../!pictures/logos/itchio.png"></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/jonas-valstar-379112243"><img src="../!pictures/logos/linkedIn.png"></a>
+                </div>
+                <div class="info" onclick="credits()">
+                    <p>&copy;Jonas Valstar, 2023</p>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="tree">
+                <a href="../index.html">jonasvalstar.github.io</a>
+                <p>/</p>
+                <a href="../games.html">games</a>
+                <p>/</p>
+                <a href="oleck.html">oleck</a>
+                <p>/</p>
+            </div>
+            <table id="gameTable">
+                <td id="descInfo">
+                    <img id="gameLogo" class="pixelArt" src="../!game files/oleck/Oleck logo.png">
+                    <h3>Some Fancy Title</h1>
+                    <p>please write a description here</p>
+                    <p>fix the fact that the version link in the sidebar can also close the collapsible</p>
+                    <h1 style="color: darkred;">!Important, this is a block-out not all information applies to this game </h1>
+                </td>
+                <td id="techInfo">
+                    <h2 style="margin-bottom: 3px; color: white;">Oleck: the first adventure</h2>
+                    <p><b>Game Version</b></p>
+                    <a href="#versionHistory" onclick="openColl('versionHistory')">v1.0</a>
+                    <p><b>Engine</b></p>
+                    <a target="_blank" href="https://gamemaker.io/en">GameMaker v2023.8.2.108</a>
+                    <p><b>Developed by:</b></p>
+                    <a href="#devellopers page">Jonas Valstar</a> <br />
+                    <a href="../games.html#scrollHere">Alex Noppert</a>
+                    <p><b>Genre</b></p>
+                    <a>2D,</a>
+                    <a>Action,</a>
+                    <a>Platformer</a>  
+                    <p><b>Support</b></p>
+                    <a>Keyboard</a> <br />
+                    <a>Controller</a>          
+                    <p><b>Download</b></p>
+                    <a href="../downloads/Prototype-3.zip" download="Sampi v0.3">Direct</a> <br />
+                    <a href="https://jvalstar.itch.io/simple-ball-game">itch.io</a>
+                </td>
+            </table>
+
+            <button class="collButton" id="media" onclick="openColl(this.id)"><b>Media</b></button>
+            <div class="collContent" id="coll_media">
+                <p>Add pictures here from the game</p>
+            </div>
+
+            <button class="collButton" id="mechanics" onclick="openColl(this.id)"><b>Mechanics</b></button>
+            <div class="collContent" id="coll_mechanics">
+                <p>add a description of what the player can do and other mechanics</p>
+            </div>
+
+            <button class="collButton" id="controlsOverview" onclick="openColl(this.id)"><b>Controls overview</b></button>
+            <div class="collContent" id="coll_controlsOverview">
+                <table> <td style="width: 50%; vertical-align: top;">
+                    <p><b>Keyboard:</b></p>
+                    <table style="width: 100%;"> <td style="width: 20%;">
+                        <p><b>A</b></p>
+                        <p><b>D</b></p>
+                        <p><b>space</b></p>
+                        <p><b>W</b></p>
+                    </td> <td style="width: 80%;">
+                        <p>Walk Left</p>
+                        <p>Walk Right</p>
+                        <p>Jump</p>
+                        <p>Enter Building</p>
+                    </td> </table> </td>
+                <td style="vertical-align: top;">
+                    <p><b>Contoller:</b></p>
+                    <table> <td>
+                        <p>[Not supported]</p>
+                    </td> </table>
+                </td> </table>
+            </div>
+
+            <button class="collButton" id="settingsOverview" onclick="openColl(this.id)"><b>Settings overview</b></button>
+            <div class="collContent" id="coll_settingsOverview">
+                <p>An explanation of what a plethora of different settings do</p>
+                <p>for example:</p>
+                <table>
+                    <td style="width: 10%;">
+                        <p><b>Difficulty</b></p>
+                        <br>
+                        <p><b>Difficulty</b></p>
+                        <br>
+                    </td>   
+                    <td style="width: 90%;">
+                        <p>Higher difficulty reduces the delay between attacks, increases the damage and slightly increases the movement speed of enemy's</p>
+                        <p>Higher difficulty reduces the delay between attacks, increases the damage and slightly increases the movement speed of enemy's</p>
+                    </td>                 
+                </table>
+            </div>
+            <button class="collButton" id="versionHistory" onclick="openColl(this.id)"><b>Version history</b></button>
+            <div class="collContent" id="coll_versionHistory">
+                <p>maybe link patch notes to a pdf document or a popup instead of making another page</p>
+                <p>[R] = release, [B] = beta</p>                
+                <div class="versionTab">
+                    <div><p>[R] v1.1 enemy update</p></div>
+                    <div>
+                        <a href="../!game files/oleck/Prototype-3.zip" download="">download</a>
+                        <a>patch notes</a>
+                        <a>source code</a>
+                    </div>
+                </div>
+                <div class="versionTab">
+                    <div><p>[R] v1.0 release</p></div>
+                    <div>
+                        <a href="../!game files/oleck/Prototype-3.zip" download="">download</a>
+                        <a>patch notes</a>
+                        <a>source code</a>
+                    </div>
+                </div>
+                <div class="versionTab">
+                    <div><p>[B] v0.1</p></div>
+                    <div>
+                        <a href="../!game files/oleck/Prototype-3.zip" download="">download</a>
+                        <a>patch notes</a>
+                        <a>source code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div id="shadow"></div> 
+</body>
+</html>
