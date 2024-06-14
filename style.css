@@ -423,6 +423,7 @@ p, a {
     width: 25vh;
     background-color: #2D3339;
     align-items: center;
+    text-align: center;
 }
 
 #gameTable {
