@@ -1,0 +1,46 @@
+::selection {
+    color: #e0dfd5;
+    background: #2c888a;
+}
+
+body, html, a, p {
+    color: #6a6a6a;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ee1c24;
+}
+
+#topBar, #sideBar, .logo, .navigation > a, .slideshow > a, .slide > a {
+    background-color: #121212; 
+    color: #6a6a6a;
+}
+
+#topBar {
+    
+    border-top: 5px solid #ee1c24;
+}
+
+#content, #techInfo {
+    background-color: #353535;
+}
+
+.logo > h1 > a {
+    color: #ee1c24;
+}
+
+.tree {
+    background-color: #292929;
+}
+
+.tree > a:hover {
+    color: #ee1c24;
+}
+
+.collButton, .collButton::before {
+    color: #6a6a6a;
+}
+
+.activeCB, .collButton:hover {
+    border-bottom: 5px solid #6a6a6a;
+}

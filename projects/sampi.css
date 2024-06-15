@@ -1,0 +1,46 @@
+::selection {
+    color: #e0dfd5;
+    background: #2c888a;
+}
+
+body, html, a, p {
+    color: #303638;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #2c888a;
+}
+
+#topBar, #sideBar, .logo, .navigation > a, .slideshow > a, .slide > a {
+    background-color: #303638; 
+    color: #e0dfd5;
+}
+
+#topBar {
+    
+    border-top: 5px solid #2c888a;
+}
+
+#content, #techInfo {
+    background-color: #e0dfd5;
+}
+
+.logo > h1 > a {
+    color: #2c888a;
+}
+
+.tree {
+    background-color: #D4D2C4;
+}
+
+.tree > a:hover {
+    color: #2c888a;
+}
+
+.collButton, .collButton::before {
+    color: #2c888a;
+}
+
+.activeCB, .collButton:hover {
+    border-bottom: 5px solid #2c888a;
+}
