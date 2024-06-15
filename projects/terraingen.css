@@ -37,10 +37,22 @@ h1, h2, h3, h4, h5, h6 {
     color: #678df0 ;
 }
 
+.info > p {
+    color: #3d548f
+}
+
 .collButton, .collButton::before {
     color: #3d548f ;
 }
 
 .activeCB, .collButton:hover {
     border-bottom: 5px solid #3d548f;
+}
+
+.versionTab {
+    background-color: #0C111D;
+}
+
+.versionTab > div > a, .versionTab > div > p {
+    color: #3d548f;
 }
