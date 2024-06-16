@@ -13,7 +13,7 @@
     <div id="container">
         <div id="topBar"> 
             <div class="logo">
-                <h1><a href="../../index.html">Jonas Valstar</a></h1>
+                <h1><a href="../index.html">Jonas Valstar</a></h1>
             </div>
             <div class="slideshow">
                 <a class="prev" onclick="showSlide(1)">&#10094;</a>
@@ -42,8 +42,8 @@
                     <a target="_blank" href="https://jvalstar.itch.io/"><img src="../a_pictures/logos/itchio.png"></a>
                     <a target="_blank" href="https://www.linkedin.com/in/jonas-valstar-379112243"><img src="../a_pictures/logos/linkedIn.png"></a>
                 </div>
-                <div class="info" onclick="credits()">
-                    <p>&copy;Jonas Valstar, 2023</p>
+                <div class="info">
+                    <p>&copy;Jonas Valstar, 2023 | <a class="infoLink" onclick="credits()">Credits</a></p>
                 </div>
             </div>
         </div>
@@ -58,13 +58,13 @@
             </div>
             <table id="gameTable">
                 <td id="descInfo">
-                    <img id="gameLogo" src="sampi/sampi logo.png">
+                    <!--<img id="gameLogo" src="sampi/sampi logo.png">-->
+                    <video width="100%" autoplay muted controls loop><source src="sampi/showcase.mp4" type="video/mp4"></video>
                     <p>Sampi is a board game that i developed together with a friend for our finals project on highschool</p>
                 </td>
                 <td id="techInfo">
                     <!-- <img src="sampi/Sampi Poster.png" style="width: 100%;"> -->
-                    <br/>
-                    <h1 style="line-height: 0.8;">Sampi</h1>
+                    <img id="gameLogo" style="width: 100%;" src="sampi/sampi logo.png">
                     <p><b>Engine</b></p>
                     <a target="_blank" href="https://unity.com/">Unity 2021.3.23f1</a>
                     <p><b>Development Time</b></p>
@@ -84,7 +84,7 @@
                     <p><b>Platform</b></p>
                     <a>Windows</a>       
                     <p><b>Download</b></p>
-                    <a href="sampi/Prototype-3.zip" download="Sampi v0.3">Direct</a> <br />
+                    <a href="#downloads" onclick="onlyOpenColl('downloads')">Direct</a> <br />
                     <a href="https://jvalstar.itch.io/sampi" target="_blank">itch.io</a>
                 </td>
             </table>
@@ -139,11 +139,11 @@
                     </td>                 
                 </table>
             </div>
-            <button class="collButton" id="versionHistory" onclick="openColl(this.id)"><b>Version history</b></button>
-            <div class="collContent" id="coll_versionHistory">
+            <button class="collButton" id="downloads" onclick="openColl(this.id)"><b>Version history</b></button>
+            <div class="collContent" id="coll_downloads">
                 <p>maybe link patch notes to a pdf document or a popup instead of making another page</p>
                 <p>[R] = release, [B] = beta</p>                
-                <div class="versionTab">
+                <div class="downloadsTab">
                     <div><p>[R] v1.1 enemy update</p></div>
                     <div>
                         <a href="../!game files/oleck/Prototype-3.zip" download="">download</a>
@@ -151,7 +151,7 @@
                         <a>source code</a>
                     </div>
                 </div>
-                <div class="versionTab">
+                <div class="downloadsTab">
                     <div><p>[R] v1.0 release</p></div>
                     <div>
                         <a href="../!game files/oleck/Prototype-3.zip" download="">download</a>
@@ -159,7 +159,7 @@
                         <a>source code</a>
                     </div>
                 </div>
-                <div class="versionTab">
+                <div class="downloadsTab">
                     <div><p>[B] v0.1</p></div>
                     <div>
                         <a href="../!game files/oleck/Prototype-3.zip" download="">download</a>

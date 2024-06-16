@@ -13,7 +13,7 @@
     <div id="container">
         <div id="topBar"> 
             <div class="logo">
-                <h1><a href="../../index.html">Jonas Valstar</a></h1>
+                <h1><a href="../index.html">Jonas Valstar</a></h1>
             </div>
             <div class="slideshow">
                 <a class="prev" onclick="showSlide(1)">&#10094;</a>
@@ -31,7 +31,7 @@
         </div>
         <div id="sideBar">
             <div class="navigation">
-                <a href="../index.html"><b>Home</b></a>
+                <a href="../index.html">Home</a>
                 <a href="../projects.html"><b>Projects</b></a>
                 <a href="../about.html">About</a>
                 <a href="../contact.html">Contact</a>
@@ -42,8 +42,8 @@
                     <a target="_blank" href="https://jvalstar.itch.io/"><img src="../a_pictures/logos/itchio.png"></a>
                     <a target="_blank" href="https://www.linkedin.com/in/jonas-valstar-379112243"><img src="../a_pictures/logos/linkedIn.png"></a>
                 </div>
-                <div class="info" onclick="credits()">
-                    <p>&copy;Jonas Valstar, 2023</p>
+                <div class="info">
+                    <p>&copy;Jonas Valstar, 2023 | <a class="infoLink" onclick="credits()">Credits</a></p>
                 </div>
             </div>
         </div>
@@ -58,16 +58,13 @@
             </div>
             <table id="gameTable">
                 <td id="descInfo">
-                    <img id="gameLogo" class="pixelArt" src="war/war logo.png">
-                    <h3>Some Fancy Title</h1>
-                    <p>please write a description here</p>
+                    <video width="100%" autoplay muted controls loop><source src="war/showcase.mp4" type="video/mp4"></video>
+                    <br/>
+                    <h3>Header</h3>
                     <p>fix the fact that the version link in the sidebar can also close the collapsible</p>
-                    <h1 style="color: darkred;">!Important, this is a block-out not all information applies to this game </h1>
                 </td>
                 <td id="techInfo">
-                    <!-- <img src="sampi/Sampi Poster.png" style="width: 100%;"> -->
-                     <br/>
-                    <h1 style="line-height: 0.8;">W.A.R.</h1>
+                    <img id="gameLogo" class="pixelArt" src="war/war logo.png">
                     <p><b>Engine</b></p>
                     <a target="_blank" href="https://gamemaker.io/en">GameMaker v2023.11.0.121</a>
                     <p><b>Development Time</b></p>
@@ -90,14 +87,25 @@
                     <p><b>Platform</b></p>
                     <a>Windows</a>       
                     <p><b>Download</b></p>
-                    <a href="sampi/Prototype-3.zip" download="Sampi v0.3">Direct</a> <br />
+                    <a href="#downloads" onclick="onlyOpenColl('downloads')">Direct</a> <br />
                     <a href="https://jvalstar.itch.io/sampi" target="_blank">itch.io</a>
                 </td>
             </table>
 
-            <button class="collButton" id="media" onclick="openColl(this.id)"><b>Development Timelapse</b></button>
+            <button class="collButton" id="media" onclick="openColl(this.id)"><b>Development Time-lapses</b></button>
             <div class="collContent" id="coll_media">
-                <video width="100%" muted controls><source src="war/timelapse.mp4" type="video/mp4"></video>
+                <video style="display: block;" width="100%" controls><source src="war/timelapse.mp4" type="video/mp4"></video>
+                <p class="imageDescription">
+                    During the whole development of the game i recorded all of my process and combined it into a time-lapse. Because I like movies, I also gave it a movie like intro 
+                    and credits. The total length of all the recording is 43,5 hours long.
+                </p>
+                <br/>
+                <video style="display: block;" width="100%" controls><source src="war/timelapse2.mp4" type="video/mp4"></video>
+                <p class="imageDescription">
+                    I also made a time-lapse of the process of making the player character sprite.
+                </p>
+                <br/>
+                <embed src="https://jonasvalstar.github.io/" width="100%" height="500px">
             </div>
 
             <button class="collButton" id="mechanics" onclick="openColl(this.id)"><b>Mechanics</b></button>
@@ -145,11 +153,11 @@
                     </td>                 
                 </table>
             </div>
-            <button class="collButton" id="versionHistory" onclick="openColl(this.id)"><b>Version history</b></button>
-            <div class="collContent" id="coll_versionHistory">
+            <button class="collButton" id="downloads" onclick="openColl(this.id)"><b>Version history</b></button>
+            <div class="collContent" id="coll_downloads">
                 <p>maybe link patch notes to a pdf document or a popup instead of making another page</p>
                 <p>[R] = release, [B] = beta</p>                
-                <div class="versionTab">
+                <div class="downloadsTab">
                     <div><p>[R] v1.1 enemy update</p></div>
                     <div>
                         <a href="../!game files/oleck/Prototype-3.zip" download="">download</a>
@@ -157,7 +165,7 @@
                         <a>source code</a>
                     </div>
                 </div>
-                <div class="versionTab">
+                <div class="downloadsTab">
                     <div><p>[R] v1.0 release</p></div>
                     <div>
                         <a href="../!game files/oleck/Prototype-3.zip" download="">download</a>
@@ -165,7 +173,7 @@
                         <a>source code</a>
                     </div>
                 </div>
-                <div class="versionTab">
+                <div class="downloadsTab">
                     <div><p>[B] v0.1</p></div>
                     <div>
                         <a href="../!game files/oleck/Prototype-3.zip" download="">download</a>

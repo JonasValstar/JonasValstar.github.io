@@ -31,13 +31,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .tree {
     background-color: #D4D2C4;
-}
-
-.tree > a:hover {
     color: #2c888a;
 }
 
-.info > p {
+.tree > a, .tree > p {
+    color: gray;
+}
+
+.tree > a:hover, .infoLink:hover {
+    color: #2c888a;
+}
+
+.info > p, .info > P > a {
     color: #e0dfd5
 }
 
@@ -49,10 +54,10 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 5px solid #2c888a;
 }
 
-.versionTab {
+.downloadsTab {
     background-color: #303638;
 }
 
-.versionTab > div > a, .versionTab > div > p {
+.downloadsTab > div > a, .downloadsTab > div > p {
     color: #e0dfd5;
 }

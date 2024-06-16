@@ -5,26 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <script src="../script.js"></script>
-    <title>Jonas Valstar | Oleck</title>
+    <title>Jonas Valstar | Terrain Gen</title>
     <link rel="icon" type="image/x-icon" href="../a_pictures/favicon.gif">
 </head>
 <body onload="loadFunctions();">
     <div id="container">
         <div id="topBar"> 
             <div class="logo">
-                <h1><a href="../../index.html">Jonas Valstar</a></h1>
+                <h1><a href="../index.html">Jonas Valstar</a></h1>
             </div>
             <div class="slideshow">
                 <a class="prev" onclick="showSlide(1)">&#10094;</a>
-                <div class="slide">
-                    <a href="#link_to_blogpost_or_sbg_page">Simple Ball Game version 1 released</a> <!--!Make actual link-->
-                </div>
-                <div class="slide">
-                    <a href="#link_to_blogpost_or_sampi_page">Sampi update 1.1 released</a> <!--!Make actual link-->
-                </div>
-                <div class="slide">
-                    <a href="#link_to_blogpost_or_uc_page">Udder Chaos released</a> <!--!Make actual link-->
-                </div>
+                <div class="slide"><a><q>This game would not have been possible without you</q></a></div>
+                <div class="slide"><a><q>You learn whatever you set your mind to SO FAST</q></a></div>
+                <div class="slide"><a><q>Just Keep doing what you are Fucking doing</q></a></div>
+                <div class="slide"><a><q>Jonas, I think all of us owe you a piece of our grade</q></a></div>
+                <div class="slide"><a><q>You are the definition of 'Doing things for shits and giggles'</q></a></div>
+                <div class="slide"><a><q>10/10 would work with again any time any day</q></a></div>
+                <div class="slide"><a><q>You have experience in c# and it shows</q></a></div>
+                <div class="slide"><a><q>My dear friend, how the fuck do you keep pulling this shit off</q></a></div>
+                <div class="slide"><a><q>You inspire me to be as good a programmer as you some day</q></a></div>
+                <div class="slide"><a><q>You, good sir, don't get to feel useless</q></a></div>
+                <div class="slide"><a><q>You take time to explain things to us in such a nice way</q></a></div>
+                <div class="slide"><a><q>Very talented coder and a great understanding of Unity</q></a></div>
+                <div class="slide"><a><q>You were the foundation of this team and you did amazing</q></a></div>
+                <div class="slide"><a><q>What skills do you not have</q></a></div>
+                <div class="slide"><a><q>Seriously I wish I had the pace of work you do</q></a></div>
+                <div class="slide"><a><q>You always do more then we ask you to</q></a></div>
+                <div class="slide"><a><q>You are a very great worker and valuable asset to a team</q></a></div>
+                <div class="slide"><a><q>Why would you need so many quotes on your website?</q></a></div>
                 <a class="next" onclick="showSlide(2)">&#10095;</a>
             </div>
         </div>
@@ -52,73 +61,83 @@
                 <p>/</p>
                 <a href="../projects.html">projects</a>
                 <p>/</p>
-                <a href="oleck.html">oleck</a>
+                <a href="terraingen.html">terraingen</a>
                 <p>/</p>
             </div>
             <table id="gameTable">
                 <td id="descInfo">
-                    <img id="gameLogo" class="pixelArt" src="Oleck logo.png">
-                    <h3>Some Fancy Title</h1>
-                    <p>please write a description here</p>
-                    <p>fix the fact that the version link in the sidebar can also close the collapsible</p>
-                    <h1 style="color: darkred;">!Important, this is a block-out not all information applies to this game </h1>
+                    <!---->
+                    <video width="100%" autoplay muted controls loop><source src="Great Forest Takeover/showcase.mp4" type="video/mp4"></video>
+                    <p>For a now discontinued game, i made a terrain generation algorithm. With approval of my team, I designed the terrain generation algorithm myself. It might not deliver the best results as the tried and tested algorithms, but i did learn the most from it. For the tree algorithm i used poisson disc sampling, and the structures are randomly placed for now.</p>
+                    <br/>
+                    <h3>Design Process</h3>
+                    <p>The first idea was that structures would spawn based on where the player was moving to. The idea behind it was that the player could walk around in an infinitely expanding world and feel lost while always being able to miraculously find the objectives. We eventually opted for a map generated at the start of the game, structures included. At this point i had the code for generating trees and toggling them on and off, the latter of which was now technically redundant but i kept it in anyway. After that i started working on a terrain generation algorithm. The first version i cam up with was very bumpy so i tried to make another one that was more hilly instead. In the end product i eventually combined both of them into one final terrain.</p>
+                    <br/>
+                    <h3>Future Plans</h3>
+                    <p>I am planning on continuing working on this and eventually make it into a game. First is making the generation better though. I am planning on making the current terrain generation a biome generation instead and using a more classical existing algorithm like Perlin noise for the terrain. Along with that i am planning on making it infinite by generating in chunks that connect to each other. For that i also need to make the current system work asynchronous.</p>
                 </td>
                 <td id="techInfo">
-                    <h2 style="margin-bottom: 3px; color: white;">Oleck: the first adventure</h2>
-                    <p><b>Game Version</b></p>
-                    <a href="#versionHistory" onclick="openColl('versionHistory')">v1.0</a>
+                    <img id="gameLogo" class="pixelArt" src="Terrain Gen/Terrain Gen logo.png">
                     <p><b>Engine</b></p>
-                    <a target="_blank" href="https://gamemaker.io/en">GameMaker v2023.8.2.108</a>
+                    <a target="_blank" href="https://unity.com/">Unity 2022.3.20f1</a>
+                    <p><b>Development Time</b></p>
+                    <a>1 Week</a>
                     <p><b>Developed by:</b></p>
-                    <a href="#devellopers page">Jonas Valstar</a> <br />
-                    <a href="../games.html#scrollHere">Alex Noppert</a>
-                    <p><b>Genre</b></p>
-                    <a>2D,</a>
-                    <a>Action,</a>
-                    <a>Platformer</a>  
-                    <p><b>Support</b></p>
-                    <a>Keyboard</a> <br />
-                    <a>Controller</a>          
+                    <a>Jonas Valstar</a><br />
+                    <p><b>My Role(s):</b></p>
+                    <a>Sole Developer</a>
+                    <p><b>Features</b></p>
+                    <a>Generated Terrain</a><br/>
+                    <a>Generated Trees</a><br/>
+                    <a>Generated Structures</a>
+                    <p><b>Platform</b></p>
+                    <a>Windows</a>       
                     <p><b>Download</b></p>
-                    <a href="../downloads/Prototype-3.zip" download="Sampi v0.3">Direct</a> <br />
-                    <a href="https://jvalstar.itch.io/simple-ball-game">itch.io</a>
+                    <a href="#downloads" onclick="onlyOpenColl('downloads')">Direct</a> <br />
                 </td>
             </table>
 
-            <button class="collButton" id="media" onclick="openColl(this.id)"><b>Media</b></button>
+            <button class="collButton" id="media" onclick="openColl(this.id)"><b>Development Timelapse</b></button>
             <div class="collContent" id="coll_media">
-                <p>Add pictures here from the game</p>
+                <video width="100%" controls><source src="Terrain Gen/timelapse.mp4" type="video/mp4"></video>
+                <p>During the development of the terrain generation script i recorded everything i did. Later i combined this footage into a time-lapse because time-lapses are a great way of showing a process in a short amount of time. The total length of the footage is around 6 hours.</p>
             </div>
 
-            <button class="collButton" id="mechanics" onclick="openColl(this.id)"><b>Mechanics</b></button>
-            <div class="collContent" id="coll_mechanics">
-                <p>add a description of what the player can do and other mechanics</p>
-            </div>
-
-            <button class="collButton" id="controlsOverview" onclick="openColl(this.id)"><b>Controls overview</b></button>
+            <button class="collButton" id="controlsOverview" onclick="openColl(this.id)"><b>Terrain Generation</b></button>
             <div class="collContent" id="coll_controlsOverview">
-                <table> <td style="width: 50%; vertical-align: top;">
-                    <p><b>Keyboard:</b></p>
-                    <table style="width: 100%;"> <td style="width: 20%;">
-                        <p><b>A</b></p>
-                        <p><b>D</b></p>
-                        <p><b>space</b></p>
-                        <p><b>W</b></p>
-                    </td> <td style="width: 80%;">
-                        <p>Walk Left</p>
-                        <p>Walk Right</p>
-                        <p>Jump</p>
-                        <p>Enter Building</p>
-                    </td> </table> </td>
-                <td style="vertical-align: top;">
-                    <p><b>Contoller:</b></p>
-                    <table> <td>
-                        <p>[Not supported]</p>
-                    </td> </table>
-                </td> </table>
+                <p>For generating the terrain i decided to not look at any pre-existing algorithms on the internet and try to come up with something myself. The first idea i had for this was to make a 2d array with all the points in the terrain. The script would then loop over all points and take the average of all the surrounding points that had already been assigned. To this average it would than add or subtract a number that makes sure it never goes above the maximum or under the minimum and would be biased towards the middle point.</p>
+                <table>
+                    <tr><td style="width: 49%;"><video width="100%" controls loop><source src="Terrain Gen/terrain 1.mp4"></video></td><td style="width: 51%;"></td></tr>
+                    <tr><td class="imageDescription" style="width: 49%;"><p>The first terrain generation algorithm</p></td><td style="width: 51%;"></td></tr>
+                </table>
+                <br/>
+                <p>This way of generating terrain is great for a bumpy field, but it would be nice to also have hills. For this I ended up using a script that I first made for maybe adding biomes to the terrain. This biome generation works in a completely different way to the first terrain generation. This script stats with a small 2d array of around 5x5. These points are given completely random height values. Then the script makes a new array that is twice as big (in this case 10x10). The values from the 5x5 grid are implemented on all the even numbered points and the rest is filled in as an average </p>
             </div>
 
-            <button class="collButton" id="settingsOverview" onclick="openColl(this.id)"><b>Settings overview</b></button>
+            <button class="collButton" id="mechanics" onclick="openColl(this.id)"><b>Tree Generation</b></button>
+            <div class="collContent" id="coll_mechanics">
+                <p>The tree generation I made using using a technique called Poisson Disc Sampling. The way this works is by generating a point in a predetermined area. That point is assigned a set amount of new points a set distance away in a circle shape. These points are then checked if the radius overlaps with another point. If so, it is discarded. If not the point is added to the list of actual points and assigned its own new points. This repeats until the whole area is full. The first version I made used a constant distance between points. This looked fine for dense forests, but normally forests are much more randomly packed. That is why i changed it to use a random distance between points between 2 values instead.</p>
+                <table>
+                    <tr>
+                        <td style="width: 49%;"><video width="100%" controls loop><source src="Terrain Gen/tree spawning 1.mp4"></video></td>
+                        <td style="width: 2%;"></td>
+                        <td style="width: 49%;"><video width="100%" controls loop><source src="Terrain Gen/tree spawning 2.mp4"></video></td>
+                    </tr>
+                    <tr>
+                        <td class="imageDescription" style="width: 49%;"><p>Version 1: with a constant distance between points</p></td>
+                        <td style="width: 2%;"></td>
+                        <td class="imageDescription" style="width: 49%;"><p>Version 2: with a random distance between points</p></td>
+                    </tr>
+                </table>
+                <br/>
+                <p>The first idea the team had, was to spawn the objectives in front of the player, so i made sure that the trees could be toggled on and off at will. The way i did this is by adding all the trees to a list. Then whenever a structure moved it would loop over every point to see if it was colliding with the structure. If a collision was found, the point would be deactivated and put into a list of all currently deactivated trees. Then, whenever the structure moved again, we could loop over all deactivated trees and activate the ones that were no longer colliding.</p>            
+                <table>
+                    <tr><td style="width: 49%;"><video width="100%" controls loop><source src="Terrain Gen/tree toggling.mp4"></video></td><td style="width: 51%;"></td></tr>
+                    <tr><td class="imageDescription" style="width: 49%;"><p>Trees disappearing when coming in contact with the green area</p></td><td style="width: 51%;"></td></tr>
+                </table>
+            </div>
+
+            <button class="collButton" id="settingsOverview" onclick="openColl(this.id)"><b>Structure Generation</b></button>
             <div class="collContent" id="coll_settingsOverview">
                 <p>An explanation of what a plethora of different settings do</p>
                 <p>for example:</p>
@@ -135,37 +154,31 @@
                     </td>                 
                 </table>
             </div>
-            <button class="collButton" id="versionHistory" onclick="openColl(this.id)"><b>Version history</b></button>
-            <div class="collContent" id="coll_versionHistory">
+            <button class="collButton" id="downloads" onclick="openColl(this.id)"><b>Downloads</b></button>
+            <div class="collContent" id="coll_downloads">
                 <p>maybe link patch notes to a pdf document or a popup instead of making another page</p>
-                <p>[R] = release, [B] = beta</p>                
-                <div class="versionTab">
-                    <div><p>[R] v1.1 enemy update</p></div>
+                <p>[R] = release, [B] = beta</p>
+                <div class="downloadsTab">
+                    <div><p>Unity Project Files</p></div>
                     <div>
                         <a href="../!game files/oleck/Prototype-3.zip" download="">download</a>
-                        <a>patch notes</a>
-                        <a>source code</a>
+                        <a class="outgoingLink" href="#link to github">github</a>
                     </div>
                 </div>
-                <div class="versionTab">
-                    <div><p>[R] v1.0 release</p></div>
+                <div class="downloadsTab">
+                    <div><p>TerrainScript.cs</p></div>
                     <div>
                         <a href="../!game files/oleck/Prototype-3.zip" download="">download</a>
-                        <a>patch notes</a>
-                        <a>source code</a>
-                    </div>
-                </div>
-                <div class="versionTab">
-                    <div><p>[B] v0.1</p></div>
-                    <div>
-                        <a href="../!game files/oleck/Prototype-3.zip" download="">download</a>
-                        <a>patch notes</a>
-                        <a>source code</a>
+                        <a class="outgoingLink" href="#link to github">github</a>
                     </div>
                 </div>
             </div>
         </div>
     </div> 
     <div id="shadow"></div> 
+    <div id="overlay" onclick="displayPic('turnOff')">
+        <img id="overlayImg" src="#setByScript" alt="Picture might be missing">
+        <p id="overlayTxt">changed in script</p>
+    </div>
 </body>
 </html>

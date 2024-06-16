@@ -1,6 +1,6 @@
 ::selection {
-    color: #e0dfd5;
-    background: #2c888a;
+    color: #121212;
+    background: #ee1c24;
 }
 
 body, html, a, p {
@@ -33,11 +33,11 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #292929;
 }
 
-.tree > a:hover {
+.tree > a:hover, .infoLink:hover {
     color: #ee1c24;
 }
 
-.info > p {
+.info > p, .info > P > a {
     color: #6a6a6a
 }
 
@@ -49,10 +49,14 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 5px solid #6a6a6a;
 }
 
-.versionTab {
+.downloadsTab {
     background-color: #121212;
 }
 
-.versionTab > div > a, .versionTab > div > p {
+.downloadsTab > div > a, .downloadsTab > div > p {
     color: #6a6a6a;
+}
+
+.imageDescription, .textImage {
+    background-color: #121212;
 }

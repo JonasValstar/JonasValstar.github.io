@@ -205,11 +205,18 @@ b {
 }
 
 .info {
-    cursor: help;
     display: flex;
     justify-content: center;
     padding-bottom: 5px;
-    font-size: 2vh;
+}
+
+.infoLink {
+    cursor: help;
+    font-size: 1.8vh;
+}
+
+.infoLink:hover {
+    color: white;
 }
 
 #content {
@@ -301,10 +308,6 @@ b {
 
 .slideshow > div > a {
     text-decoration: solid;
-}
-
-.slideshow > div > a:hover {
-    cursor: pointer;
 }
 
 .slideAnim1 {
@@ -454,17 +457,22 @@ b {
     width: 70%;
 }
 
+#descInfo {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 #techInfo {
     vertical-align:top;
     padding-top: 5px;
-    padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 5px;
     position: relative;
     background-color: #424b54;
     width: 30%;
 }
 
-#descInfo > img {
+#descInfo > img, #techInfo > img {
     width: 100%;
 }
 
@@ -510,9 +518,29 @@ b {
 
 .collContent > table {
     width: 100%;
+    border-collapse: collapse;
 }
 
-.versionTab {
+.collContent > table > tbody > tr > td {
+    padding: 0;
+}
+
+.collContent > table > tbody > tr > td > p, .collContent > table > tbody > tr > td > video {
+    text-align: center;
+    display: block;
+}
+
+.textImage {
+    width: 49%;   
+}
+
+.textImage > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.downloadsTab {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -524,14 +552,18 @@ b {
     
 }
 
-.versionTab > div > p {
+.downloadsTab > div > p {
     margin-left: 15px;
     font-size: 1.75vh;
 }
 
-.versionTab > div > a {
+.downloadsTab > div > a {
     margin-right: 15px;
     margin-left: -10px;
+}
+
+.outgoingLink:hover {
+    cursor: alias;
 }
 
 #canvasHolder {

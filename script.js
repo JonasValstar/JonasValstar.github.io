@@ -27,8 +27,9 @@ function showSlide(mode) {
     let slides = document.getElementsByClassName('slide');
     if (mode == 0) { // setup first slide
         slides[i].style.display = "none";
-        i = 0;
-        slides[0].style.display = "block";
+        let randomIndex = Math.round(Math.random() * (slides.length-1));
+        i = randomIndex;
+        slides[i].style.display = "block";
     } else if (mode == 1) { // previous
         slides[i].style.display = "none";
         if (i == 0) {
@@ -64,7 +65,12 @@ function displayPic(link, title, date, program) {
     if (link != "turnOff") {
         overlay.style.display = "flex";
         document.getElementById("overlayImg").src = "posters/" + link;
-        document.getElementById("overlayTxt").innerHTML = "<b>" + title + "</b>&nbsp;|&nbsp;" + date + "&nbsp;|&nbsp;<i>made in:&nbsp;" + program + "</i>";
+        if (date != "-1") {
+            document.getElementById("overlayTxt").innerHTML = "<b>" + title + "</b>&nbsp;|&nbsp;" + date + "&nbsp;|&nbsp;<i>made in:&nbsp;" + program + "</i>";
+        } else {
+            document.getElementById("overlayTxt").innerHTML = "<b>" + title + "</i>";
+        }
+        
     } else {
         overlay.style.display = "none";
     }
@@ -80,5 +86,14 @@ function openColl(collID) {
     } else {
         coll.style.display = "none";
         callElem.classList.remove("activeCB");
+    }
+}
+
+function onlyOpenColl(collID) {
+    coll = document.getElementById('coll_' + collID);
+    callElem = document.getElementById(collID);
+    if (coll.style.display != "block") {
+        coll.style.display = "block";
+        callElem.classList.add("activeCB");
     }
 }

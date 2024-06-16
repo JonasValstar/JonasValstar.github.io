@@ -1,5 +1,5 @@
 ::selection {
-    color: #e0dfd5;
+    color: #182138;
     background: #678df0 ;
 }
 
@@ -31,28 +31,37 @@ h1, h2, h3, h4, h5, h6 {
 
 .tree {
     background-color: #12192B;
+    
 }
 
-.tree > a:hover {
+.tree > a, .tree > p {
+    color: #3d548f;
+}
+
+.tree > a:hover, .infoLink:hover {
     color: #678df0 ;
 }
 
-.info > p {
+.info > p, .info > P > a {
     color: #3d548f
 }
 
 .collButton, .collButton::before {
-    color: #3d548f ;
+    color: #678df0 ;
 }
 
 .activeCB, .collButton:hover {
-    border-bottom: 5px solid #3d548f;
+    border-bottom: 5px solid #678df0;
 }
 
-.versionTab {
+.downloadsTab {
     background-color: #0C111D;
 }
 
-.versionTab > div > a, .versionTab > div > p {
+.downloadsTab > div > a, .downloadsTab > div > p {
     color: #3d548f;
+}
+
+.imageDescription, .textImage {
+    background-color: #0C111D;
 }
