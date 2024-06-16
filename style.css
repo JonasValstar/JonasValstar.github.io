@@ -263,6 +263,7 @@ b {
 
 .tree > a, .tree > p {
     font-family:'Times New Roman', Times, serif;
+    font-size: 1.5vh;
     color: grey;
 }
 
@@ -360,6 +361,16 @@ b {
     align-items: center;
 }
 
+.mainPicA {
+    transition: .2s;
+    text-decoration: 0;
+}
+
+.mainPicA:hover {
+    scale: 1.03;
+    transition: 0.2s;
+}
+
 .mainPic {
     margin: 2vh;
     margin-right: 4vh;
@@ -377,16 +388,10 @@ b {
     margin: 0;
 }
 
-.mainPicImg > a > img{
-    transition: 0.2s;
+.mainPicImg > img{
     min-width: 30vh;
     max-width: 30vh;
     display: block;
-}
-
-.mainPicImg > a > img:hover{
-    transition: 0.2s;
-    scale: 1.1;
 }
 
 .mainPicText {
@@ -426,7 +431,7 @@ b {
 
 .picTD > a > img:hover {
     transition: 0.2s;
-    scale: 1.1;
+    scale: 1.06;
 }
 
 .gameMenu {
