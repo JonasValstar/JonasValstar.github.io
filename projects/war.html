@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="war.css">
     <script src="../script.js"></script>
-    <title>Jonas Valstar | Oleck</title>
+    <title>Jonas Valstar | War</title>
     <link rel="icon" type="image/x-icon" href="../a_pictures/favicon.gif">
 </head>
 <body onload="loadFunctions();">
@@ -17,15 +17,24 @@
             </div>
             <div class="slideshow">
                 <a class="prev" onclick="showSlide(1)">&#10094;</a>
-                <div class="slide">
-                    <a href="#link_to_blogpost_or_sbg_page">Simple Ball Game version 1 released</a> <!--!Make actual link-->
-                </div>
-                <div class="slide">
-                    <a href="#link_to_blogpost_or_sampi_page">Sampi update 1.1 released</a> <!--!Make actual link-->
-                </div>
-                <div class="slide">
-                    <a href="#link_to_blogpost_or_uc_page">Udder Chaos released</a> <!--!Make actual link-->
-                </div>
+                <div class="slide"><a><q>This game would not have been possible without you</q></a></div>
+                <div class="slide"><a><q>You learn whatever you set your mind to SO FAST</q></a></div>
+                <div class="slide"><a><q>Just Keep doing what you are Fucking doing</q></a></div>
+                <div class="slide"><a><q>Jonas, I think all of us owe you a piece of our grade</q></a></div>
+                <div class="slide"><a><q>You are the definition of 'Doing things for shits and giggles'</q></a></div>
+                <div class="slide"><a><q>10/10 would work with again any time any day</q></a></div>
+                <div class="slide"><a><q>You have experience in c# and it shows</q></a></div>
+                <div class="slide"><a><q>My dear friend, how the fuck do you keep pulling this shit off</q></a></div>
+                <div class="slide"><a><q>You inspire me to be as good a programmer as you some day</q></a></div>
+                <div class="slide"><a><q>You, good sir, don't get to feel useless</q></a></div>
+                <div class="slide"><a><q>You take time to explain things to us in such a nice way</q></a></div>
+                <div class="slide"><a><q>Very talented coder and a great understanding of Unity</q></a></div>
+                <div class="slide"><a><q>You were the foundation of this team and you did amazing</q></a></div>
+                <div class="slide"><a><q>What skills do you not have</q></a></div>
+                <div class="slide"><a><q>Seriously I wish I had the pace of work you do</q></a></div>
+                <div class="slide"><a><q>You always do more then we ask you to</q></a></div>
+                <div class="slide"><a><q>You are a very great worker and valuable asset to a team</q></a></div>
+                <div class="slide"><a><q>Why would you need so many quotes on your website?</q></a></div>
                 <a class="next" onclick="showSlide(2)">&#10095;</a>
             </div>
         </div>
@@ -43,7 +52,8 @@
                     <a target="_blank" href="https://www.linkedin.com/in/jonas-valstar-379112243"><img src="../a_pictures/logos/linkedIn.png"></a>
                 </div>
                 <div class="info">
-                    <p>&copy;Jonas Valstar, 2023 | <a class="infoLink" onclick="credits()">Credits</a></p>
+                    <p>&copy;Jonas Valstar, 2023</p>
+                    <p>background and banner images from Freepik</p>
                 </div>
             </div>
         </div>
@@ -53,15 +63,25 @@
                 <p>/</p>
                 <a href="../projects.html">projects</a>
                 <p>/</p>
-                <a href="oleck.html">oleck</a>
+                <a href="war.html">war</a>
                 <p>/</p>
             </div>
             <table id="gameTable">
                 <td id="descInfo">
                     <video width="100%" autoplay muted controls loop><source src="war/showcase.mp4" type="video/mp4"></video>
+                    <p>
+                        For the game that my team was making for our second assignment of my studies, i made procedurally animated spider legs for the main character. I also made a  
+                        raycast for the legs to work, the system that allows the player to control the npc teammates with mouse controls and the system for the laser puzzle. On top of 
+                        the coding things, i also came up game concept and made a couple of 2d assets like the player character, the side bar and the laser turret.
+                    </p>
                     <br/>
-                    <h3>Header</h3>
-                    <p>fix the fact that the version link in the sidebar can also close the collapsible</p>
+                    <h3>Design Process</h3>
+                    <p>
+                        In the concepting stage of development i came up with a game where the player controls a character with mechanical spider legs and control other party members to
+                        with their own abilities to solve puzzles on a deserted planet. The idea mostly came from thinking about what interesting thing i wanted to code, but i like the 
+                        idea enough to suggest it. My team members also liked it a lot so we went into development with that idea. I started off with making the spider legs and later on 
+                        started making the ordering mechanic and the lasers. Because i made the lasers, i could also design the level where the player is introduced to that new puzzle.
+                    </p>
                 </td>
                 <td id="techInfo">
                     <img id="gameLogo" class="pixelArt" src="war/war logo.png">
@@ -85,10 +105,7 @@
                     <a>Team ordering</a><br/>
                     <a>Laser Puzzle</a>
                     <p><b>Platform</b></p>
-                    <a>Windows</a>       
-                    <p><b>Download</b></p>
-                    <a href="#downloads" onclick="onlyOpenColl('downloads')">Direct</a> <br />
-                    <a href="https://jvalstar.itch.io/sampi" target="_blank">itch.io</a>
+                    <a>Windows</a>
                 </td>
             </table>
 
@@ -104,86 +121,141 @@
                 <p class="imageDescription">
                     I also made a time-lapse of the process of making the player character sprite.
                 </p>
+            </div>
+
+            <button class="collButton" id="animLegs" onclick="openColl(this.id)"><b>Procedurally Animated Legs and Raycast</b></button>
+            <div class="collContent" id="coll_animLegs">
+                <p>
+                    The main selling point of the game were the procedurally animated spider legs. I had never done procedural animation, but i have never let that stop me. I had an 
+                    idea of how i wanted to do it, which was to check if the leg end point was either too far away or too close by. If one of those was the case, it would move the leg 
+                    end point back to a predetermined location based on the player. It wouldn't be spider legs however with only one section, so i made a joint in the middle. The 
+                    location of the joint is decided by simple triangle maths. If we see the start, joint and end point as a triangle, and we have the lengths of all sides, than we 
+                    can calculate any corner with the cosine rule. 
+                </p><p>
+                    This looked fine, but i wanted to perfect this and make it as realistic as possible. The biggest improvement i made 
+                    was to change the coordinate system for placing the end point to a grades system. Instead of placing the leg on one point, it would now place the leg in the 
+                    direction of the leg and based on player movement so that the leg wouldn't have to be replaced for as long as possible. The check if an endpoint was no longer 
+                    correct was also changed to use angles instead of x and y coordinates.
+                </p><p>
+                    The last thing big thing that i did was making my own raycast system because GameMaker didn't have one. The way I did this is by using a method called binary search. 
+                    This works by supplying 2 points and then it check whatever a half is fully correct or fully incorrect, if so it would check half of the other side. This repeats 
+                    until a certain threshold is reached for the distance it test. I used this to calculate where the leg could be maximally placed if the real target location was blocked.
+                </p>
                 <br/>
-                <embed src="https://jonasvalstar.github.io/" width="100%" height="500px">
-            </div>
-
-            <button class="collButton" id="mechanics" onclick="openColl(this.id)"><b>Mechanics</b></button>
-            <div class="collContent" id="coll_mechanics">
-                <p>add a description of what the player can do and other mechanics</p>
-            </div>
-
-            <button class="collButton" id="controlsOverview" onclick="openColl(this.id)"><b>Controls overview</b></button>
-            <div class="collContent" id="coll_controlsOverview">
-                <table> <td style="width: 50%; vertical-align: top;">
-                    <p><b>Keyboard:</b></p>
-                    <table style="width: 100%;"> <td style="width: 20%;">
-                        <p><b>A</b></p>
-                        <p><b>D</b></p>
-                        <p><b>space</b></p>
-                        <p><b>W</b></p>
-                    </td> <td style="width: 80%;">
-                        <p>Walk Left</p>
-                        <p>Walk Right</p>
-                        <p>Jump</p>
-                        <p>Enter Building</p>
-                    </td> </table> </td>
-                <td style="vertical-align: top;">
-                    <p><b>Contoller:</b></p>
-                    <table> <td>
-                        <p>[Not supported]</p>
-                    </td> </table>
-                </td> </table>
-            </div>
-
-            <button class="collButton" id="settingsOverview" onclick="openColl(this.id)"><b>Settings overview</b></button>
-            <div class="collContent" id="coll_settingsOverview">
-                <p>An explanation of what a plethora of different settings do</p>
-                <p>for example:</p>
+                <table><tr>
+                    <td class="textImage"><video width="100%" controls loop><source src="war/legs1.mp4"></video></td><td style="width: 2%;"></td>
+                    <td class="textImage"><video width="100%" controls loop><source src="war/legs2.mp4"></video></td>
+                </tr><tr>
+                    <td class="imageDescription" style="width: 49%;"><p>First version of the legs before it was made to have a joint</p></td><td style="width: 2%;"></td>
+                    <td class="imageDescription" style="width: 49%;"><p>Legs after adding a joint to separate the legs and an transition between positions</p></td>
+                </tr></table>
+                <br/>
+                <table><tr>
+                    <td class="textImage"><video width="100%" controls loop><source src="war/legs3.mp4"></video></td><td style="width: 2%;"></td>
+                    <td class="textImage"><video width="100%" controls loop><source src="war/legs4.mp4"></video></td>
+                </tr><tr>
+                    <td class="imageDescription" style="width: 49%;"><p>Legs with the sprites implemented in the game</p></td><td style="width: 2%;"></td>
+                    <td class="imageDescription" style="width: 49%;"><p>Latest version of the legs using the new angle new position check</p></td>
+                </tr></table>
+                <br/>
                 <table>
-                    <td style="width: 10%;">
-                        <p><b>Difficulty</b></p>
-                        <br>
-                        <p><b>Difficulty</b></p>
-                        <br>
-                    </td>   
-                    <td style="width: 90%;">
-                        <p>Higher difficulty reduces the delay between attacks, increases the damage and slightly increases the movement speed of enemy's</p>
-                        <p>Higher difficulty reduces the delay between attacks, increases the damage and slightly increases the movement speed of enemy's</p>
-                    </td>                 
+                    <tr><td class="textImage"><img  onclick="displayPic('../war/area.png', 'The way the spider legs move to a new location', '-1', '-1')" style="width: 100%;" src="war/area.png"></td><td style="width: 51%;"></td></tr>
+                    <tr><td class="imageDescription" style="width: 49%;"><p>The way the legs move to a new position based on movement</p></td><td style="width: 51%;"></td></tr>
                 </table>
             </div>
-            <button class="collButton" id="downloads" onclick="openColl(this.id)"><b>Version history</b></button>
-            <div class="collContent" id="coll_downloads">
-                <p>maybe link patch notes to a pdf document or a popup instead of making another page</p>
-                <p>[R] = release, [B] = beta</p>                
-                <div class="downloadsTab">
-                    <div><p>[R] v1.1 enemy update</p></div>
-                    <div>
-                        <a href="../!game files/oleck/Prototype-3.zip" download="">download</a>
-                        <a>patch notes</a>
-                        <a>source code</a>
-                    </div>
+
+            <button class="collButton" id="npcOrder" onclick="openColl(this.id)"><b>NPC Ordering System</b></button>
+            <div class="collContent" id="coll_npcOrder">
+                <p>
+                    To control the MEH's i needed to make a system that would be easy to use for the player and capable. The idea I had was to make a system like Baldur's Gate 3 in 
+                    in which the mouse would be enough to control every action. This would make it easy to use and with the mouse having 2 buttons, capable of doing different things. 
+                    I made it so that for both characters left click means engage in action and right click means disengage. For the strong MEH for example, left click is picking up a 
+                    boulder and right click is dropping it. Left click on empty ground just means walk there.
+                </p>
+                <br/>
+                <table><tr>
+                    <td class="textImage"><video width="100%" controls loop><source src="war/order1.mp4"></video></td><td style="width: 2%;"></td>
+                    <td class="textImage"><video width="100%" controls loop><source src="war/order2.mp4"></video></td>
+                </tr><tr>
+                    <td class="imageDescription" style="width: 49%;"><p>first version of the ordering mechanic</p></td><td style="width: 2%;"></td>
+                    <td class="imageDescription" style="width: 49%;"><p>Later version of the ordering mechanic</p></td>
+                </tr></table>
+            </div>
+
+            <button class="collButton" id="lasers" onclick="openColl(this.id)"><b>Laser Puzzle System and level</b></button>
+            <div class="collContent" id="coll_lasers">
+                <p>
+                    One of the puzzles in the game was the laser puzzle. In this puzzle a laser would shoot out of an emitter, or laser turret, and bounce against mirrors to activate 
+                    a laser detector. That laser detector would then give a signal to wherever it was connected to (usually a door, in which case it opens). The way this is done is 
+                    by checking every grid cell in the direction of the emitter if there is something. If there is a mirror, it would check which frame the sprite is in and if it can 
+                    bounce off. If it can bounce it changes direction to the way it bounced. If there is a detector, it activates it and stops. If there is anything else on the cell 
+                    it just stops.
+                </p>
+                <p>
+                    The laser level was designed to slowly introduce the player to the lasers mechanics. The first laser only requires the mirror to be moved and the laser to be 
+                    activated. For the second laser, a mirror had to be turned around. And for the third level nothing new was introduced, but the route complicated. During this there 
+                    also is the puzzle of switching MEH's in and out of the house which adds an extra layer of complexity.
+                </p>
+                <br/>
+                <table><tr>
+                    <td class="textImage"><video width="100%" controls loop><source src="war/lasers.mp4"></video></td><td style="width: 2%;"></td>
+                    <td class="textImage"><img onclick="displayPic('../war/laser puzzle.png', 'The solution to the laser puzzle level', '-1', '-1')" style="width: 100%;" src="war/laser puzzle.png"></td>
+                </tr><tr>
+                    <td class="imageDescription" style="width: 49%;"><p>The lasers working in a test room</p></td><td style="width: 2%;"></td>
+                    <td class="imageDescription" style="width: 49%;"><p>The solution to the laser puzzle. First yellow, then blue and lastly red. Purple is all colours</p></td>
+                </tr></table>
+            </div>
+
+            <button class="collButton" id="2dAssets" onclick="openColl(this.id)"><b>2D Assets</b></button>
+            <div class="collContent" id="coll_2dAssets">
+                <p>
+                    During the development period i was also experimenting with making pixel art (for example the Oleck project). I wanted to enhance my skills in that department, so i 
+                    requested if i could do some 2d assets for our game. I  asked the player character specifically because i wanted to experiment with doing semi-realistic pixel art 
+                    together with the glass dome on the top. Later i also did the assets for the side bar where the player could select which MEH to control along with the laser turret.
+                </p>
+                <br/>
+                <table><tr>
+                    <td class="textImage"><img onclick="displayPic('../war/player sprite transparent.png', 'Player Sprite', '-1', '-1')" style="width: 50%;" src="war/player sprite transparent.png"></td><td style="width: 2%;"></td>
+                    <td class="textImage"><img onclick="displayPic('../war/frame filled.png', 'The Side Menu UI', '-1', '-1')" style="width: 23%;" src="war/frame filled.png"></td>
+                </tr><tr>
+                    <td class="imageDescription" style="width: 49%;"><p>Player sprite without the legs</p></td><td style="width: 2%;"></td>
+                    <td class="imageDescription" style="width: 49%;"><p>Side bar ui filled with controls for selecting npc along with main menu, restart, fullscreen and debug mode</p></td>
+                </tr></table>
+                <br/>
+                <table><tr>
+                    <td class="textImage"><img onclick="displayPic('../war/laser turret.png', 'Laser turret deactivated and activated', '-1', '-1')" style="width: 70%; padding-top: 2%;" src="war/laser turret.png"></td><td style="width: 2%;"></td>
+                    <td class="textImage"><img onclick="displayPic('../war/laser detection.png', 'Laser detector deactivated and activated', '-1', '-1')" style="width: 70%;" src="war/laser detection.png"></td>
+                </tr><tr>
+                    <td class="imageDescription" style="width: 49%;"><p>Laser turret sprite in it's deactivated and activated state</p></td><td style="width: 2%;"></td>
+                    <td class="imageDescription" style="width: 49%;"><p>Laser detector sprite in it's deactivated and activate state</p></td>
+                </tr></table>
+            </div>
+
+            <button class="collButton" id="concept" onclick="openColl(this.id)"><b>Game Concept</b></button>
+            <div class="collContent" id="coll_concept">
+                <p>
+                    I came up with the concept for the game. It started as a concept of a game where i could make a programming system that i have never done before, but ended as an 
+                    actually good game concept that we collectively decided on making with some tweaks to fit it to everyone's desires. At first the idea was quite big to do in 2 months 
+                    so we had to scale down and cut some things out.
+                </p>
+                <p>
+                    The idea basically is that the player is a character that has 6 mechanical spider legs that they can use to vault over gaps in the terrain, pick locks and catch bugs. 
+                    There are also CIT's that have different abilities. The main idea behind the legs was to make them smart and do things without input of the player, but this was 
+                    scrapped because of the time-constraints. The story plays out on an abandoned world where food is scarce, so the player also has to hunt for food when able. The main 
+                    objective is too gather a team of CIT's and either escape the planet or build a settlement. The idea was that all the players dialogue choices would affect the story.
+                </p>
+                <br/>
+                <div style="height: 75vh;">
+                    <embed class="pdf" src="war/The_CIT_Game.pdf" width="100%" height="100%">
                 </div>
-                <div class="downloadsTab">
-                    <div><p>[R] v1.0 release</p></div>
-                    <div>
-                        <a href="../!game files/oleck/Prototype-3.zip" download="">download</a>
-                        <a>patch notes</a>
-                        <a>source code</a>
-                    </div>
-                </div>
-                <div class="downloadsTab">
-                    <div><p>[B] v0.1</p></div>
-                    <div>
-                        <a href="../!game files/oleck/Prototype-3.zip" download="">download</a>
-                        <a>patch notes</a>
-                        <a>source code</a>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div> 
     <div id="shadow"></div> 
+    <div id="overlay" onclick="displayPic('turnOff')">
+        <img id="overlayImg" src="#setByScript" alt="Picture might be missing">
+        <p id="overlayTxt">changed in script</p>
+    </div>
 </body>
 </html>
