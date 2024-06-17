@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #2c888a;
 }
 
-.info > p, .info > P > a {
+.info > p, .info > P > a, .imageDescription > p {
     color: #e0dfd5
 }
 
@@ -60,4 +60,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .downloadsTab > div > a, .downloadsTab > div > p {
     color: #e0dfd5;
+}
+
+.imageDescription, .textImage {
+    background-color: #303638;
 }
