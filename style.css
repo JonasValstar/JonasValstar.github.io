@@ -408,6 +408,7 @@ b {
     transition: 0.2s;
     box-shadow: 3px 3px 10px black;
     max-width: 25vh;
+    cursor: pointer;
 }
 
 .picTD > img:hover {
@@ -458,7 +459,6 @@ b {
     padding-right: 10px;
     padding-bottom: 5px;
     position: relative;
-    background-color: #424b54;
     width: 30%;
 }
 
@@ -532,6 +532,7 @@ b {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
 }
 
 .downloadsTab {
@@ -564,6 +565,10 @@ b {
     width: 100%;
     max-width: 94vh;
     height: 75vh;
+}
+
+.imageDescription, .textImage {
+    background-color: #363C42;
 }
 
 /*

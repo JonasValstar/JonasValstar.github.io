@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <script src="../script.js"></script>
-    <title>Jonas Valstar | Terrain Gen</title>
+    <title>Jonas Valstar | The Great Forest: Takeover</title>
     <link rel="icon" type="image/x-icon" href="../a_pictures/favicon.gif">
 </head>
 <body onload="loadFunctions();">
@@ -39,7 +39,7 @@
         </div>
         <div id="sideBar">
             <div class="navigation">
-                <a href="../index.html"><b>Home</b></a>
+                <a href="../index.html">Home</a>
                 <a href="../projects.html"><b>Projects</b></a>
                 <a href="../about.html">About</a>
                 <a href="../contact.html">Contact</a>
@@ -50,8 +50,9 @@
                     <a target="_blank" href="https://jvalstar.itch.io/"><img src="../a_pictures/logos/itchio.png"></a>
                     <a target="_blank" href="https://www.linkedin.com/in/jonas-valstar-379112243"><img src="../a_pictures/logos/linkedIn.png"></a>
                 </div>
-                <div class="info" onclick="credits()">
+                <div class="info">
                     <p>&copy;Jonas Valstar, 2023</p>
+                    <p>background and banner images from Freepik</p>
                 </div>
             </div>
         </div>
@@ -61,115 +62,154 @@
                 <p>/</p>
                 <a href="../projects.html">projects</a>
                 <p>/</p>
-                <a href="terraingen.html">terraingen</a>
+                <a href="greatforest.html">greatforest</a>
                 <p>/</p>
             </div>
             <table id="gameTable">
                 <td id="descInfo">
                     <!---->
                     <video width="100%" autoplay muted controls loop><source src="Great Forest Takeover/showcase.mp4" type="video/mp4"></video>
-                    <p>For a now discontinued game, i made a terrain generation algorithm. With approval of my team, I designed the terrain generation algorithm myself. It might not deliver the best results as the tried and tested algorithms, but i did learn the most from it. For the tree algorithm i used poisson disc sampling, and the structures are randomly placed for now.</p>
+                    <p>
+                        For this kids game, i was the lead programmer that made the player and camera control system along with a dialogue system, a parkour race and a boss-fight. 
+                        The camera and player controls were inspired by how they are designed in the TT lego games with our own changes. The game also features a lot of dialogue 
+                        so i also designed a system to manage that dialogue and display it to the player. This system would by used by other team members, so i made sure to make it 
+                        as user friendly as i could. The parkour race uses unity's nav-mesh and off-mesh links along with a custom system to make the bunny (the player opponent) take 
+                        breaks. The boss-fight i made to have any amount of fully adjustable stages with puzzle and attack stages switching between each other. 
+                    </p>
                     <br/>
                     <h3>Design Process</h3>
-                    <p>The first idea was that structures would spawn based on where the player was moving to. The idea behind it was that the player could walk around in an infinitely expanding world and feel lost while always being able to miraculously find the objectives. We eventually opted for a map generated at the start of the game, structures included. At this point i had the code for generating trees and toggling them on and off, the latter of which was now technically redundant but i kept it in anyway. After that i started working on a terrain generation algorithm. The first version i cam up with was very bumpy so i tried to make another one that was more hilly instead. In the end product i eventually combined both of them into one final terrain.</p>
+                    <p>
+                        For the 3rd project of my studies we had to make kids for a pretend client. After 2 failed concepts, we eventually started working on this concept that did work. 
+                        I first made the player and camera controls because they were the most important to get right. The system was inspired by how it works in most TT lego games 
+                        because it works great for puzzle games which our game was. After we made concepts for level 2 and 3, we knew we also wanted a parkour race in level 2 and a 
+                        boss-fight to end the game in level 3. I started with making the boss-fight, so that we could test the difficulty with the target audience as soon as possible. 
+                        after making the main system of the boss-fight, i made the parkour race work. The team member making the story also wanted to put in the dialogue, so in between 
+                        i made the dialogue system. 
+                    </p>
                     <br/>
-                    <h3>Future Plans</h3>
-                    <p>I am planning on continuing working on this and eventually make it into a game. First is making the generation better though. I am planning on making the current terrain generation a biome generation instead and using a more classical existing algorithm like Perlin noise for the terrain. Along with that i am planning on making it infinite by generating in chunks that connect to each other. For that i also need to make the current system work asynchronous.</p>
                 </td>
                 <td id="techInfo">
-                    <img id="gameLogo" class="pixelArt" src="Terrain Gen/Terrain Gen logo.png">
+                    <img id="gameLogo" src="Great Forest Takeover/greatforestLogo.png">
                     <p><b>Engine</b></p>
                     <a target="_blank" href="https://unity.com/">Unity 2022.3.20f1</a>
                     <p><b>Development Time</b></p>
-                    <a>1 Week</a>
+                    <a>3 Months</a>
                     <p><b>Developed by:</b></p>
                     <a>Jonas Valstar</a><br />
+                    <a>Elen Butković</a><br />
+                    <a>Leonie van den Hengel</a><br />
+                    <a>Jasmijn Hoogeveen</a><br />
+                    <a>Sem Jager</a><br />
+                    <a>Alex Noppert</a><br />
                     <p><b>My Role(s):</b></p>
-                    <a>Sole Developer</a>
+                    <a>Lead Programmer</a><br/>
+                    <a>3D Artist</a><br/>
                     <p><b>Features</b></p>
-                    <a>Generated Terrain</a><br/>
-                    <a>Generated Trees</a><br/>
-                    <a>Generated Structures</a>
+                    <a>Boss-fight</a><br/>
+                    <a>Parkour Race</a><br/>
+                    <a>Dialogue System</a><br/>
+                    <a>Player and Camera movement</a>
                     <p><b>Platform</b></p>
                     <a>Windows</a>       
                     <p><b>Download</b></p>
-                    <a href="#downloads" onclick="onlyOpenColl('downloads')">Direct</a> <br />
+                    <a href="https://jvalstar.itch.io/the-great-forest-takeover\">Itch.io</a>
                 </td>
             </table>
 
-            <button class="collButton" id="media" onclick="openColl(this.id)"><b>Development Timelapse</b></button>
-            <div class="collContent" id="coll_media">
-                <video width="100%" controls><source src="Terrain Gen/timelapse.mp4" type="video/mp4"></video>
-                <p>During the development of the terrain generation script i recorded everything i did. Later i combined this footage into a time-lapse because time-lapses are a great way of showing a process in a short amount of time. The total length of the footage is around 6 hours.</p>
-            </div>
-
-            <button class="collButton" id="controlsOverview" onclick="openColl(this.id)"><b>Terrain Generation</b></button>
-            <div class="collContent" id="coll_controlsOverview">
-                <p>For generating the terrain i decided to not look at any pre-existing algorithms on the internet and try to come up with something myself. The first idea i had for this was to make a 2d array with all the points in the terrain. The script would then loop over all points and take the average of all the surrounding points that had already been assigned. To this average it would than add or subtract a number that makes sure it never goes above the maximum or under the minimum and would be biased towards the middle point.</p>
-                <table>
-                    <tr><td style="width: 49%;"><video width="100%" controls loop><source src="Terrain Gen/terrain 1.mp4"></video></td><td style="width: 51%;"></td></tr>
-                    <tr><td class="imageDescription" style="width: 49%;"><p>The first terrain generation algorithm</p></td><td style="width: 51%;"></td></tr>
-                </table>
+            <button class="collButton" id="bossfight" onclick="openColl(this.id)"><b>Boss-fight</b></button>
+            <div class="collContent" id="coll_bossfight">
+                <p>
+                    The last level in the game would be a boss-fight that would act as the epic conclusion to the story. Because the game is a puzzle game in it's core, the way the 
+                    player damages the boss should be a puzzle mechanic to keep things consistent. This is why we opted to go for a system where puzzle and attack stage would alternate. 
+                    In the puzzle stage, the player would do the mole's puzzle introduced in level one to make sure the player doesn't need to quickly learn a whole new system. After 
+                    testing resulted that the puzzle alone was a bit boring, I also added a attack the player would have to dodge in this stage. The attack stage is a stage where the 
+                    player just has to survive until the stage is over. During that, the boss would fire plenty off attacks their way which the player needs to dodge. Because we planned 
+                    on only having 2 attack stages, i made 2 different attacks. The first was an easy wave attack the player could either dodge or jump over. The second attack was 
+                    introduced in the second attack stage and was a circle attack that would spawning a circle of which the radius would increase. Because we were going to test the fight 
+                    a lot and needed to tweak it quickly, i made all stage settings stored inside of scriptable objects. These scriptable objects would be added to a list and that would 
+                    be the amount of stages. Every even stage (beginning at 0) would be a mole puzzle and all the odd stages would be attack ones.
+                </p>
                 <br/>
-                <p>This way of generating terrain is great for a bumpy field, but it would be nice to also have hills. For this I ended up using a script that I first made for maybe adding biomes to the terrain. This biome generation works in a completely different way to the first terrain generation. This script stats with a small 2d array of around 5x5. These points are given completely random height values. Then the script makes a new array that is twice as big (in this case 10x10). The values from the 5x5 grid are implemented on all the even numbered points and the rest is filled in as an average </p>
+                <table><tr>
+                    <td class="textImage"><video width="100%" controls loop><source src="Great Forest Takeover/bossfight main.mp4"></video></td><td style="width: 2%;"></td>
+                    <td class="textImage"><video width="100%" controls loop><source src="Great Forest Takeover/bossfight mole.mp4"></video></td>
+                </tr><tr>
+                    <td class="imageDescription" style="width: 49%;"><p>How the different stages in the boss-fight work</p></td><td style="width: 2%;"></td>
+                    <td class="imageDescription" style="width: 49%;"><p>The attack that was later added to the mole puzzle stage</p></td>
+                </tr></table>
             </div>
 
-            <button class="collButton" id="mechanics" onclick="openColl(this.id)"><b>Tree Generation</b></button>
-            <div class="collContent" id="coll_mechanics">
-                <p>The tree generation I made using using a technique called Poisson Disc Sampling. The way this works is by generating a point in a predetermined area. That point is assigned a set amount of new points a set distance away in a circle shape. These points are then checked if the radius overlaps with another point. If so, it is discarded. If not the point is added to the list of actual points and assigned its own new points. This repeats until the whole area is full. The first version I made used a constant distance between points. This looked fine for dense forests, but normally forests are much more randomly packed. That is why i changed it to use a random distance between points between 2 values instead.</p>
-                <table>
-                    <tr>
-                        <td style="width: 49%;"><video width="100%" controls loop><source src="Terrain Gen/tree spawning 1.mp4"></video></td>
-                        <td style="width: 2%;"></td>
-                        <td style="width: 49%;"><video width="100%" controls loop><source src="Terrain Gen/tree spawning 2.mp4"></video></td>
-                    </tr>
-                    <tr>
-                        <td class="imageDescription" style="width: 49%;"><p>Version 1: with a constant distance between points</p></td>
-                        <td style="width: 2%;"></td>
-                        <td class="imageDescription" style="width: 49%;"><p>Version 2: with a random distance between points</p></td>
-                    </tr>
-                </table>
+            <button class="collButton" id="parkour" onclick="openColl(this.id)"><b>Parkour Race</b></button>
+            <div class="collContent" id="coll_parkour">
+                <p>
+                    In the second level the player would have to win race against a bunny to proceed. The first idea was to make this by placing invisible platforms between the actual 
+                    platforms for the bunny to walk over. But when i found out off-mesh links existed, I opted for that instead. The normal way for the ai to take an off-mesh however 
+                    is straight. When searching for a way to make it more like a jump I found a tutorial that explained how that could be done. With that issue fixed, there was still 
+                    the fact that the bunny was a lot faster than the player, especially kids. It wouldn't make sense that a bunny is bad at jumping so I came up with the solution to 
+                    make the bunny be exhausted every couple of jumps. The way i made that is by giving the script an amount of rest moments. It would then calculate the average amount 
+                    of jumps between rests, which was used to give every rest moment a random interval between 1 and 2 times the average. Lastly I made the script check if the total 
+                    amount of jumps wasn't more or less that the total amount of real jumps. If that was the case it would randomly remove or add to the moments until it matched up.
+                </p>
                 <br/>
-                <p>The first idea the team had, was to spawn the objectives in front of the player, so i made sure that the trees could be toggled on and off at will. The way i did this is by adding all the trees to a list. Then whenever a structure moved it would loop over every point to see if it was colliding with the structure. If a collision was found, the point would be deactivated and put into a list of all currently deactivated trees. Then, whenever the structure moved again, we could loop over all deactivated trees and activate the ones that were no longer colliding.</p>            
-                <table>
-                    <tr><td style="width: 49%;"><video width="100%" controls loop><source src="Terrain Gen/tree toggling.mp4"></video></td><td style="width: 51%;"></td></tr>
-                    <tr><td class="imageDescription" style="width: 49%;"><p>Trees disappearing when coming in contact with the green area</p></td><td style="width: 51%;"></td></tr>
-                </table>
+                <table><tr>
+                    <td class="textImage"><video width="100%" controls loop><source src="Great Forest Takeover/race 1.mp4"></video></td><td style="width: 2%;"></td>
+                    <td class="textImage"><video width="100%" controls loop><source src="Great Forest Takeover/race 2.mp4"></video></td>
+                </tr><tr>
+                    <td class="imageDescription" style="width: 49%;"><p>The first version of the parkour race</p></td><td style="width: 2%;"></td>
+                    <td class="imageDescription" style="width: 49%;"><p>The latest version with parabolic jumping, pauses, post processing and winning</p></td>
+                </tr></table>
             </div>
 
-            <button class="collButton" id="settingsOverview" onclick="openColl(this.id)"><b>Structure Generation</b></button>
-            <div class="collContent" id="coll_settingsOverview">
-                <p>An explanation of what a plethora of different settings do</p>
-                <p>for example:</p>
-                <table>
-                    <td style="width: 10%;">
-                        <p><b>Difficulty</b></p>
-                        <br>
-                        <p><b>Difficulty</b></p>
-                        <br>
-                    </td>   
-                    <td style="width: 90%;">
-                        <p>Higher difficulty reduces the delay between attacks, increases the damage and slightly increases the movement speed of enemy's</p>
-                        <p>Higher difficulty reduces the delay between attacks, increases the damage and slightly increases the movement speed of enemy's</p>
-                    </td>                 
-                </table>
+            <button class="collButton" id="dialogue" onclick="openColl(this.id)"><b>Dialogue System</b></button>
+            <div class="collContent" id="coll_dialogue">
+                <p>
+                    The game would be telling most of the story and some mechanics through the dialogue the player could have with the animals. It was therefore essential that it 
+                    worked without any bugs and was easy to use for implementing new dialogue. I started with the writing 'animation'. I made it work so that every set interval it 
+                    would write one more character from a text string. If a certain button was pressed it would skip and display the full string. The same button would then be used 
+                    to enter the next window and that text would start to be written. After all the windows were displayed, it would display the set response options. Theses buttons 
+                    could be set-up to start a new dialogue or to exit out of dialogue. The way i made it work is by making all dialogue parts a scriptable object. Every setting could 
+                    be adjusted in the scriptable object and then dragged into a list of all parts. In the response options an index could then be given of a new dialogue to load 
+                    corresponding with the index of the dialogue scriptable object.
+                </p>
+                <br/>
+                <table><tr>
+                    <td class="textImage" style="width: 49%;"><video width="100%" controls loop><source src="Great Forest Takeover/dialogue.mp4"></video></td><td style="width: 2%;"></td>
+                    <td class="textImage" style="width: 49%;"><img onclick="displayPic('../Great Forest Takeover/dialogue settings.png', 'The settings for every piece of dialogue', '-1', '-1')" style="width: 50%;" src="Great Forest Takeover/dialogue settings.png"></td>
+                </tr>
+                <tr>
+                    <td class="imageDescription" style="width: 49%;"><p>The dialogue system working</p></td><td style="width: 2%;"></td>
+                    <td class="imageDescription" style="width: 49%;"><p>The settings for every piece of dialogue</p></td>
+                </tr></table>
+            </div>
+
+            <button class="collButton" id="playerCamera" onclick="openColl(this.id)"><b>Player and Camera movement</b></button>
+            <div class="collContent" id="coll_playerCamera">
+                <p>
+                    The way the camera and player moves is inspired by the TT Lego games. The camera always looks from a certain side and rotates to keep the player in view. If the 
+                    camera has to rotate more than a certain amount of degrees it moves to the left, right, up or down. If the player comes too close or goes to far away, the camera 
+                    moves away or towards. This simple system combined with certain area's where the camera has a fixed position makes the camera system.
+                </p>
+                <p>
+                    The player's movement is based on the rotation of the camera to make sure the player always walks forward from where the player sees the player character. The player 
+                    also has a system that if the character's chest to feet touch the ledge of a platform it will climb up. This was implemented after we got feedback that the jumping 
+                    was too difficult.
+                </p>
+                <br/>
+                <table><tr>
+                    <td style="width: 49%;"><video width="100%" controls loop><source src="Great Forest Takeover/camera and movement.mp4"></video></td><td style="width: 2%;"></td>
+                    <td style="width: 49%;"><video width="100%" controls loop><source src="Great Forest Takeover/camera pull.mp4"></video></td>
+                </tr>
+                <tr>
+                    <td class="imageDescription" style="width: 49%;"><p>An early version of the game showing the camera and how it works together with moving</p></td><td style="width: 2%;"></td>
+                    <td class="imageDescription" style="width: 49%;"><p>Grabbing onto ledges</p></td>
+                </tr></table>
             </div>
             <button class="collButton" id="downloads" onclick="openColl(this.id)"><b>Downloads</b></button>
             <div class="collContent" id="coll_downloads">
-                <p>maybe link patch notes to a pdf document or a popup instead of making another page</p>
-                <p>[R] = release, [B] = beta</p>
                 <div class="downloadsTab">
-                    <div><p>Unity Project Files</p></div>
+                    <div><p>The Great Forest: Takeover v0.1</p></div>
                     <div>
-                        <a href="../!game files/oleck/Prototype-3.zip" download="">download</a>
-                        <a class="outgoingLink" href="#link to github">github</a>
-                    </div>
-                </div>
-                <div class="downloadsTab">
-                    <div><p>TerrainScript.cs</p></div>
-                    <div>
-                        <a href="../!game files/oleck/Prototype-3.zip" download="">download</a>
-                        <a class="outgoingLink" href="#link to github">github</a>
+                        <a class="outgoingLink" href="https://jvalstar.itch.io/the-great-forest-takeover\" target="_blank">Itch.io</a>
                     </div>
                 </div>
             </div>
