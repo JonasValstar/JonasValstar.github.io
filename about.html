@@ -87,29 +87,49 @@
                             improving something until i can't find any small mistake anymore or the deadline is in 5 minutes.
                         </p>
                         <br/>
-                        <h3>Hard Skills</h3>
-                        <p>Programming</p>
-                        <p>3D modelling</p>
-                        <p>Photoshop</p>
+                        <table style="width: 100%;"><tr>
+                            <td style="vertical-align: top; width: 32%;">
+                                <h3>Hard Skills</h3>
+                                <p>Programming</p>
+                                <p>3D modelling</p>
+                                <p>Photoshop</p>
+                            </td><td style="width: 2%;"></td>
+                            <td style="vertical-align: top; width: 32%;">
+                                <h3>Soft Skills</h3>
+                                <p>Creative</p>
+                                <p>Perfectionist</p>
+                                <p>Proactive</p>
+                                <p>Dedicated</p>
+                                <p>Perseverance</p>
+                                <p>Teamwork</p>
+                                <p>Patient</p>
+                                <p>Stressless</p>
+                            </td>
+                            <td style="width: 2%;"></td>
+                            <td style="vertical-align: top; width: 32%;">
+                                <h3>Interest</h3>
+                                <p>Programming</p>
+                                <p>Video Games</p>
+                                <p>Movies</p>
+                                <p>Photography</p>
+                                <p>Warhammer</p>
+                                <p>Trains</p>
+                            </td>
+                        </tr></table>                        
                         <br/>
-                        <h3>Soft Skills</h3>
-                        <p>Creative</p>
-                        <p>Perfectionist</p>
-                        <p>Proactive</p>
-                        <p>Dedicated</p>
-                        <p>Perseverance</p>
-                        <p>Teamwork</p>
-                        <p>Patient</p>
-                        <p>Stressless</p>
                     </td>
                     <td style="width: 40%; vertical-align: top;">
-                        <img style="width: 100%; display: block;" src="a_pictures/about/me2.JPG">
+                        <img style="width: 100%; display: block;" src="a_pictures/about/me2.jpg" onclick="displayPic('../a_pictures/about/me2.jpg', 'Me on Terschelling', '-1', '-1')">
                     </td>
                 </tr>
             </table>
                  
         </div>
     </div> 
-    <div id="shadow"></div> 
+    <div id="shadow"></div>
+    <div id="overlay" onclick="displayPic('turnOff')">
+        <img id="overlayImg" src="#setByScript" alt="Picture might be missing">
+        <p id="overlayTxt">changed in script</p>
+    </div> 
 </body>
 </html>
