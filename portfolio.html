@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Jonas Valstar | Portfolio Projects</title>
+    <link rel="icon" type="image/x-icon" href="a_pictures/favicon.gif">
+</head>
+<body onload="loadFunctions()">
+    <div id="container">
+        <div id="topBar"> 
+            <div class="logo">
+                <h1><a href="index.html">Jonas Valstar</a></h1>
+            </div>
+            <div class="slideshow">
+                <a class="prev" onclick="showSlide(1)">&#10094;</a>
+                <div class="slide"><a><q>This game would not have been possible without you</q></a></div>
+                <div class="slide"><a><q>You learn whatever you set your mind to SO FAST</q></a></div>
+                <div class="slide"><a><q>Just Keep doing what you are Fucking doing</q></a></div>
+                <div class="slide"><a><q>Jonas, I think all of us owe you a piece of our grade</q></a></div>
+                <div class="slide"><a><q>You are the definition of 'Doing things for shits and giggles'</q></a></div>
+                <div class="slide"><a><q>10/10 would work with again any time any day</q></a></div>
+                <div class="slide"><a><q>You have experience in c# and it shows</q></a></div>
+                <div class="slide"><a><q>My dear friend, how the fuck do you keep pulling this shit off</q></a></div>
+                <div class="slide"><a><q>You inspire me to be as good a programmer as you some day</q></a></div>
+                <div class="slide"><a><q>You, good sir, don't get to feel useless</q></a></div>
+                <div class="slide"><a><q>You take time to explain things to us in such a nice way</q></a></div>
+                <div class="slide"><a><q>Very talented coder and a great understanding of Unity</q></a></div>
+                <div class="slide"><a><q>You were the foundation of this team and you did amazing</q></a></div>
+                <div class="slide"><a><q>What skills do you not have</q></a></div>
+                <div class="slide"><a><q>Seriously I wish I had the pace of work you do</q></a></div>
+                <div class="slide"><a><q>You always do more then we ask you to</q></a></div>
+                <div class="slide"><a><q>You are a very great worker and valuable asset to a team</q></a></div>
+                <div class="slide"><a><q>Why would you need so many quotes on your website?</q></a></div>
+                <a class="next" onclick="showSlide(2)">&#10095;</a>
+            </div>
+        </div>
+        <div id="sideBar">
+            <div class="navigation">
+                <a href="index.html">Home</a>
+                <a href="portfolio.html"><b>Portfolio Projects</b></a>
+                <a href="projects.html">All Projects</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer">
+                <div class="links">
+                    <a target="_blank" href="https://github.com/JonasValstar"><img src="a_pictures/logos/github.png"></a>
+                    <a target="_blank" href="https://jvalstar.itch.io/"><img src="a_pictures/logos/itchio.png"></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/jonas-valstar-379112243"><img src="a_pictures/logos/linkedIn.png"></a>
+                </div>
+                <div class="info">
+                    <p>&copy;Jonas Valstar, 2023</p>
+                    <p>background and banner images from Freepik</p>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="tree">
+                <a href="index.html">jonasvalstar.github.io</a>
+                <p>/</p>
+                <a href="projects.html">projects</a>
+                <p>/</p>
+            </div>
+            <img src="a_pictures/banners/projects.png">
+            <div class="artShadow"></div> <!--!decide if i want this-->
+            <a class="mainPicA" style="padding: 0;" href="projects/sampi.html"><div class="mainPic" style="background-color: #D4D2C4; color: #303638;">
+                <table style="border-collapse: collapse;">
+                    <td class="mainPicImg"><img src="projects/sampi/Sampi Poster wide.png"/></td>
+                    <td class="mainPicText">
+                        <h1 style="color: #2c888a ;">Sampi</h1>
+                        <p>Custom made AI opponent</p>
+                        <p>&nbsp;</p>
+                        <p><b>Description:</b> A digital board game where the objective is to reach the opposite side of the board before you opponent does.</p>
+                        <p><b>Team Role:</b> Sole programmer and visual designer</p>
+                        <p><b>Made with:</b> Unity 2021.3.13f1</p>
+                        <p><b>Dev Time:</b> 2 weeks</p>
+                    </td>
+                </table>
+            </div></a>
+            <a class="mainPicA" style="padding: 0;" href="projects/war.html"><div class="mainPic" style="background-color: #353535; color: #6a6a6a;">
+                <table style="border-collapse: collapse;">
+                    <td class="mainPicImg"><img class="pixelArt" src="projects/war/WAR Poster wide.png"/></td>
+                    <td class="mainPicText">
+                        <h1 style="color: #ee1c24;">W.A.R.</h1>
+                        <p>Procedurally animated spider legs</p>
+                        <p>&nbsp;</p>
+                        <p><b>Description:</b> A 2D top-down puzzle game where you have to have to use each characters unique ability to solve various puzzles</p>
+                        <p><b>Team Role:</b> Lead Programmer and 2d artist</p>
+                        <p><b>Made with:</b> GameMaker v2023.11.0.121</p>
+                        <p><b>Dev Time:</b> 2 months</p>
+                    </td>
+                </table>
+            </div></a>
+            <a class="mainPicA" style="padding: 0;" href="projects/terraingen.html"><div class="mainPic" style="background-color: #182138; color: #3d548f;">
+                <table style="border-collapse: collapse;">
+                    <td class="mainPicImg"><img src="projects/Terrain Gen/Terrain Gen poster wide.png"/></td>
+                    <td class="mainPicText">
+                        <h1 style="color: #678df0;">Terrain Gen</h1>
+                        <p>Custom made terrain generation</p>
+                        <p>&nbsp;</p>
+                        <p><b>Description:</b> Originally made for a discontinued game, a system generating a piece of terrain with trees and structures</p>
+                        <p><b>Team Role:</b> Solo developer</p>
+                        <p><b>Made with:</b> Unity 2022.3.20f1</p>
+                        <p><b>Dev Time:</b> 1 week <span style="font-family: ErasLightITC;">(so far)</span></p>
+                    </td>
+                </table>
+            </div></a>
+            <table class="picTable">
+                <tr class="picTR">
+                    <td class="picTD"><a href="projects/greatforest.html"><img src="projects/Great Forest Takeover/Great Forest poster.png"/></a><div class="gameMenu"><p>Puzzle game with dialogue, a race and a boss fight</p></div></td>
+                    <td class="picTD"><a href="projects/mechMates.html"><img src="projects/mechMates/MechMates Poster.png"/></a><div class="gameMenu"><p>GameJam horde shooter game with switchable weapons</p></div></td>
+                    <td class="picTD"><a href="projects/udderChaos.html"><img src="projects/udderChaos/Udder Chaos Poster.png"/></a> <div class="gameMenu"><p>2D 1v1 fighting game inspired by stickfight and rounds</p></div></td>
+                </tr>
+                <tr class="picTR">
+                    <td class="picTD"><a href="projects/tdgame.html"><img src="projects/TD Game/GameJam poster.png" class="pixelArt"/></a><div class="gameMenu"><p>GameJam tower defense game with grid based building</p></div></td>
+                    <td class="picTD"><a href="projects/tijnballgame.html"><img src="projects/tijnSimpleBallGame/TSBG Poster.png"/></a><div class="gameMenu"><p>2D game where you try to score a ball through a hoop</p></div></td>
+                </tr>
+            </table>   
+            <p>&nbsp;</p>
+            <h1 class="SectionHeader">Other Projects</h1>
+            <p>Apart from the main programming projects, i have also made some other things that i think are interesting. these are either non-programming projects or small programming tests</p>
+            <table class="picTable">
+                <tr class="picTR">
+                    <td class="picTD"><a href="projects/toast.html"><img src="projects/Toast/toast poster.png"/></a> <div class="gameMenu"><p>3D Animation</p></div></td>
+                    <td class="picTD"><a href="projects/oleck.html"><img src="projects/oleck/Oleck Poster.png" class="pixelArt"/></a><div class="gameMenu"><p>Pixel Art</p></div></td>
+                    <td class="picTD"><a href="projects/blackwaterbandits.html"><img src="projects/blackwaterBandits/Blackwater Bandits poster.png"/></a><div class="gameMenu"><p>Board Game</p></div></td>
+                </tr>
+                <tr class="picTR">
+                    <td class="picTD"><a href="projects/posters.html"><img src="projects/posters/DRG Poster 1.png"/></a> <div class="gameMenu"><p>Movie style posters</p></div></td>
+                </tr>
+            </table>   
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+        </div>
+    </div> 
+    <div id="shadow"></div> 
+</body>
+</html>

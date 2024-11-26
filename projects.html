@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <title>Jonas Valstar | Games</title>
+    <script src="projectScript.js"></script>
+    <title>Jonas Valstar | All Projects</title>
     <link rel="icon" type="image/x-icon" href="a_pictures/favicon.gif">
 </head>
-<body onload="loadFunctions()">
+<body onload="loadFunctions(); loadProjects()">
     <div id="container">
         <div id="topBar"> 
             <div class="logo">
@@ -40,7 +41,8 @@
         <div id="sideBar">
             <div class="navigation">
                 <a href="index.html">Home</a>
-                <a href="projects.html"><b>Projects</b></a>
+                <a href="portfolio.html">Portfolio Projects</a>
+                <a href="projects.html"><b>All Projects</b></a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
             </div>
@@ -65,72 +67,140 @@
             </div>
             <img src="a_pictures/banners/projects.png">
             <div class="artShadow"></div> <!--!decide if i want this-->
-            <a class="mainPicA" style="padding: 0;" href="projects/sampi.html"><div class="mainPic" style="background-color: #D4D2C4; color: #303638;">
-                <table style="border-collapse: collapse;">
-                    <td class="mainPicImg"><img src="projects/sampi/Sampi Poster wide.png"/></td>
-                    <td class="mainPicText">
-                        <h1 style="color: #2c888a ;">Sampi</h1>
-                        <p>Custom made AI opponent</p>
-                        <p>&nbsp;</p>
-                        <p><b>Description:</b> A digital board game where the objective is to reach the opposite side of the board before you opponent does.</p>
-                        <p><b>Team Role:</b> Sole programmer and visual designer</p>
-                        <p><b>Made with:</b> Unity 2021.3.13f1</p>
-                        <p><b>Dev Time:</b> 2 weeks</p>
-                    </td>
-                </table>
-            </div></a>
-            <a class="mainPicA" style="padding: 0;" href="projects/war.html"><div class="mainPic" style="background-color: #353535; color: #6a6a6a;">
-                <table style="border-collapse: collapse;">
-                    <td class="mainPicImg"><img class="pixelArt" src="projects/war/WAR Poster wide.png"/></td>
-                    <td class="mainPicText">
-                        <h1 style="color: #ee1c24;">W.A.R.</h1>
-                        <p>Procedurally animated spider legs</p>
-                        <p>&nbsp;</p>
-                        <p><b>Description:</b> A 2D top-down puzzle game where you have to have to use each characters unique ability to solve various puzzles</p>
-                        <p><b>Team Role:</b> Lead Programmer and 2d artist</p>
-                        <p><b>Made with:</b> GameMaker v2023.11.0.121</p>
-                        <p><b>Dev Time:</b> 2 months</p>
-                    </td>
-                </table>
-            </div></a>
-            <a class="mainPicA" style="padding: 0;" href="projects/terraingen.html"><div class="mainPic" style="background-color: #182138; color: #3d548f;">
-                <table style="border-collapse: collapse;">
-                    <td class="mainPicImg"><img src="projects/Terrain Gen/Terrain Gen poster wide.png"/></td>
-                    <td class="mainPicText">
-                        <h1 style="color: #678df0;">Terrain Gen</h1>
-                        <p>Custom made terrain generation</p>
-                        <p>&nbsp;</p>
-                        <p><b>Description:</b> Originally made for a discontinued game, a system generating a piece of terrain with trees and structures</p>
-                        <p><b>Team Role:</b> Solo developer</p>
-                        <p><b>Made with:</b> Unity 2022.3.20f1</p>
-                        <p><b>Dev Time:</b> 1 week <span style="font-family: ErasLightITC;">(so far)</span></p>
-                    </td>
-                </table>
-            </div></a>
             <table class="picTable">
                 <tr class="picTR">
-                    <td class="picTD"><a href="projects/greatforest.html"><img src="projects/Great Forest Takeover/Great Forest poster.png"/></a><div class="gameMenu"><p>Puzzle game with dialogue, a race and a boss fight</p></div></td>
-                    <td class="picTD"><a href="projects/mechMates.html"><img src="projects/mechMates/MechMates Poster.png"/></a><div class="gameMenu"><p>GameJam horde shooter game with switchable weapons</p></div></td>
-                    <td class="picTD"><a href="projects/udderChaos.html"><img src="projects/udderChaos/Udder Chaos Poster.png"/></a> <div class="gameMenu"><p>2D 1v1 fighting game inspired by stickfight and rounds</p></div></td>
+                    <td class="picTD" id="n_Sampi" data-tag0="Unity" data-tag1="C#">
+                        <a href="projects/sampi.html"><img src="projects/sampi/Sampi Poster.png"/></a>
+                        <div class="gameMenu"><h3><b>Sampi</b></h3></div>
+                        <div class="gameMenu"><p>Digital board game with custom AI opponent</p></div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag(this.outerText)">Unity</a>
+                            <a onclick="ToggleTag(this.outerText)">C#</a>
+                            <a onclick="ToggleTag(this.outerText)">2D</a>
+                            <a onclick="ToggleTag(this.outerText)">School</a>
+                        </div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag(this.outerText)">Programmer</a>
+                            <a onclick="ToggleTag(this.outerText)">Artist</a>
+                        </div>
+                    </td>
+                    <td class="picTD" id="n_War" data-tag0="Unity" data-tag1="C#">
+                        <a href="projects/war.html"><img src="projects/war/WAR Poster.png" class="pixelArt"/></a>
+                        <div class="gameMenu"><h3><b>W.A.R.</b></h3></div>
+                        <div class="gameMenu"><p>Puzzle game with procedural animation and NPC ordering</p></div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag(this.outerText)">GameMaker</a>
+                            <a onclick="ToggleTag(this.outerText)">GML</a>
+                            <a onclick="ToggleTag(this.outerText)">2D</a>
+                        </div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag(this.outerText)">Procedural</a>
+                            <a onclick="ToggleTag(this.outerText)">School</a>
+                        </div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag(this.outerText)">Programmer</a>
+                            <a onclick="ToggleTag(this.outerText)">Artist</a>
+                        </div>
+                    </td>
+                    <td class="picTD" id="n_TerrainGen" data-tag0="C#">
+                        <a href="projects/terraingen.html"><img src="projects/Terrain Gen/Terrain Gen poster.png"/></a>
+                        <div class="gameMenu"><h3><b>TerrainGen</b></h3></div>
+                        <div class="gameMenu"><p>Custom designed Terrain Generation algorithm</p></div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag(this.outerText)">Unity</a>
+                            <a onclick="ToggleTag(this.outerText)">C#</a>
+                            <a onclick="ToggleTag(this.outerText)">3D</a>
+                            <a onclick="ToggleTag(this.outerText)">Procedural</a>
+                        </div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag(this.outerText)">Personal</a>
+                            <a onclick="ToggleTag(this.outerText)">Programmer</a>
+                        </div>
+                    </td>
                 </tr>
                 <tr class="picTR">
-                    <td class="picTD"><a href="projects/tdgame.html"><img src="projects/TD Game/GameJam poster.png" class="pixelArt"/></a><div class="gameMenu"><p>GameJam tower defense game with grid based building</p></div></td>
-                    <td class="picTD"><a href="projects/tijnballgame.html"><img src="projects/tijnSimpleBallGame/TSBG Poster.png"/></a><div class="gameMenu"><p>2D game where you try to score a ball through a hoop</p></div></td>
+                    <td class="picTD" id="n_TheGreatForest">
+                        <a href="projects/greatforest.html"><img src="projects/Great Forest Takeover/Great Forest poster.png"/></a>
+                        <div class="gameMenu"><h3><b>The Great Forest</b></h3></div>
+                        <div class="gameMenu"><p>Puzzle game with dialogue, a race and a boss fight</p></div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag('Unity')">Unity</a>
+                            <a onclick="ToggleTag(this.outerText)">C#</a>
+                            <a onclick="ToggleTag(this.outerText)">3D</a>
+                            <a onclick="ToggleTag(this.outerText)">School</a>
+                        </div>
+                    </td>
+                    <td class="picTD" id="n_MechMates">
+                        <a href="projects/mechMates.html"><img src="projects/mechMates/MechMates Poster.png"/></a>
+                        <div class="gameMenu"><h3><b>MechMates</b></h3></div>
+                        <div class="gameMenu"><p>GameJam horde shooter game with switchable weapons</p></div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag('Unity')">Unity</a>
+                            <a onclick="ToggleTag(this.outerText)">C#</a>
+                            <a onclick="ToggleTag(this.outerText)">GameJam</a>
+                        </div>
+                    </td>
+                    <td class="picTD" id="n_UdderChaos">
+                        <a href="projects/udderChaos.html"><img src="projects/udderChaos/Udder Chaos Poster.png"/></a>
+                        <div class="gameMenu"><h3><b>Udder Chaos</b></h3></div>
+                        <div class="gameMenu"><p>2D 1v1 fighting game inspired by stickfight and rounds</p></div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag('Unity')">Unity</a>
+                            <a onclick="ToggleTag(this.outerText)">C#</a>
+                            <a onclick="ToggleTag(this.outerText)">School</a>
+                        </div>
+                    </td>
                 </tr>
-            </table>   
-            <p>&nbsp;</p>
-            <h1 class="SectionHeader">Other Projects</h1>
-            <p>Apart from the main programming projects, i have also made some other things that i think are interesting. these are either non-programming projects or small programming tests</p>
-            <table class="picTable">
                 <tr class="picTR">
-                    <td class="picTD"><a href="projects/toast.html"><img src="projects/Toast/toast poster.png"/></a> <div class="gameMenu"><p>3D Animation</p></div></td>
-                    <td class="picTD"><a href="projects/oleck.html"><img src="projects/oleck/Oleck Poster.png" class="pixelArt"/></a><div class="gameMenu"><p>Pixel Art</p></div></td>
-                    <td class="picTD"><a href="projects/blackwaterbandits.html"><img src="projects/blackwaterBandits/Blackwater Bandits poster.png"/></a><div class="gameMenu"><p>Board Game</p></div></td>
+                    <td class="picTD" id="n_TDGame">
+                        <a href="projects/tdgame.html"><img src="projects/TD Game/GameJam poster.png" class="pixelArt"/></a>
+                        <div class="gameMenu"><h3><b>TD Game</b></h3></div>
+                        <div class="gameMenu"><p>GameJam tower defense game with grid based building</p></div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag('Unity')">Unity</a>
+                            <a onclick="ToggleTag(this.outerText)">C#</a>
+                            <a onclick="ToggleTag(this.outerText)">GameJam</a>
+                        </div>
+                    </td>
+                    <td class="picTD" id="n_TijnsBallGame">
+                        <a href="projects/tijnballgame.html"><img src="projects/tijnSimpleBallGame/TSBG Poster.png"/></a>
+                        <div class="gameMenu"><h3><b>Tijn's Ball Game</b></h3></div>
+                        <div class="gameMenu"><p>2D game where you try to score a ball through a hoop</p></div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag('Unity')">Unity</a>
+                            <a onclick="ToggleTag(this.outerText)">C#</a>
+                            <a onclick="ToggleTag(this.outerText)">Personal</a>
+                        </div>
+                    </td>
+                    <td class="picTD" id="n_Posters">
+                        <a href="projects/posters.html"><img src="projects/posters/DRG Poster 1.png"/></a>
+                        <div class="gameMenu"><h3><b>Posters</b></h3></div>
+                        <div class="gameMenu"><p>Movie style posters</p></div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag('Unity')">Unity</a>
+                            <a onclick="ToggleTag(this.outerText)">C#</a>
+                            <a onclick="ToggleTag(this.outerText)">School</a>
+                        </div>
+                    </td>
                 </tr>
                 <tr class="picTR">
-                    <td class="picTD"><a href="projects/posters.html"><img src="projects/posters/DRG Poster 1.png"/></a> <div class="gameMenu"><p>Movie style posters</p></div></td>
+                    <td class="picTD" id="n_Toast">
+                        <a href="projects/toast.html"><img src="projects/Toast/toast poster.png"/></a>
+                        <div class="gameMenu"><h3><b>Toast</b></h3></div>
+                        <div class="gameMenu"><p>3D Animation</p></div>
+                    </td>
+                    <td class="picTD" id="n_Oleck">
+                        <a href="projects/oleck.html"><img src="projects/oleck/Oleck Poster.png" class="pixelArt"/></a>
+                        <div class="gameMenu"><h3><b>Oleck</b></h3></div>
+                        <div class="gameMenu"><p>Pixel Art</p></div>
+                    </td>
+                    <td class="picTD" id="n_BlackWaterBandits">
+                        <a href="projects/blackwaterbandits.html"><img src="projects/blackwaterBandits/Blackwater Bandits poster.png"/></a>
+                        <div class="gameMenu"><h3><b>Blackwater Bandits</b></h3></div>
+                        <div class="gameMenu"><p>Board Game</p></div>
+                    </td>
                 </tr>
-            </table>   
+            </table>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
         </div>

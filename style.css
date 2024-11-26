@@ -409,6 +409,7 @@ b {
     box-shadow: 3px 3px 10px black;
     max-width: 25vh;
     cursor: pointer;
+    display: block;
 }
 
 .picTD > img:hover {
@@ -436,6 +437,28 @@ b {
     background-color: #2D3339;
     align-items: center;
     text-align: center;
+    padding-top: 1vh;
+    margin-top: -1vh;
+}
+
+.gameTags {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 25vh;
+    background-color: #2D3339;
+    align-items: center;
+    text-align: center;
+}
+
+.gameTags > a {
+    background-color: rgba(30, 34, 38, 100);
+    padding: 2%;
+    margin: 1%;
+}
+
+.gameTags > a:hover {
+    cursor: pointer;
 }
 
 #gameTable {
