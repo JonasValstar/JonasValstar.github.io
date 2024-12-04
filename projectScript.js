@@ -6,8 +6,13 @@ projects = [];
 projectNames = [];
 projectTags = [[]];
 
+// tagbar
+tags = [];
+tagNames = [];
+
 // current information
 activeProjects = [];
+var activeTag = 0;
 
 // make the arrays
 function loadProjects() 
@@ -23,7 +28,7 @@ function loadProjects()
 
     // get the name
     for (let i = 0; i < spots.length; i++) {
-        projectNames[i] = spots[i].id;
+        projectNames[i] = spots[i].id.toLowerCase();
     }
 
     // get the tags
@@ -43,7 +48,18 @@ function loadProjects()
         }
     }
 
+    // getting tag-bar tags and names
+    tempTags = [];
+    tempTags = document.getElementsByClassName("tagBar");
+    for (let i = 0; i < tempTags.length; i++) {
+        for (let j = 0; j < tempTags[i].children.length; j++) {
+            tags[tags.length] = tempTags[i].children[j];
+            tagNames[tagNames.length] = tempTags[i].children[j].outerText;
+        }
+    }
+
     // startLayout
+    //updatePage();
 }
 
 // toggle sections
@@ -51,17 +67,44 @@ function ToggleTag(tag)
 {
     // resetting
     activeProjects = [];
+    if (activeTag != null) {
+        // deactivating tag indicator
+        activeTag.className = "";
+    }
 
-    // checking all projects
-    for (let i = 0; i < projectTags.length; i++) {
-        for (let j = 0; j < projectTags[i].length; j++) {
-            if (projectTags[i][j] == tag) {
-                activeProjects[activeProjects.length] = i;
+    // checking if new tag is selected
+    if (activeTag.outerText != tag) {
+
+        // checking all projects
+        for (let i = 0; i < projectTags.length; i++) {
+            for (let j = 0; j < projectTags[i].length; j++) {
+                if (projectTags[i][j] == tag) {
+                    activeProjects[activeProjects.length] = i;
+                }
             }
+        }
+
+        // activating the tag indicator
+        for (let i = 0; i < tagNames.length; i++) {
+            if (tagNames[i] == tag) {
+                activeTag = tags[i];
+                activeTag.className = "tagBarActive";
+            }
+        }   
+
+    } else {
+
+        // resetting active tag
+        activeTag = 0;
+
+        // adding everything back in active
+        activeProjects = [];
+        for (let i = 0; i < projectTags.length; i++) {
+            activeProjects[activeProjects.length] = i;
         }
     }
 
-    // updating page
+    // updating page    
     updatePage();
 }
 
@@ -72,11 +115,20 @@ function updatePage()
 
     // setting all active projects
     for (let i = 0; i < activeProjects.length; i++) {
-        spots[i].innerHTML = projects[activeProjects[i]];       
+        spots[i].innerHTML = projects[activeProjects[i]];
+        spots[i].style.visibility = "visible";       
+    }
+
+    // checking for too little items
+    let errorCorrect = 0;
+    for (let i = activeProjects.length; i < 3; i++) {
+        spots[i].innerHTML = projects[activeProjects[0]];;
+        spots[i].style.visibility = "hidden";
+        errorCorrect++;
     }
 
     // removing all empty ones
-    for (let i = activeProjects.length; i < spots.length; i++) {
+    for (let i = activeProjects.length + errorCorrect; i < spots.length; i++) {
         spots[i].innerHTML = "";      
     }
 }
@@ -98,4 +150,22 @@ function sortName()
     for (let i = 0; i < sortedNames.length; i++) {
         activeProjects[i] = projectNames.indexOf(sortedNames[i]);
     }
+}
+
+// Text Input changes
+function DetectChange(inputText)
+{
+    // clearing list
+    activeProjects = [];
+
+    // check percentages
+    for (let i = 0; i < projects.length; i++) {
+        if (projectNames[i].includes(inputText)) {
+            activeProjects[activeProjects.length] = i;
+            console.log(projectNames[i])
+        }
+    }
+
+    // updating the page
+    updatePage();
 }

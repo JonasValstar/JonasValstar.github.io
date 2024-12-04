@@ -67,6 +67,27 @@
             </div>
             <img src="a_pictures/banners/projects.png">
             <div class="artShadow"></div> <!--!decide if i want this-->
+            <div style="display: flex; flex-direction: row; text-align: center; background-color: #2D3339;">
+                <h1 style="margin: 1vh;">Filter</h1>
+                <input class="projectSearch" oninput="DetectChange(this.value.toLowerCase())" type="text" placeholder="Search Project" />
+            </div>
+            <div class="tagBar" style="padding-top: 1%;">
+                <a onclick="ToggleTag(this.outerText)">Unity</a>
+                <a onclick="ToggleTag(this.outerText)">GameMaker</a>
+                <a onclick="ToggleTag(this.outerText)">Blender</a>
+                <a onclick="ToggleTag(this.outerText)">C#</a>
+                <a onclick="ToggleTag(this.outerText)">GML</a>
+                <a onclick="ToggleTag(this.outerText)">2D</a>
+                <a onclick="ToggleTag(this.outerText)">3D</a>
+                <a onclick="ToggleTag(this.outerText)">Procedural</a>
+            </div>
+            <div class="tagBar">
+                <a onclick="ToggleTag(this.outerText)">School</a>
+                <a onclick="ToggleTag(this.outerText)">Personal</a>
+                <a onclick="ToggleTag(this.outerText)">GameJam</a>
+                <a onclick="ToggleTag(this.outerText)">Programmer</a>
+                <a onclick="ToggleTag(this.outerText)">Artist</a>
+            </div>
             <table class="picTable">
                 <tr class="picTR">
                     <td class="picTD" id="n_Sampi" data-tag0="Unity" data-tag1="C#">
@@ -124,10 +145,15 @@
                         <div class="gameMenu"><h3><b>The Great Forest</b></h3></div>
                         <div class="gameMenu"><p>Puzzle game with dialogue, a race and a boss fight</p></div>
                         <div class="gameTags">
-                            <a onclick="ToggleTag('Unity')">Unity</a>
+                            <a onclick="ToggleTag(this.outerText)">Unity</a>
+                            <a onclick="ToggleTag(this.outerText)">Blender</a>
                             <a onclick="ToggleTag(this.outerText)">C#</a>
                             <a onclick="ToggleTag(this.outerText)">3D</a>
+                            
+                        </div>
+                        <div class="gameTags">
                             <a onclick="ToggleTag(this.outerText)">School</a>
+                            <a onclick="ToggleTag(this.outerText)">Programmer</a>
                         </div>
                     </td>
                     <td class="picTD" id="n_MechMates">
@@ -135,9 +161,13 @@
                         <div class="gameMenu"><h3><b>MechMates</b></h3></div>
                         <div class="gameMenu"><p>GameJam horde shooter game with switchable weapons</p></div>
                         <div class="gameTags">
-                            <a onclick="ToggleTag('Unity')">Unity</a>
+                            <a onclick="ToggleTag(this.outerText)">Unity</a>
                             <a onclick="ToggleTag(this.outerText)">C#</a>
+                            <a onclick="ToggleTag(this.outerText)">3D</a>
                             <a onclick="ToggleTag(this.outerText)">GameJam</a>
+                        </div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag(this.outerText)">Programmer</a>
                         </div>
                     </td>
                     <td class="picTD" id="n_UdderChaos">
@@ -145,9 +175,13 @@
                         <div class="gameMenu"><h3><b>Udder Chaos</b></h3></div>
                         <div class="gameMenu"><p>2D 1v1 fighting game inspired by stickfight and rounds</p></div>
                         <div class="gameTags">
-                            <a onclick="ToggleTag('Unity')">Unity</a>
+                            <a onclick="ToggleTag(this.outerText)">Unity</a>
                             <a onclick="ToggleTag(this.outerText)">C#</a>
+                            <a onclick="ToggleTag(this.outerText)">2D</a>
                             <a onclick="ToggleTag(this.outerText)">School</a>
+                        </div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag(this.outerText)">Programmer</a>
                         </div>
                     </td>
                 </tr>
@@ -157,9 +191,13 @@
                         <div class="gameMenu"><h3><b>TD Game</b></h3></div>
                         <div class="gameMenu"><p>GameJam tower defense game with grid based building</p></div>
                         <div class="gameTags">
-                            <a onclick="ToggleTag('Unity')">Unity</a>
+                            <a onclick="ToggleTag(this.outerText)">Unity</a>
                             <a onclick="ToggleTag(this.outerText)">C#</a>
+                            <a onclick="ToggleTag(this.outerText)">2D</a>
                             <a onclick="ToggleTag(this.outerText)">GameJam</a>
+                        </div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag(this.outerText)">Programmer</a>
                         </div>
                     </td>
                     <td class="picTD" id="n_TijnsBallGame">
@@ -167,9 +205,13 @@
                         <div class="gameMenu"><h3><b>Tijn's Ball Game</b></h3></div>
                         <div class="gameMenu"><p>2D game where you try to score a ball through a hoop</p></div>
                         <div class="gameTags">
-                            <a onclick="ToggleTag('Unity')">Unity</a>
+                            <a onclick="ToggleTag(this.outerText)">Unity</a>
                             <a onclick="ToggleTag(this.outerText)">C#</a>
+                            <a onclick="ToggleTag(this.outerText)">2D</a>
                             <a onclick="ToggleTag(this.outerText)">Personal</a>
+                        </div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag(this.outerText)">Programmer</a>
                         </div>
                     </td>
                     <td class="picTD" id="n_Posters">
@@ -177,9 +219,9 @@
                         <div class="gameMenu"><h3><b>Posters</b></h3></div>
                         <div class="gameMenu"><p>Movie style posters</p></div>
                         <div class="gameTags">
-                            <a onclick="ToggleTag('Unity')">Unity</a>
-                            <a onclick="ToggleTag(this.outerText)">C#</a>
-                            <a onclick="ToggleTag(this.outerText)">School</a>
+                            <a onclick="ToggleTag(this.outerText)">2D</a>
+                            <a onclick="ToggleTag(this.outerText)">Personal</a>
+                            <a onclick="ToggleTag(this.outerText)">Artist</a>
                         </div>
                     </td>
                 </tr>
@@ -188,16 +230,34 @@
                         <a href="projects/toast.html"><img src="projects/Toast/toast poster.png"/></a>
                         <div class="gameMenu"><h3><b>Toast</b></h3></div>
                         <div class="gameMenu"><p>3D Animation</p></div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag(this.outerText)">Blender</a>
+                            <a onclick="ToggleTag(this.outerText)">3D</a>
+                            <a onclick="ToggleTag(this.outerText)">Personal</a>
+                        </div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag(this.outerText)">Artist</a>
+                        </div>
                     </td>
                     <td class="picTD" id="n_Oleck">
                         <a href="projects/oleck.html"><img src="projects/oleck/Oleck Poster.png" class="pixelArt"/></a>
                         <div class="gameMenu"><h3><b>Oleck</b></h3></div>
                         <div class="gameMenu"><p>Pixel Art</p></div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag(this.outerText)">2D</a>
+                            <a onclick="ToggleTag(this.outerText)">Personal</a>
+                            <a onclick="ToggleTag(this.outerText)">Artist</a>
+                        </div>
                     </td>
                     <td class="picTD" id="n_BlackWaterBandits">
                         <a href="projects/blackwaterbandits.html"><img src="projects/blackwaterBandits/Blackwater Bandits poster.png"/></a>
                         <div class="gameMenu"><h3><b>Blackwater Bandits</b></h3></div>
                         <div class="gameMenu"><p>Board Game</p></div>
+                        <div class="gameTags">
+                            <a onclick="ToggleTag(this.outerText)">2D</a>
+                            <a onclick="ToggleTag(this.outerText)">School</a>
+                            <a onclick="ToggleTag(this.outerText)">Artist</a>
+                        </div>
                     </td>
                 </tr>
             </table>

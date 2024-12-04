@@ -399,9 +399,13 @@ b {
 .picTD {
     align-content: center;
     max-width: 25vh;
-    padding-left: 2vh;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding: 1vh;
+}
+
+.tagTD {
+    align-content: center;
+    max-width: 25vh;
+    padding: 1vh;
 }
 
 .picTD > img {
@@ -420,8 +424,7 @@ b {
 .picTD > a > img {
     transition: 0.2s;
     box-shadow: 3px 3px 10px black;
-    max-width: 25vh;
-    min-width: 25vh;
+    width: 100%;
 }
 
 .picTD > a > img:hover {
@@ -433,7 +436,7 @@ b {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 25vh;
+    width: 100%;
     background-color: #2D3339;
     align-items: center;
     text-align: center;
@@ -445,7 +448,7 @@ b {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 25vh;
+    max-width: 100%;
     background-color: #2D3339;
     align-items: center;
     text-align: center;
@@ -459,6 +462,40 @@ b {
 
 .gameTags > a:hover {
     cursor: pointer;
+}
+
+.tagBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+    background-color: #2D3339;
+    align-items: center;
+    text-align: center;
+}
+
+.tagBar > a {
+    background-color: rgba(30, 34, 38, 100);
+    padding: 2%;
+    margin: 1%;
+    margin-top: 0%;
+}
+
+.tagBar > a:hover {
+    cursor: pointer;
+}
+
+.tagBarActive {
+    font-family: ErasBoldITC;
+}
+
+.projectSearch {
+    padding: 0;
+    width: 94%;
+    margin: 1%;
+    padding: 2%;
+    outline: none;
+    border: none;
 }
 
 #gameTable {
