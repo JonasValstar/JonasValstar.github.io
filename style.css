@@ -320,6 +320,50 @@ b {
     to {opacity: 1; padding-left: 0;}
 }
 
+.landingImage {
+    position: relative;
+}
+
+.landingImage > img {
+    width: 100%;
+    display: block;
+}
+
+.landingImage > button {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 40%;
+    height: 25%;
+    background-color: rgba(33, 37, 41, .3);
+    border: solid gainsboro 0.5vh;
+    transition: .1s;
+}
+
+.landingImage > button > h1 {
+    color: gainsboro;
+    font-size: 4vh;
+}
+
+.landingImage > button:hover {
+    border: solid gainsboro 1vh;
+    background-color: rgba(33, 37, 41, .6);
+    transition: .1s;
+}
+
+.landingButtons {
+    margin: 2vh;
+    padding: 1vh;
+    border: none;
+    background-color: #2d3339;
+}
+
+.landingButtons > h3 {
+    color: gainsboro;
+}
+
 #blogPost {
     background-color: #2D3339;
     width: 100vw;
