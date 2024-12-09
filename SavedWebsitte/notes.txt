@@ -1,0 +1,6 @@
+TODO:
+- Change 'Copyright Symbol' to 'made by' or 'by' on the footer of every page
+- Add the new side-bar on every page
+- make Portfolio Banner
+- Spell Check
+- Make contact look nicer (optional)
