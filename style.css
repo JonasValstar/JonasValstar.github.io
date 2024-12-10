@@ -204,6 +204,11 @@ b {
     max-height: 4vh;
 }
 
+.madeBy {
+    font-style: normal;
+    font-family: 'ErasLightITC';
+}
+
 .info {
     text-align: center;
     padding-bottom: 5px;
@@ -348,8 +353,80 @@ b {
 }
 
 .landingImage > button:hover {
+    cursor: pointer;
     border: solid gainsboro 1vh;
     background-color: rgba(33, 37, 41, .6);
+    transition: .1s;
+}
+
+.landingButtons {
+    margin: 2vh;
+    padding: 1vh;
+    border: none;
+    background-color: #2d3339;
+    transition: .1s;
+}
+
+.landingButtons:hover {
+    scale: 1.025;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.landingButtons > h3 {
+    color: gainsboro;
+}
+
+.aboutButton {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 5%;
+    background-color: #2D3339;
+    border: none;
+    transition: .1s;
+}
+
+.aboutButton > h3 {
+    color: gainsboro;
+    font-size: 3vh;
+}
+
+.aboutButton:hover {
+    cursor: pointer;
+    scale: 1.1;
+    transition: .1s;
+}
+
+.contactImage {
+    position: relative;
+    margin-top: -15px; /* Banner Shadow is 15px */
+    z-index: 0;
+}
+
+.contactImage > img {
+    width: 100%;
+    display: block;
+    pointer-events: none;
+}
+
+.contactImage > a {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transition: .1s;
+}
+
+.contactImage > a > h1 {
+    font-family: 'ErasBoldITC';
+    color: white;
+    font-size: 6vh;
+}
+
+.contactImage > a:hover {
+    cursor: pointer;
     transition: .1s;
 }
 

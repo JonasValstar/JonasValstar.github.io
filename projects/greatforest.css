@@ -1,0 +1,67 @@
+::selection {
+    color: #cdbe9f;
+    background: #005e2c;
+}
+
+body, html, a, p {
+    color: #303638;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #005e2c;
+}
+
+#topBar, #sideBar, .logo, .navigation > a, .slideshow > a, .slide > a {
+    background-color: #ac5c2e; 
+    color: #cdbe9f;
+}
+
+#topBar {
+    
+    border-top: 5px solid #005e2c;
+}
+
+#content, #techInfo {
+    background-color: #cdbe9f;
+}
+
+.logo > h1 > a {
+    color: #005e2c;
+}
+
+.tree {
+    background-color: #ded2bc;
+    color: #2c888a;
+}
+
+.tree > a, .tree > p {
+    color: gray;
+}
+
+.tree > a:hover, .infoLink:hover {
+    color: #005e2c;
+}
+
+.info > p, .info > P > a, .imageDescription > p {
+    color: #cdbe9f
+}
+
+.collButton, .collButton::before {
+    color: #005e2c;
+}
+
+.activeCB, .collButton:hover {
+    border-bottom: 5px solid #005e2c;
+}
+
+.downloadsTab {
+    background-color: #ac5c2e;
+}
+
+.downloadsTab > div > a, .downloadsTab > div > p {
+    color: #cdbe9f;
+}
+
+.imageDescription, .textImage {
+    background-color: #ac5c2e;
+}
