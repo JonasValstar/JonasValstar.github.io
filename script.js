@@ -9,8 +9,12 @@ function loadFunctions() {
     // triggering functions
     autoSlider();
     showSlide(0); // setup
-}
 
+    // detect window size
+    if (window.innerWidth*3.05 < window.innerHeight*4) {
+        document.getElementById("screenWarning").style.display = "block";
+    }
+}
 
 // Show credits
 function credits() {

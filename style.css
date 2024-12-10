@@ -66,6 +66,27 @@ b {
     font-family: ErasDemiITC;
 }
 
+#screenWarning {
+    display: none;
+    z-index: 12;
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1vh;
+    background-color: red;
+    text-align: center;
+}
+
+#screenWarning > a {
+    text-decoration: underline;
+}
+
+#screenWarning > a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .pixelArt {
     image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
     image-rendering: -moz-crisp-edges;          /* Firefox                        */
