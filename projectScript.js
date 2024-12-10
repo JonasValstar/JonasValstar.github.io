@@ -59,7 +59,7 @@ function loadProjects()
     }
 
     // startLayout
-    //updatePage();
+    updatePage();
 }
 
 // toggle sections

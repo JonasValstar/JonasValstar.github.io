@@ -9,6 +9,11 @@ function loadFunctions() {
     // triggering functions
     autoSlider();
     showSlide(0); // setup
+
+    // detect window size
+    if (window.innerWidth*4 < window.innerHeight*3) {
+        // something
+    }
 }
 
 
