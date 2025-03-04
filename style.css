@@ -66,6 +66,10 @@ b {
     font-family: ErasDemiITC;
 }
 
+i {
+    font-family: ErasLightITC;
+}
+
 #screenWarning {
     display: none;
     z-index: 12;
