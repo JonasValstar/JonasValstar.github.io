@@ -60,7 +60,7 @@ function showSlide(mode) {
 function autoSlider() {
     if (autoSlide == true) {
         showSlide(2);
-        setTimeout(autoSlider, 7500);
+        setTimeout(autoSlider, 4500); //? was 7500
     }
 }
 
