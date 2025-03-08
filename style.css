@@ -516,17 +516,8 @@ b {
 .mainPicImg {
     padding: 0;
     margin: 0;
-}
-
-.mainPicImg > a {
-    padding: 0;
-    margin: 0;
-}
-
-.mainPicImg > img{
     min-width: 30vh;
     max-width: 30vh;
-    display: block;
 }
 
 .mainPicText {
@@ -542,6 +533,38 @@ b {
     align-content: center;
     max-width: 25vh;
     padding: 1vh;
+}
+
+.mainPicImg > img .mainPicImg > video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.mainPicImg > video {
+    width: 30vh;
+}
+
+.mainPicImg {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+.mainPicImg:hover {
+    transform: scale(1.02);
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+.mainPicImg:hover .overlay {
+    opacity: 0;
 }
 
 .tagTD {
@@ -772,6 +795,8 @@ b {
 .imageDescription, .textImage {
     background-color: #363C42;
 }
+
+
 
 /*
 Colors: 

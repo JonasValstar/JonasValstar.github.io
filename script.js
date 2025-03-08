@@ -101,3 +101,12 @@ function onlyOpenColl(collID) {
         callElem.classList.add("activeCB");
     }
 }
+
+function playVideo(video) {
+    document.getElementById(video).play();
+    document.getElementById(video).currentTime = 0;
+}
+
+function pauseVideo(video) {
+    document.getElementById(video).pause();
+}
