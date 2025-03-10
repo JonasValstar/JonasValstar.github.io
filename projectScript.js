@@ -4,6 +4,7 @@ spots = [];
 // saved information
 projects = [];
 projectNames = [];
+projectDates = [];
 projectTags = [[]];
 
 // tagbar
@@ -29,6 +30,11 @@ function loadProjects()
     // get the name
     for (let i = 0; i < spots.length; i++) {
         projectNames[i] = spots[i].id.toLowerCase();
+    }
+
+    // get the date
+    for (let i = 0; i < spots.length; i++) {
+        projectDates[i] = spots[i].getAttribute("data-date");
     }
 
     // get the tags
@@ -111,7 +117,7 @@ function ToggleTag(tag)
 function updatePage()
 {
     // sorting currently active projects
-    sortName();
+    sortDate();
 
     // setting all active projects
     for (let i = 0; i < activeProjects.length; i++) {
@@ -149,6 +155,28 @@ function sortName()
     // applying to array
     for (let i = 0; i < sortedNames.length; i++) {
         activeProjects[i] = projectNames.indexOf(sortedNames[i]);
+    }
+}
+
+// sorting by date
+function sortDate()
+{
+    sortedDates = [];
+
+    // get all active elements
+    for (let i = 0; i < activeProjects.length; i++) {
+        sortedDates[i] = projectDates[activeProjects[i]]
+    }
+
+    // sorting
+    sortedDates.sort();
+
+    // reverse
+    sortedDates.reverse();
+
+    // applying to array
+    for (let i = 0; i < sortedDates.length; i++) {
+        activeProjects[i] = projectDates.indexOf(sortedDates[i]);
     }
 }
 

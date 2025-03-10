@@ -66,6 +66,10 @@ b {
     font-family: ErasDemiITC;
 }
 
+i {
+    font-family: ErasLightITC;
+}
+
 #screenWarning {
     display: none;
     z-index: 12;
@@ -141,7 +145,7 @@ b {
 }
 
 #topBar {
-    background-color: #363C42;
+    background-color: #282d30;
     position: fixed;
     z-index: 10;
     display: flex;
@@ -159,7 +163,7 @@ b {
 #sideBar {
     z-index: 2;
     position: fixed;
-    background-color: #363C42;
+    background-color: #282d30;
     padding-top: 5px;
     width: 30vw;
     max-width: 40vh;
@@ -167,7 +171,7 @@ b {
 }
 
 .logo {
-    background-color: #363C42;
+    background-color: #1e2225;
     height: 10vh;
     width: 30vw;
     max-width: 40vh;
@@ -237,7 +241,7 @@ b {
 
 #content {
     z-index: 1;
-    background-color: #212529;
+    background-color: #42474a; 
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -271,7 +275,7 @@ b {
 .tree {
     width: 100vw;
     max-width: 93vh; /*134 - 40 - 1*/
-    background-color: rgba(30, 34, 38, 100);
+    background-color: #30363a;
     z-index: 3;
     position: fixed;
     padding: 7.5px;
@@ -304,7 +308,7 @@ b {
 }
 
 .slideshow > a {
-    text-align: center;
+    text-align: left;
     width: 100vw;
     max-width: 12vh;
     margin: 5px;
@@ -315,7 +319,7 @@ b {
 }
 
 .slideshow > div {
-    text-align: center;
+    text-align: left;
     width: 100vw;
     max-width: 70vh;
     display: none;
