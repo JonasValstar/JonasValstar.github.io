@@ -7,6 +7,15 @@
     <script src="../script.js"></script>
     <title>Jonas Valstar | Mod RogueLike</title>
     <link rel="icon" type="image/x-icon" href="../a_pictures/favicon.gif">
+    <style>
+        #topBar {
+            border-top: 5px solid #a3754d;
+        }
+
+        .logo > h1 > a {
+            color: #a3754d;
+        }
+    </style>
 </head>
 <body onload="loadFunctions();">
     <div id="container">
@@ -76,18 +85,11 @@
                     <!---->
                     <video width="100%" autoplay muted controls loop><source src="mechMates/MechMates showcase.mp4" type="video/mp4"></video>
                     <p>
-                        As part of out intro week for the second year of my study, our school hosted a 48 hour GameJam with the theme 'Together'. For this game we came up with the idea 
-                        that 2 players control the same character. I would make sure the player could shoot bullets and had to reload, that they did damage to enemies and they could get 
-                        new weapons in a shop.
+                        In this project, I want to experiment with making something fully alterable by the player. I decided to make a weapon system where the weapons were fully changeable in behaviour by applying new mods. I also wanted to experiment with Node trees, so I made a level tree to unlock new weapons.
                     </p>
                     <br/>
-                    <h3>Design Process</h3>
                     <p>
-                        On the first day we came up with the concept of the game. A 2 player game where one would walk a mech, and the other would be in charge of shooting. One of the 
-                        things we wanted was for both players to have to rely on each other. So, for example, the player who would move would also reload the weapons of the shooter. I 
-                        firstly made the shooting work while my co-programmer worked on the enemy spawn and behaviour. After we were both done, we merged the 2 projects into one and I 
-                        continued with making the weapon shop and UI. With little sleep and little time left before the deadline I made some last minute tweaks and implemented the player 
-                        model someone else made into a playable, although somewhat interesting, end result.
+                        I also wanted to make the code I wrote as easily understandable and workable for other developers and adaptable based on things I could add later. For this I tried making something called UML diagrams, to convey how my code works together. I also made UI adapt to whatever items were available to the player.
                     </p>
                 </td>
                 <td id="techInfo">
@@ -117,66 +119,51 @@
                     <p><b>Platform</b></p>
                     <a>Windows</a>       
                     <p><b>Download</b></p>
-                    <a href="#downloads" onclick="onlyOpenColl('downloads')">Direct</a> <br />
-                    <a href="https://jvalstar.itch.io/mech-mates">Itch.io</a><br/>
-                    <a href="https://github.com/JonasValstar/Y2GameJam">Github</a>
+                    <a href="#downloads" onclick="onlyOpenColl('downloads')">Direct</a>
                 </td>
             </table>
 
-            <button class="collButton" id="weapons" onclick="openColl(this.id)"><b>Weapons and Damage</b></button>
+            <button class="collButton" id="weapons" onclick="openColl(this.id)"><b>Weapon Mods</b></button>
             <div class="collContent" id="coll_weapons">
+                <i>Video Here</i>
+                <br/>
                 <p>
-                    For the game i wanted to work on making the weapons and how enemies handle taking damage. I had an idea to make the enemies more interesting by adding elemental 
-                    damage to weapons and give bullets a change of critically hitting the enemy. The original plan was to also make it depend on what part of the enemy the player would 
-                    should, but the models of the enemies we decided upon weren't really suited for multiple hit-boxes. I made a system that weapons can have a basic damage as well as 
-                    elemental damage, and enemies can be neutral, resistant or weak to certain elements. If an enemy was resistant to a specific type of elemental damage it would ignore 
-                    all elemental damage and only take basic damage. Weak enemies would take double elemental damage on top of the basic damage. If a crit hit was scored it would multiply 
-                    the total amount of damage with 1.5
+                    I made the guns have several mod groups to which the mods would be applied. Each group only accepts mods of that group. Every time a new mod was added or removed; the mods would load in again to make sure the behaviour is correct. The system cleans the weapons behaviour and adds all the equipped mods behaviour into it, along with the weapons base behaviour.
+                </p>
+                <br/>
+                <p>
+                    The mods can be setup in a couple of different ways. They can add damage to the bullets the weapons shoots in one of a couple damage types. They can modify a weapons stat, like the delay between firing shots or the maximum amount of ammo. They can add events to existing events like firing the weapons or reloading. Or they can add events to happen on a regular interval. For example, heal every 20 seconds.
                 </p>
             </div>
 
             <button class="collButton" id="shop" onclick="openColl(this.id)"><b>Weapon Shop</b></button>
             <div class="collContent" id="coll_shop">
+                <i>Video Here</i>
+                <br/>
                 <p>
-                    One of the aspects of our idea was to make a weapons shop where to players could go to and get better weapons. The first idea for the game was for it to be more 
-                    Roguelike, so i designed the store to offer the player a random selection of pre-determined weapons. It would add better weapons to the pool of available weapons 
-                    the further the player got. The player could then also select on which side they wanted to equip the new weapon.
+                    The level tree is made from a list holding structs containing the information that a node needs. Things like the weapon it unlocks. But those structs also have a list in them that holds all the nods that are available after that node is unlocked.
                 </p>
-                <table><tr>
-                    <td class="textImage" style="width: 49%;"><img onclick="displayPic('../mechMates/MechMates Poster.png', 'Example of Shop UI', '-1', '-1')" style="width: 50%;" src="mechMates/MechMates Poster.png"></td><td style="width: 2%;"></td>
-                    <td style="width: 51%;"></td>
-                </tr><tr>
-                    <td class="imageDescription" style="width: 49%;"><p>Example of how the shop UI looks like in game</p></td><td style="width: 2%;"></td>
-                </tr></table>
+                <br/>
+                <p>
+                    If a node in unlocked, it adds the weapons it has to the player’s inventory
+                </p>
             </div>
 
             <button class="collButton" id="ui" onclick="openColl(this.id)"><b>UI</b></button>
             <div class="collContent" id="coll_ui">
+                <i>Video Here</i>
+                <br/>
                 <p>
-                    The game also needed a UI, of which the responsibility of making it was handed to me when dividing the programming roles. I opted for a very standard looking 
-                    sci-fi UI, seeing as it was a GameJam and i can't draw. In the top the plan was to add a health bar, but this was later changed to a timer, and in the bottom 
-                    corners it made sense to put the ammo counts for the left and right weapon. One of my teammates suggested giving the bland looking UI a drop-shadow, which also 
-                    looked good as a glow. As an improvement of UX, i thought it would be a cool idea to link the color of the glow to the players health (and later time left) which 
-                    ended up looking pretty good and have the player a good way of subconsciously knowing if they had enough hp. To make the glow more realistic it also dims and 
-                    brightens with randomized speed each time it hits an outer value.
+                    The mod UI can be setup by the developer in how many cells wide and high each area is (equipped mods and available mods). It will then automatically calculate the size of each cell and place the mods in these cells.
                 </p>
                 <br/>
-                <table>
-                    <tr><td style="width: 49%;"><video width="100%" controls loop><source src="mechMates/UI glow.mp4"></video></td><td style="width: 51%;"></td></tr>
-                    <tr><td class="imageDescription" style="width: 49%;"><p>Glow behind the UI changed based on time left with a 10 seconds maximum time</p></td><td style="width: 51%;"></td></tr>
-                </table>
+                <P>
+                    The level tree UI checks every node in the list and their children and stores them in a different list based on how deep it the node was found. It then sees which depth (row) has the most nodes and adjusts the size of all nods to fit based on that row and the total amount of rows. After that, it goes along every node again and places lines between them and their children. 
+                </P>
             </div>
 
             <button class="collButton" id="downloads" onclick="openColl(this.id)"><b>Downloads</b></button>
             <div class="collContent" id="coll_downloads">
-                <div class="downloadsTab">
-                    <div><p>Mech-Mates</p></div>
-                    <div>
-                        <a href="mechMates/MechMates.zip" download="TD Game">download [.zip]</a>
-                        <a href="mechMates/MechMates.7z" download="TD Game">download [.7z]</a>
-                        <a class="outgoingLink" href="https://jvalstar.itch.io/mech-mates" target="_blank">Itch.io</a>
-                    </div>
-                </div>
                 <div class="downloadsTab">
                     <div><p>Source Files</p></div>
                     <div>

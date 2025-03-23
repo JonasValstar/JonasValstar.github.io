@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="sampi.css">
     <script src="../script.js"></script>
     <title>Jonas Valstar | Sampi</title>
     <link rel="icon" type="image/x-icon" href="../a_pictures/favicon.gif">
+    <style>
+        #topBar {
+            border-top: 5px solid #2c888a;
+        }
+
+        .logo > h1 > a {
+            color: #2c888a;
+        }
+    </style>
 </head>
 <body onload="loadFunctions();">
     <div id="container">
@@ -77,20 +85,11 @@
                     <!--<img id="gameLogo" src="sampi/sampi logo.png">-->
                     <video width="100%" autoplay muted controls loop><source src="sampi/showcase.mp4" type="video/mp4"></video>
                     <p>
-                        For my graduation project for highschool I made custom board game together with a working ai opponent. Together with a friend we came up with the concept after 
-                        which i made the game in unity and all the visual assets for it. I also made a custom designed AI that would be playing against the player and that would be the 
-                        main feature of the game. For designing the AI i didn't look too much at existing models and algorithms, instead opting to think of something myself and make that 
-                        work. I did this because i think it is way more valuable to learn like this first and after, if i make an board game ai again, using the existing best algorithms.
+                        In this project, I wanted to experiment with making an AI opponent for a chess like game. Together with my friend Matthijs, we came up with a new board game for which I would create the AI. This was one of the first projects I did in unity, so it was a great opportunity to learn more about the engine and programming. 
                     </p>
                     <br/>
-                    <h3>Design Process</h3>
                     <p>
-                        The idea of the graduation project was that we would make a video game ai for a board game. We also thought it would be more fun if we also made that game 
-                        ourselves. We came up with the concept during a train-ride to delft and refined it later during the development process. My friend would handle the research part 
-                        of the project and i would make everything in unity. I started with making the base game first. I make the designs for the pieces and board, put them into unity 
-                        and begun programming the moves. After getting the moves working i started making the ai that would play against the player. The first finished iteration of the 
-                        ai always assumed the player would play the worst move because that would be better for the ai, so i added a quick check that the ai wouldn't give away pieces 
-                        and take all the free ones to make it a bit better.
+                        I decided it would be a good idea to come up with an algorithm for the AI on my own instead of using an existing algorithm that would likely work better. I did this so that instead of copying an algorithm, I would figure out the solution on my own and get a deeper understanding of how and why other algorithms work. 
                     </p>
                 </td>
                 <td id="techInfo">
@@ -122,21 +121,20 @@
                 </td>
             </table>
 
+            <button class="collButton" id="development" onclick="openColl(this.id)"><b>Game Development</b></button>
+            <div class="collContent" id="coll_development">
+                <table>
+                    <tr><td class="textImage"><video width="100%" controls loop><source src="sampi/testing.mp4"></video></td><td style="width: 51%;"></td></tr>
+                    <tr><td class="imageDescription" style="width: 49%;"><p>Playtesting the game</p></td><td style="width: 51%;"></td></tr>
+                </table>
+                <br/>
+                <p>
+                    The first part after coming up with the concept was making it work in Unity. I made a system that detects where the player is clicking to know if they were clicking on their pieces. It would then detect the possible and legal moves they could make with that piece and display it on the board. It would also check if a piece can capture another piece, and if done remove that other piece from the board. It would also keep track of all the positions for the AI to use later.
+                </p>
+            </div>
+            
             <button class="collButton" id="sampiAi" onclick="openColl(this.id)"><b>Sampi.AI</b></button>
             <div class="collContent" id="coll_sampiAi">
-                <p>
-                    For the AI i made my own algorithm. This isn't how the best result is obtained, but I do learn more from it, and was the idea behind the Graduation project. The way 
-                    the AI is designed it is basically an Algorithm, which applies to most game AI's. The AI loops over every piece it has and plays every possible move. It then plays 
-                    every move the opponent can make in all those alternative board positions. This repeats until a certain search dept is reached. It then calculates the strength of 
-                    final board positions. The AI scores the board on value of pieces of both AI and opponent, distance from own edge for ai and player and how many pieces are covered 
-                    by other pieces. This board positions are then sorted by score and the best is played.
-                </p>
-                <p>
-                    This has a pretty big flaw though. The AI will now always assume the player plays the worst move because the ai profits most from that. At this point there wasn't a 
-                    lot of time left before the deadline, so i added some simple checks that my friend and i agreed one where always good and bad moves. The AI would now never give a 
-                    piece up for free to the opponent. It would also always take a free piece.
-                </p>
-                <br/>
                 <table><tr>
                     <td style="width: 49%;"><video width="100%" controls loop><source src="sampi/ai1.mp4"></video></td><td style="width: 2%;"></td>
                     <td style="width: 49%;"><video width="100%" controls loop><source src="sampi/ai2.mp4"></video></td>
@@ -145,46 +143,23 @@
                     <td class="imageDescription" style="width: 49%;"><p>First version of the AI. It is still slow and makes dumb decisions</p></td><td style="width: 2%;"></td>
                     <td class="imageDescription" style="width: 49%;"><p>Latest version of the AI. It is significantly faster and doesn't make blunders</p></td>
                 </tr></table>
-            </div>
-
-            <button class="collButton" id="development" onclick="openColl(this.id)"><b>Game Development</b></button>
-            <div class="collContent" id="coll_development">
+                <br/>
                 <p>
-                    I was in charge of making the game itself. The way i did this is by giving every piece a type. Then, if the player clicked on a piece it would look up where that 
-                    type of piece could go. On those locations it was then checked if it was inside of the board and if something else was already there. If one of the moves landed on 
-                    an opponent piece, it would place a red circle and if the player clicked that, it would remove the piece from the board. If the location was outside of the board or 
-                    on one of the players own pieces, it wouldn't be placed and if it was a free spot a green circle would appear. There is also a check if the piece can move off the 
-                    board at the end, and if so it places a green circle in the middle and the player wins if they move towards that spot.
+                    To determine the best move to make, the AI first loops through all the pieces on the board, determines every possible move and saves all the board states of what would happen if that move was played. It repeats this for a certain number of times (called “Depth”) and then picks the best result.
+                </p>
+                <br/>
+                <p>
+                    The best result is determined using the piece positions and some tweakable variables (“Weights”). The algorithm determines the value of all the pieces based on their type and position, the average distance from the start and if the pieces cover each other for attacks. This is done for every board state it gathered, and the highest value is picked from that.
+                </p>
+                <br/>
+                <p>
+                    This means that the AI will usually assume the opponent only makes blunders seeing as that results in a better final board state for the AI. To combat this, there are checks to make sure the AI wouldn’t make any blunders, and would always take free pieces. This is still far from perfect, but worked well enough for the time.
                 </p>
                 <br/>
                 <table>
-                    <tr><td class="textImage"><video width="100%" controls loop><source src="sampi/testing.mp4"></video></td><td style="width: 51%;"></td></tr>
-                    <tr><td class="imageDescription" style="width: 49%;"><p>We tested the game a lot</p></td><td style="width: 51%;"></td></tr>
+                    <tr><td class="textImage"><img  onclick="displayPic('../Toast/Toaster Mech quad.png', 'Toast robot posing with 2 swords', '-1', '-1')" style="width: 100%;" src="Toast/Toaster Mech quad.png"></td><td style="width: 51%;"></td></tr>
+                    <tr><td class="imageDescription" style="width: 49%;"><p>The value of pieces based on their position</p></td><td style="width: 51%;"></td></tr>
                 </table>
-            </div>
-
-            <button class="collButton" id="visuals" onclick="openColl(this.id)"><b>Visual Design</b></button>
-            <div class="collContent" id="coll_visuals">
-                <p>
-                    For the game i designed the visual elements like pieces, the ui and the board. The idea behind the pieces was that they were very simple but distinct. I also 
-                    designed the pieces to indicate where they can be moved to by following the points. This made sure that the player would always know what every piece was and 
-                    where it could move towards. The board is a simple gird, but the colours are chosen to be easy on the eye to look at.
-                </p>
-                <br/>
-                <table><tr>
-                    <td class="textImage" style="width: 32%;"><img style="width: 70%;" src="sampi/ζ Zèta - Light.png"></td><td style="width: 2%;"></td>
-                    <td class="textImage" style="width: 32%;"><img style="width: 70%;" src="sampi/η Èta- Light.png"></td><td style="width: 2%;"></td>
-                    <td class="textImage" style="width: 32%;"><img style="width: 70%;" src="sampi/θ Thèta - LIght.png"></td>
-                </tr><tr>
-                    <td class="imageDescription" style="width: 32%;"><p>ζ (Zèta) piece. It can move diagonally forward</p></td><td style="width: 2%;"></td>
-                    <td class="imageDescription" style="width: 32%;"><p>η (Èta) piece. It can move straight forward, left and right</p></td><td style="width: 2%;"></td>
-                    <td class="imageDescription" style="width: 32%;"><p>θ (Thèta) peice. It can move diagonally and straight forward as well as backward</p></td>
-                </tr></table>
-            </div>
-
-            <button class="collButton" id="desiognReport" onclick="openColl(this.id)"><b>Design Report (Dutch)</b></button>
-            <div class="collContent" style="height: 75vh;" id="coll_desiognReport">
-                <embed class="pdf" src="sampi/Sampi Design Report.pdf" width="100%" height="100%">
             </div>
 
             <button class="collButton" id="downloads" onclick="openColl(this.id)"><b>Downloads</b></button>
@@ -194,6 +169,7 @@
                     <div>
                         <a href="sampi/Prototype-3.zip" download="Sampi v.p3 Nederlands">download [.zip]</a>
                         <a href="sampi/Prototype-3.7z" download="Sampi v.p3 Nederlands">download [.7z]</a>
+                        <a href="https://jvalstar.itch.io/sampi" target="_blank">itch.io</a>
                     </div>
                 </div>
                 <div class="downloadsTab">

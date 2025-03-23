@@ -549,14 +549,12 @@ i {
 
 .mainPicImg > video {
     width: 30vh;
+    display: block;
 }
 
 .mainPicImg {
     position: relative;
     transition: transform 0.3s ease;
-}
-.mainPicImg:hover {
-    transform: scale(1.02);
 }
 .overlay {
     position: absolute;
@@ -567,6 +565,11 @@ i {
     opacity: 1;
     transition: opacity 0.3s ease;
 }
+
+.mainPic > td:hover td > .overlay {
+    opacity: 0;
+}
+
 .mainPicImg:hover .overlay {
     opacity: 0;
 }

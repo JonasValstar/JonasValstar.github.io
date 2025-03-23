@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="terraingen.css">
     <script src="../script.js"></script>
     <title>Jonas Valstar | Terrain Gen</title>
     <link rel="icon" type="image/x-icon" href="../a_pictures/favicon.gif">
+    <style>
+        #topBar {   
+            border-top: 5px solid #678df0 ;
+        }
+
+        .logo > h1 > a {
+            color: #678df0 ;
+        }
+    </style>
 </head>
 <body onload="loadFunctions();">
     <div id="container">
@@ -76,13 +84,13 @@
                 <td id="descInfo">
                     <!---->
                     <video width="100%" autoplay muted controls loop><source src="Terrain Gen/showcase.mp4" type="video/mp4"></video>
-                    <p>For a now discontinued game, i made a terrain generation algorithm. With approval of my team, I designed the terrain generation algorithm myself. It might not deliver the best results as the tried and tested algorithms, but i did learn the most from it. For the tree algorithm i used poisson disc sampling, and the structures are randomly placed for now.</p>
+                    <p>
+                        Something that I have always been interested about is random terrain generation. I wanted to try and make my own algorithm at first. To experiment with it and see what problems I would run into.
+                    </p>
                     <br/>
-                    <h3>Design Process</h3>
-                    <p>The first idea was that structures would spawn based on where the player was moving to. The idea behind it was that the player could walk around in an infinitely expanding world and feel lost while always being able to miraculously find the objectives. We eventually opted for a map generated at the start of the game, structures included. At this point i had the code for generating trees and toggling them on and off, the latter of which was now technically redundant but i kept it in anyway. After that i started working on a terrain generation algorithm. The first version i cam up with was very bumpy so i tried to make another one that was more hilly instead. In the end product i eventually combined both of them into one final terrain.</p>
-                    <br/>
-                    <h3>Future Plans</h3>
-                    <p>I am planning on continuing working on this and eventually make it into a game. First is making the generation better though. I am planning on making the current terrain generation a biome generation instead and using a more classical existing algorithm like Perlin noise for the terrain. Along with that i am planning on making it infinite by generating in chunks that connect to each other. For that i also need to make the current system work asynchronous.</p>
+                    <p>
+                        For generating the trees, I didn’t have an idea of where I could start so I decided, so did some research and found a technique called Poisson Disc Sampling. The Terrain height generation I did want to try myself.
+                    </p>
                 </td>
                 <td id="techInfo">
                     <img id="gameLogo" src="Terrain Gen/Terrain Gen logo.png">
@@ -107,98 +115,53 @@
                 </td>
             </table>
 
-            <button class="collButton" id="media" onclick="openColl(this.id)"><b>Development Time-lapse</b></button>
-            <div class="collContent" id="coll_media">
-                <video style="display: block;" width="100%" controls><source src="Terrain Gen/timelapse.mp4" type="video/mp4"></video>
-                <p class="imageDescription">
-                    During the development of the terrain generation script i recorded everything i did. Later i combined this footage into a time-lapse because time-lapses are a great 
-                    way of showing a process in a short amount of time. The total length of the footage is around 6 hours.
-                </p>
-            </div>
-
-            <button class="collButton" id="controlsOverview" onclick="openColl(this.id)"><b>Terrain Generation</b></button>
-            <div class="collContent" id="coll_controlsOverview">
-                <p>
-                    For generating the terrain i decided to not look at any pre-existing algorithms on the internet and try to come up with something myself. The first idea i had for 
-                    this was to make a 2d array with all the points in the terrain. The script would then loop over all points and take the average of all the surrounding points that 
-                    had already been assigned. To this average it would than add or subtract a number that makes sure it never goes above the maximum or under the minimum and would be 
-                    biased towards the middle point.
-                </p>
-                <br/>
-                <table>
-                    <tr><td class="textImage"><video width="100%" controls loop><source src="Terrain Gen/terrain 1.mp4"></video></td><td style="width: 51%;"></td></tr>
-                    <tr><td class="imageDescription" style="width: 49%;"><p>The first terrain generation algorithm</p></td><td style="width: 51%;"></td></tr>
-                </table>
-                <br/>
-                <p>
-                    This way of generating terrain is great for a bumpy field, but it would be nice to also have hills. For this I ended up using a script that I first made for maybe 
-                    adding biomes to the terrain. This biome generation works in a completely different way to the first terrain generation. This script stats with a small 2d array of 
-                    around 5x5. These points are given completely random height values. Then the script makes a new array that is twice as big (in this case 10x10). The values from the 
-                    5x5 grid are implemented on all the even numbered points and the rest is filled in as an average of the surrounding points to create smooth transitions between 
-                    points. Now a new array is made that is again twice as big (20x20 in this example). We then fill the 10x10 in the 20x20 and we repeat that until we get a 
-                    sufficiently sized array of height points. There is also some randomness given to any new point made to give it a more natural look
-                </p>
-                <br/>
-                <table><tr>
-                    <td class="textImage"><video width="100%" controls loop><source src="Terrain Gen/terrain 2.mp4"></video></td><td style="width: 2%;"></td>
-                    <td class="textImage"><img style="width: 70%;" src="Terrain Gen/terrain hill check.png"></td>
-                </tr><tr>
-                    <td class="imageDescription" style="width: 49%;"><p>Version 2: I added colours to make the height difference more noticeable</p></td><td style="width: 2%;"></td>
-                    <td class="imageDescription" style="width: 49%;"><p>Drawing of how a smaller array is translated into a bigger one. The crosses are the old points in the new array. The arrows is where each new point takes the average of</p></td>
-                </tr></table>
-                <br/>
-            </div>
-
-            <button class="collButton" id="mechanics" onclick="openColl(this.id)"><b>Tree Generation</b></button>
+            <button class="collButton" id="mechanics" onclick="openColl(this.id)"><b>Poisson Disc Sampling</b></button>
             <div class="collContent" id="coll_mechanics">
-                <p>
-                    The tree generation I made using using a technique called Poisson Disc Sampling. The way this works is by generating a point in a predetermined area. That point is 
-                    assigned a set amount of new points a set distance away in a circle shape. These points are then checked if the radius overlaps with another point. If so, it is 
-                    discarded. If not the point is added to the list of actual points and assigned its own new points. This repeats until the whole area is full. The first version I 
-                    made used a constant distance between points. This looked fine for dense forests, but normally forests are much more randomly packed. That is why i changed it to 
-                    use a random distance between points between 2 values instead.
-                </p>
-                <br/>
                 <table><tr>
                     <td style="width: 49%;"><video width="100%" controls loop><source src="Terrain Gen/tree spawning 1.mp4"></video></td><td style="width: 2%;"></td>
                     <td style="width: 49%;"><video width="100%" controls loop><source src="Terrain Gen/tree spawning 2.mp4"></video></td>
                 </tr>
                 <tr>
-                    <td class="imageDescription" style="width: 49%;"><p>Version 1: with a constant distance between points</p></td><td style="width: 2%;"></td>
-                    <td class="imageDescription" style="width: 49%;"><p>Version 2: with a random distance between points</p></td>
+                    <td class="imageDescription" style="width: 49%;"><p>Version 1 - constant distance between points</p></td><td style="width: 2%;"></td>
+                    <td class="imageDescription" style="width: 49%;"><p>Version 2 - random distance between points</p></td>
                 </tr></table>
                 <br/>
                 <p>
-                    The first idea the team had, was to spawn the objectives in front of the player, so i made sure that the trees could be toggled on and off at will. The way i did this 
-                    is by adding all the trees to a list. Then whenever a structure moved it would loop over every point to see if it was colliding with the structure. If a collision 
-                    was found, the point would be deactivated and put into a list of all currently deactivated trees. Then, whenever the structure moved again, we could loop over all 
-                    deactivated trees and activate the ones that were no longer colliding.
-                </p>            
-                <br/>
-                <table>
-                    <tr><td style="width: 49%;"><video width="100%" controls loop><source src="Terrain Gen/tree toggling.mp4"></video></td><td style="width: 51%;"></td></tr>
-                    <tr><td class="imageDescription" style="width: 49%;"><p>Trees disappearing when coming in contact with the green area</p></td><td style="width: 51%;"></td></tr>
-                </table>
-            </div>
-
-            <button class="collButton" id="settingsOverview" onclick="openColl(this.id)"><b>Structure Generation</b></button>
-            <div class="collContent" id="coll_settingsOverview">
-                <p>
-                    The first idea for the structures was to make them spawn in front of the player if they went to far from the current structure. The way i implemented this is by
-                    registering the players movement in the last second and using that to find out where the player is moving to. In that direction a new structure is placed a set
-                    distance away from the player. This was eventually replaced by spawning the structures up front, which i have opted to simply do with picking a random location and
-                    checking if there is another structure or player within a certain distance because for the concept we had for the game we would only spawn 3 structures at most.  
+                    For generating the trees, I used an algorithm called Poisson Disc Sampling. The system starts with placing a random tree somewhere and creating possible generation points in a circle around it. Then the system checks all those possible points and sees if it can place a tree there without it being to close to an already existing tree. This is repeated until there are no possible points left. 
                 </p>
                 <br/>
-                <table><tr>
-                    <td style="width: 49%;"><video width="100%" controls loop><source src="Terrain Gen/structure in front of player.mp4"></video></td><td style="width: 2%;"></td>
-                    <td style="width: 49%;"><video width="100%" controls loop><source src="Terrain Gen/structure random location.mp4"></video></td>
-                </tr>
-                <tr>
-                    <td class="imageDescription" style="width: 49%;"><p>Structure spawning in front of player (blue capsule)</p></td><td style="width: 2%;"></td>
-                    <td class="imageDescription" style="width: 49%;"><p>Structure randomly spawning on terrain</p></td>
-                </tr></table>
+                <p>
+                    First, I had a constant distance that needed to be between trees. But when making it a random distance it became much less dense and natural looking.
+                </p>
             </div>
+
+            <button class="collButton" id="controlsOverview" onclick="openColl(this.id)"><b>Terrain Generation</b></button>
+            <div class="collContent" id="coll_controlsOverview">
+                <table>
+                    <tr>
+                        <td class="textImage"><video width="100%" controls loop><source src="Terrain Gen/terrain 1.mp4"></video></td><td style="width: 2%;"></td>
+                        <td class="textImage"><video width="100%" controls loop><source src="Terrain Gen/terrain 2.mp4"></video></td>
+                    </tr>
+                    <tr>
+                        <td class="imageDescription" style="width: 49%;"><p>Algorithm 1 - small bumps</p></td><td style="width: 2%;"></td>
+                        <td class="imageDescription" style="width: 49%;"><p>Algorithm 2 - large hills (cube visualization)</p></td>
+                    </tr>
+                </table>
+                <br/>
+                <p>
+                    The first system I made loops over every point in a grid and takes the average height of the generated points around it. Then it would add a random number to the height that would always slightly favour going to the middle. 
+                </p>
+                <br/>
+                
+                <p>
+                    This resulted in a lot of very small hills, so I tried a different approach. The algorithm started with a small grid (5x5 for example). It would randomise every point on that grid. Then it would double the lengths of the grid (10x10 in this example) and place all the original points on the even numbers. All the odd numbers were set to be near the average of the points around it. This would repeat until the system had a size grid it was happy with.
+                </p>
+                <br/>
+                <p>
+                    This resulted in a low number of big hills, but somewhat flat looking. So, for the final version, I combined the first and second algorithm to create a somewhat convincing looking result. 
+                </p>
+            </div>
+
             <button class="collButton" id="downloads" onclick="openColl(this.id)"><b>Downloads</b></button>
             <div class="collContent" id="coll_downloads">
                 <div class="downloadsTab">
@@ -207,12 +170,6 @@
                         <a href="Terrain Gen/TerrainGeneration.zip" download="TerrainGeneration">download [.zip]</a>
                         <a href="Terrain Gen/TerrainGeneration.7z" download="TerrainGeneration">download [.7z]</a>
                         <a class="outgoingLink" href="https://github.com/JonasValstar/TerrainGeneration" target="_blank">github</a>
-                    </div>
-                </div>
-                <div class="downloadsTab">
-                    <div><p>TerrainScript.cs</p></div>
-                    <div>
-                        <a class="outgoingLink" href="https://github.com/JonasValstar/TerrainGeneration/blob/main/Assets/Scripts/TerrainScript.cs" target="_blank">github</a>
                     </div>
                 </div>
             </div>
