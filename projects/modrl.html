@@ -83,7 +83,7 @@
             <table id="gameTable">
                 <td id="descInfo">
                     <!---->
-                    <video width="100%" autoplay muted controls loop><source src="mechMates/MechMates showcase.mp4" type="video/mp4"></video>
+                    <video width="100%" autoplay muted controls loop><source src="ModRL/Showcase video.mp4" type="video/mp4"></video>
                     <p>
                         In this project, I want to experiment with making something fully alterable by the player. I decided to make a weapon system where the weapons were fully changeable in behaviour by applying new mods. I also wanted to experiment with Node trees, so I made a level tree to unlock new weapons.
                     </p>
@@ -95,27 +95,19 @@
                 <td id="techInfo">
                     <img id="gameLogo" src="mechMates/mechmates logo.png">
                     <p><b>Engine</b></p>
-                    <a target="_blank" href="https://unity.com/">Unity 2022.3.45f1</a>
+                    <a target="_blank" href="https://unity.com/">Unity 2022.3.54f1</a>
                     <p><b>Development Time</b></p>
-                    <a>48 Hours</a>
+                    <a>1 Week</a>
                     <p><b>Development Period</b></p>
-                    <a>Sep 2024</a>
+                    <a>Jan 2025</a>
                     <p><b>Developed by</b></p>
                     <a>Jonas Valstar</a><br />
-                    <a>Alexandra Chelaru</a><br />
-                    <a>Radu Florescu</a><br />
-                    <a>Senja Harjula</a><br />
-                    <a>Sem Jager</a><br />
-                    <a>Jibbe Wieman</a><br />
                     <p><b>My Role(s)</b></p>
-                    <a>GamePlay Programmer</a><br/>
-                    <a>Store Programmer</a><br/>
-                    <a>UI Designer / Programmer</a>
+                    <a>Sole Developer</a>
                     <p><b>My Features</b></p>
-                    <a>(Elemental) Weapons</a><br/>
-                    <a>Enemy Weakness/Resistance</a><br/>
-                    <a>Weapon Shop every 15 pts</a><br/>
-                    <a>UI and Main Menu</a>
+                    <a>Modifiable weapons</a><br/>
+                    <a>Level tree</a><br/>
+                    <a>Adaptive UI</a>
                     <p><b>Platform</b></p>
                     <a>Windows</a>       
                     <p><b>Download</b></p>
@@ -125,7 +117,10 @@
 
             <button class="collButton" id="weapons" onclick="openColl(this.id)"><b>Weapon Mods</b></button>
             <div class="collContent" id="coll_weapons">
-                <i>Video Here</i>
+                <table>
+                    <tr><td class="textImage"><video width="100%" controls loop><source src="ModRL/Mod Change Weapon.mp4"></video></td><td style="width: 51%;"></td></tr>
+                    <tr><td class="imageDescription" style="width: 49%;"><p>Mods change the behaviour of a weapon</p></td><td style="width: 51%;"></td></tr>
+                </table>
                 <br/>
                 <p>
                     I made the guns have several mod groups to which the mods would be applied. Each group only accepts mods of that group. Every time a new mod was added or removed; the mods would load in again to make sure the behaviour is correct. The system cleans the weapons behaviour and adds all the equipped mods behaviour into it, along with the weapons base behaviour.
@@ -136,10 +131,12 @@
                 </p>
             </div>
 
-            <button class="collButton" id="shop" onclick="openColl(this.id)"><b>Weapon Shop</b></button>
+            <button class="collButton" id="shop" onclick="openColl(this.id)"><b>Level Tree</b></button>
             <div class="collContent" id="coll_shop">
-                <i>Video Here</i>
-                <br/>
+                <table>
+                    <tr><td class="textImage"><video width="100%" controls loop><source src="ModRL/Level Tree.mp4"></video></td><td style="width: 51%;"></td></tr>
+                    <tr><td class="imageDescription" style="width: 49%;"><p>Level tree unlocking new weapon</p></td><td style="width: 51%;"></td></tr>
+                </table>
                 <p>
                     The level tree is made from a list holding structs containing the information that a node needs. Things like the weapon it unlocks. But those structs also have a list in them that holds all the nods that are available after that node is unlocked.
                 </p>
@@ -149,10 +146,16 @@
                 </p>
             </div>
 
-            <button class="collButton" id="ui" onclick="openColl(this.id)"><b>UI</b></button>
+            <button class="collButton" id="ui" onclick="openColl(this.id)"><b>Adaptive UI</b></button>
             <div class="collContent" id="coll_ui">
-                <i>Video Here</i>
-                <br/>
+                <table><tr>
+                    <td style="width: 49%;"><video width="100%" controls loop><source src="ModRL/Mod UI.mp4"></video></td><td style="width: 2%;"></td>
+                    <td style="width: 49%;"><video width="100%" controls loop><source src="ModRL/Level UI.mp4"></video></td>
+                </tr>
+                <tr>
+                    <td class="imageDescription" style="width: 49%;"><p>Changeable Mod UI size</p></td><td style="width: 2%;"></td>
+                    <td class="imageDescription" style="width: 49%;"><p>Adaptable Level UI layout</p></td>
+                </tr></table>
                 <p>
                     The mod UI can be setup by the developer in how many cells wide and high each area is (equipped mods and available mods). It will then automatically calculate the size of each cell and place the mods in these cells.
                 </p>
@@ -167,9 +170,7 @@
                 <div class="downloadsTab">
                     <div><p>Source Files</p></div>
                     <div>
-                        <a href="mechMates/MechMatesSource.zip" download="TD Game">download [.zip]</a>
-                        <a href="mechMates/MechMatesSource.7z" download="TD Game">download [.7z]</a>
-                        <a class="outgoingLink" href="https://github.com/JonasValstar/Y2GameJam" target="_blank">Github</a>
+                        <a class="outgoingLink" href="https://github.com/JonasValstar/GameProgramming-FT" target="_blank">Github</a>
                     </div>
                 </div>
             </div>
