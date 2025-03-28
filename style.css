@@ -145,7 +145,7 @@ i {
 }
 
 #topBar {
-    background-color: #282d30;
+    background-color: #1e2225;
     position: fixed;
     z-index: 10;
     display: flex;
@@ -163,7 +163,7 @@ i {
 #sideBar {
     z-index: 2;
     position: fixed;
-    background-color: #282d30;
+    background-color: #1e2225;
     padding-top: 5px;
     width: 30vw;
     max-width: 40vh;
@@ -200,12 +200,17 @@ i {
 .navigation > a {
     padding-top: 1vh;
     padding-bottom: 1vh;
-    padding-left: 3vw;
+    padding-left: 5vh;
     text-decoration-line: none;
 }
 
 .navigation > a:hover {
-    padding-left: 5vw;
+    border-left: 2vh white solid;
+    padding-left: 3vh;
+}
+
+.activeNav {
+    background-color: #30363a; /*#282d30;*/
 }
 
 .footer {
@@ -241,7 +246,7 @@ i {
 
 #content {
     z-index: 1;
-    background-color: #42474a; 
+    background-color: #30363a; 
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -275,7 +280,7 @@ i {
 .tree {
     width: 100vw;
     max-width: 93vh; /*134 - 40 - 1*/
-    background-color: #30363a;
+    background-color: #282d30;
     z-index: 3;
     position: fixed;
     padding: 7.5px;
@@ -407,7 +412,7 @@ i {
     margin-left: 5%;
     margin-right: 5%;
     padding: 5%;
-    background-color: #2D3339;
+    background-color: #202428;
     border: none;
     transition: .1s;
 }
@@ -436,9 +441,10 @@ i {
 }
 
 .contactImage > a {
+    color: black;
     position: absolute;
-    top: 72%;
-    left: 50%;
+    top: 25%;
+    left: 64%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transition: .1s;
@@ -446,8 +452,8 @@ i {
 
 .contactImage > a > h1 {
     font-family: 'ErasBoldITC';
-    color: white;
-    font-size: 6vh;
+    color: black;
+    font-size: 4vh;
 }
 
 .contactImage > a:hover {
@@ -459,7 +465,7 @@ i {
     margin: 2vh;
     padding: 1vh;
     border: none;
-    background-color: #2d3339;
+    background-color: #202428;
 }
 
 .landingButtons > h3 {
@@ -513,7 +519,7 @@ i {
 .mainPic {
     margin: 2vh;
     margin-right: 4vh;
-    background-color: #2d3339;
+    background-color: #202428;
     padding: 0;
 }
 
@@ -570,7 +576,7 @@ i {
     opacity: 0;
 }
 
-.mainPicImg:hover .overlay {
+.mainPic:hover .overlay {
     opacity: 0;
 }
 
@@ -771,7 +777,7 @@ i {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background-color: #2D3339;
+    background-color: #202428;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 1vh;
@@ -800,7 +806,7 @@ i {
 }
 
 .imageDescription, .textImage {
-    background-color: #363C42;
+    background-color: #202428;
 }
 
 

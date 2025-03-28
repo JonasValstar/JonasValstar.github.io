@@ -5,44 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <script src="projectScript.js"></script>
-    <title>Jonas Valstar | All Projects</title>
+    <title>Jonas Valstar | Portfolio Projects</title>
     <link rel="icon" type="image/x-icon" href="a_pictures/favicon.gif">
 </head>
-<body onload="loadFunctions(); loadProjects()">
+<body onload="loadFunctions()">
     <div id="container">
         <div id="topBar"> 
             <div class="logo">
                 <h1><a href="index.html">Jonas Valstar</a></h1>
             </div>
             <div class="slideshow">
-                <a class="prev" onclick="showSlide(1)">&#10094;</a>
-                <div class="slide"><a><q>This game would not have been possible without you</q></a></div>
-                <div class="slide"><a><q>You learn whatever you set your mind to SO FAST</q></a></div>
-                <div class="slide"><a><q>Just Keep doing what you are Fucking doing</q></a></div>
-                <div class="slide"><a><q>Jonas, I think all of us owe you a piece of our grade</q></a></div>
-                <div class="slide"><a><q>You are the definition of 'Doing things for shits and giggles'</q></a></div>
-                <div class="slide"><a><q>10/10 would work with again any time any day</q></a></div>
-                <div class="slide"><a><q>You have experience in c# and it shows</q></a></div>
-                <div class="slide"><a><q>My dear friend, how the fuck do you keep pulling this shit off</q></a></div>
-                <div class="slide"><a><q>You inspire me to be as good a programmer as you some day</q></a></div>
-                <div class="slide"><a><q>You, good sir, don't get to feel useless</q></a></div>
-                <div class="slide"><a><q>You take time to explain things to us in such a nice way</q></a></div>
-                <div class="slide"><a><q>Very talented coder and a great understanding of Unity</q></a></div>
-                <div class="slide"><a><q>You were the foundation of this team and you did amazing</q></a></div>
-                <div class="slide"><a><q>What skills do you not have</q></a></div>
-                <div class="slide"><a><q>Seriously I wish I had the pace of work you do</q></a></div>
-                <div class="slide"><a><q>You always do more then we ask you to</q></a></div>
-                <div class="slide"><a><q>You are a very great worker and valuable asset to a team</q></a></div>
-                <div class="slide"><a><q>Why would you need so many quotes on your website?</q></a></div>
-                <a class="next" onclick="showSlide(2)">&#10095;</a>
+                <div class="slide"><a>Skylanders Giants Player</a></div>
+                <div class="slide"><a>Hobby Photographer</a></div>
+                <div class="slide"><a>Warhammer 40000 Player</a></div>
+                <div class="slide"><a>Film Enjoyer</a></div>
+                <div class="slide"><a>Magic the Gathering Player</a></div>
+                <div class="slide"><a>Likes Race Cars</a></div>
+                <div class="slide"><a>Dungeons and Dragons Player</a></div>
+                <div class="slide"><a>Model Car Collector</a></div>
             </div>
         </div>
         <div id="sideBar">
             <div class="navigation">
                 <a href="index.html">Home</a>
-                <a href="portfolio.html">Portfolio Projects</a>
-                <a href="projects.html"><b>All Projects</b></a>
+                <a class="activeNav" href="projects.html"><b>Projects</b></a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
             </div>
@@ -53,7 +39,7 @@
                     <a target="_blank" href="https://www.linkedin.com/in/jonas-valstar-379112243"><img src="a_pictures/logos/linkedIn.png"></a>
                 </div>
                 <div class="info">
-                    <p><i class="madeBy">site by</i> Jonas Valstar, 2024</p>
+                    <p><i class="madeBy">site by</i> Jonas Valstar, 2025</p>
                     <p>background and banner images from Freepik</p>
                 </div>
             </div>
@@ -70,256 +56,95 @@
                 <a href="projects.html">projects</a>
                 <p>/</p>
             </div>
-            <img src="a_pictures/banners/projects.png">
+            <img src="a_pictures/banners/portfolio.png">
             <div class="artShadow"></div> <!--!decide if i want this-->
-            <div style="display: flex; flex-direction: row; text-align: center; background-color: #2D3339;">
-                <h1 style="margin: 1vh;">Filter</h1>
-                <input class="projectSearch" oninput="DetectChange(this.value.toLowerCase())" type="text" placeholder="Search Project" />
-            </div>
-            <div class="tagBar" style="padding-top: 1%;">
-                <a onclick="ToggleTag(this.outerText)">Unity</a>
-                <a onclick="ToggleTag(this.outerText)">GameMaker</a>
-                <a onclick="ToggleTag(this.outerText)">Blender</a>
-                <a onclick="ToggleTag(this.outerText)">C#</a>
-                <a onclick="ToggleTag(this.outerText)">GML</a>
-                <a onclick="ToggleTag(this.outerText)">2D</a>
-                <a onclick="ToggleTag(this.outerText)">3D</a>
-                <a onclick="ToggleTag(this.outerText)">Procedural</a>
-            </div>
-            <div class="tagBar">
-                <a onclick="ToggleTag(this.outerText)">School</a>
-                <a onclick="ToggleTag(this.outerText)">Personal</a>
-                <a onclick="ToggleTag(this.outerText)">GameJam</a>
-                <a onclick="ToggleTag(this.outerText)">Programmer</a>
-                <a onclick="ToggleTag(this.outerText)">Artist</a>
-            </div>
-            <table class="picTable">
-                <tr class="picTR">
-                    <td class="picTD" id="n_Sampi" data-date="2023.02.01">
-                        <a href="projects/sampi.html"><img src="projects/sampi/Sampi Poster.png"/></a>
-                        <div class="gameMenu"><h3><b>Sampi</b></h3></div>
-                        <div class="gameMenu"><i>nov 2022 - feb 2023</i></div>
-                        <div class="gameMenu"><p>Digital board game with custom AI opponent</p></div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">Unity</a>
-                            <a onclick="ToggleTag(this.outerText)">C#</a>
-                            <a onclick="ToggleTag(this.outerText)">2D</a>
-                            <a onclick="ToggleTag(this.outerText)">School</a>
-                        </div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">Programmer</a>
-                            <a onclick="ToggleTag(this.outerText)">Artist</a>
-                        </div>
+            <a class="mainPicA" style="padding: 0;" href="projects/modrl.html"><div class="mainPic">
+                <table style="border-collapse: collapse;" onmouseover="playVideo('video4')" onmouseout="pauseVideo('video4')">
+                    <td class="mainPicImg">
+                        <video id="video4" src="projects/ModRL/ModRL Video.mp4" type="video/mp4" muted loop></video>
+                        <img class="overlay" src="projects/ModRL/Mod RL poster wide.png"/></td>
+                    <td class="mainPicText">
+                        <h1 style="color: #a3754d;">Weapon Mod System</h1>
+                        <p>Modifiable weapon system and level tree upgrade system</p>
+                        <p>&nbsp;</p>
+                        <p><b>Description:</b> A system for modifying weapons with mods the player can collect build into the Unity FPS micro game.</p>
+                        <p><b>Team Role:</b> Solo Developer</p>
+                        <p><b>Made with:</b> Unity 2022.3.54f1</p>
+                        <p><b>Dev Time:</b> 1 Week</span></p>
                     </td>
-                    <td class="picTD" id="n_W.A.R.n_War" data-date="2024.01.02">
-                        <a href="projects/war.html"><img src="projects/war/WAR Poster.png" class="pixelArt"/></a>
-                        <div class="gameMenu"><h3><b>W.A.R.</b></h3></div>
-                        <div class="gameMenu"><i>nov 2023 - jan 2024</i></div>
-                        <div class="gameMenu"><p>Puzzle game with procedural animation and NPC ordering</p></div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">GameMaker</a>
-                            <a onclick="ToggleTag(this.outerText)">GML</a>
-                            <a onclick="ToggleTag(this.outerText)">2D</a>
-                        </div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">Procedural</a>
-                            <a onclick="ToggleTag(this.outerText)">School</a>
-                        </div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">Programmer</a>
-                            <a onclick="ToggleTag(this.outerText)">Artist</a>
-                        </div>
+                </table>
+            </div></a>
+            <a class="mainPicA" style="padding: 0;" href="projects/terraingen.html"><div class="mainPic">
+                <table style="border-collapse: collapse;" onmouseover="playVideo('video3')" onmouseout="pauseVideo('video3')">
+                    <td class="mainPicImg">
+                        <video id="video3" src="projects/Terrain Gen/Terrain Gen Poster Video.mp4" type="video/mp4" muted loop></video>
+                        <img class="overlay" src="projects/Terrain Gen/Terrain Gen poster wide.png"/></td>
+                    <td class="mainPicText">
+                        <h1 style="color: #678df0;">Terrain Gen</h1>
+                        <p>Custom made terrain generation</p>
+                        <p>&nbsp;</p>
+                        <p><b>Description:</b> Originally made for a discontinued game, a system generating a piece of terrain with trees and structures</p>
+                        <p><b>Team Role:</b> Solo Developer</p>
+                        <p><b>Made with:</b> Unity 2022.3.20f1</p>
+                        <p><b>Dev Time:</b> 1 week <span style="font-family: ErasLightITC;">(so far)</span></p>
                     </td>
-                    <td class="picTD" id="n_TerrainGen" data-date="2024.03.03">
-                        <a href="projects/terraingen.html"><img src="projects/Terrain Gen/Terrain Gen poster.png"/></a>
-                        <div class="gameMenu"><h3><b>TerrainGen</b></h3></div>
-                        <div class="gameMenu"><i>mar 2024</i></div>
-                        <div class="gameMenu"><p>Custom designed Terrain Generation algorithm</p></div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">Unity</a>
-                            <a onclick="ToggleTag(this.outerText)">C#</a>
-                            <a onclick="ToggleTag(this.outerText)">3D</a>
-                            <a onclick="ToggleTag(this.outerText)">Procedural</a>
-                        </div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">Personal</a>
-                            <a onclick="ToggleTag(this.outerText)">Programmer</a>
-                        </div>
+                </table>
+            </div></a>
+            <a class="mainPicA" style="padding: 0;" href="projects/war.html"><div class="mainPic">
+                <table style="border-collapse: collapse;" onmouseover="playVideo('video2')" onmouseout="pauseVideo('video2')">
+                    <td class="mainPicImg">
+                        <video id="video2" src="projects/war/WAR Poster Video.mp4" type="video/mp4" muted loop></video>
+                        <img class="overlay" src="projects/war/WAR Poster wide.png"/></td>
+                    <td class="mainPicText">
+                        <h1 style="color: #ee1c24;">W.A.R.</h1>
+                        <p>Procedurally animated spider legs</p>
+                        <p>&nbsp;</p>
+                        <p><b>Description:</b> A 2D top-down puzzle game where you have to have to use each characters unique ability to solve various puzzles</p>
+                        <p><b>Team Role:</b> Lead Programmer, 2D Artist</p>
+                        <p><b>Made with:</b> GameMaker v2023.11.0.121</p>
+                        <p><b>Dev Time:</b> 2 months</p>
                     </td>
-                </tr>
-                <tr class="picTR">
-                    <td class="picTD" id="n_TheGreatForestTakeover" data-date="2024.06.04">
-                        <a href="projects/greatforest.html"><img src="projects/Great Forest Takeover/Great Forest poster.png"/></a>
-                        <div class="gameMenu"><h3><b>The Great Forest</b></h3></div>
-                        <div class="gameMenu"><i>feb 2024 - jun 2024</i></div>
-                        <div class="gameMenu"><p>Puzzle game with dialogue, a race and a boss fight</p></div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">Unity</a>
-                            <a onclick="ToggleTag(this.outerText)">Blender</a>
-                            <a onclick="ToggleTag(this.outerText)">C#</a>
-                            <a onclick="ToggleTag(this.outerText)">3D</a>
-                            
-                        </div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">School</a>
-                            <a onclick="ToggleTag(this.outerText)">Programmer</a>
-                        </div>
+                </table>
+            </div></a>
+            <a class="mainPicA" style="padding: 0;" href="projects/sampi.html"><div class="mainPic">
+                <table style="border-collapse: collapse;" onmouseover="playVideo('video1')" onmouseout="pauseVideo('video2')">
+                    <td class="mainPicImg" >
+                        <video id="video1" src="projects/sampi/Sampi Poster Video.mp4" type="video/mp4" muted loop></video>
+                        <img class="overlay" src="projects/sampi/Sampi Poster wide.png"/></td>
+                    <td class="mainPicText">
+                        <h1 style="color: #2c888a ;">Sampi</h1>
+                        <p>Custom made AI opponent</p>
+                        <p>&nbsp;</p>
+                        <p><b>Description:</b> A digital board game where the objective is to reach the opposite side of the board before you opponent does.</p>
+                        <p><b>Team Role:</b> Sole Programmer, Visual Designer</p>
+                        <p><b>Made with:</b> Unity 2021.3.13f1</p>
+                        <p><b>Dev Time:</b> 2 weeks</p>
                     </td>
-                    <td class="picTD" id="n_MechMates" data-date="2024.09.05">
-                        <a href="projects/mechMates.html"><img src="projects/mechMates/MechMates Poster.png"/></a>
-                        <div class="gameMenu"><h3><b>MechMates</b></h3></div>
-                        <div class="gameMenu"><i>sep 2024</i></div>
-                        <div class="gameMenu"><p>GameJam horde shooter game with switchable weapons</p></div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">Unity</a>
-                            <a onclick="ToggleTag(this.outerText)">C#</a>
-                            <a onclick="ToggleTag(this.outerText)">3D</a>
-                            <a onclick="ToggleTag(this.outerText)">GameJam</a>
-                        </div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">Programmer</a>
-                        </div>
-                    </td>
-                    <td class="picTD" id="n_UdderChaos" data-date="2022.02.06">
-                        <a href="projects/udderChaos.html"><img src="projects/udderChaos/Udder Chaos Poster.png"/></a>
-                        <div class="gameMenu"><h3><b>Udder Chaos</b></h3></div>
-                        <div class="gameMenu"><i>dec 2021 - feb 2022</i></div>
-                        <div class="gameMenu"><p>2D 1v1 fighting game inspired by stickfight and rounds</p></div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">Unity</a>
-                            <a onclick="ToggleTag(this.outerText)">C#</a>
-                            <a onclick="ToggleTag(this.outerText)">2D</a>
-                            <a onclick="ToggleTag(this.outerText)">School</a>
-                        </div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">Programmer</a>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="picTR">
-                    <td class="picTD" id="n_TDGame" data-date="2023.12.07">
-                        <a href="projects/tdgame.html"><img src="projects/TD Game/GameJam poster.png" class="pixelArt"/></a>
-                        <div class="gameMenu"><h3><b>TD Game</b></h3></div>
-                        <div class="gameMenu"><i>dec 2023</i></div>
-                        <div class="gameMenu"><p>GameJam tower defense game with grid based building</p></div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">Unity</a>
-                            <a onclick="ToggleTag(this.outerText)">C#</a>
-                            <a onclick="ToggleTag(this.outerText)">2D</a>
-                            <a onclick="ToggleTag(this.outerText)">GameJam</a>
-                        </div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">Programmer</a>
-                        </div>
-                    </td>
-                    <td class="picTD" id="n_TijnsBallGame" data-date="2023.11.08">
-                        <a href="projects/tijnballgame.html"><img src="projects/tijnSimpleBallGame/TSBG Poster.png"/></a>
-                        <div class="gameMenu"><h3><b>Tijn's Ball Game</b></h3></div>
-                        <div class="gameMenu"><i>nov 2023</i></div>
-                        <div class="gameMenu"><p>2D game where you try to score a ball through a hoop</p></div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">Unity</a>
-                            <a onclick="ToggleTag(this.outerText)">C#</a>
-                            <a onclick="ToggleTag(this.outerText)">2D</a>
-                            <a onclick="ToggleTag(this.outerText)">Personal</a>
-                        </div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">Programmer</a>
-                        </div>
-                    </td>
-                    <td class="picTD" id="n_Posters" data-date="2024.00.09">
-                        <a href="projects/posters.html"><img src="projects/posters/DRG Poster 1.png"/></a>
-                        <div class="gameMenu"><h3><b>Posters</b></h3></div>
-                        <div class="gameMenu"><i>2022 - 2024</i></div>
-                        <div class="gameMenu"><p>Movie style posters</p></div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">2D</a>
-                            <a onclick="ToggleTag(this.outerText)">Personal</a>
-                            <a onclick="ToggleTag(this.outerText)">Artist</a>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="picTR">
-                    <td class="picTD" id="n_Toast" data-date="2024.06.10">
-                        <a href="projects/toast.html"><img src="projects/Toast/toast poster.png"/></a>
-                        <div class="gameMenu"><h3><b>Toast</b></h3></div>
-                        <div class="gameMenu"><i>jun 2024</i></div>
-                        <div class="gameMenu"><p>3D Animation</p></div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">Blender</a>
-                            <a onclick="ToggleTag(this.outerText)">3D</a>
-                            <a onclick="ToggleTag(this.outerText)">Personal</a>
-                        </div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">Artist</a>
-                        </div>
-                    </td>
-                    <td class="picTD" id="n_Oleck" data-date="2023.11.11">
-                        <a href="projects/oleck.html"><img src="projects/oleck/Oleck Poster.png" class="pixelArt"/></a>
-                        <div class="gameMenu"><h3><b>Oleck</b></h3></div>
-                        <div class="gameMenu"><i>nov 2023</i></div>
-                        <div class="gameMenu"><p>Pixel Art</p></div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">2D</a>
-                            <a onclick="ToggleTag(this.outerText)">Personal</a>
-                            <a onclick="ToggleTag(this.outerText)">Artist</a>
-                        </div>
-                    </td>
-                    <td class="picTD" id="n_BlackWaterBandits" data-date="2023.11.12">
-                        <a href="projects/blackwaterbandits.html"><img src="projects/blackwaterBandits/Blackwater Bandits poster.png"/></a>
-                        <div class="gameMenu"><h3><b>Blackwater Bandits</b></h3></div>
-                        <div class="gameMenu"><i>sep 2023 - nov 2023</i></div>
-                        <div class="gameMenu"><p>Board Game</p></div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">2D</a>
-                            <a onclick="ToggleTag(this.outerText)">School</a>
-                            <a onclick="ToggleTag(this.outerText)">Artist</a>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="picTR">
-                    <td class="picTD" id="n_Storm" data-date="2024.11.13">
-                        <a href="projects/storm.html"><img src="projects/Storm/Storm poster.png"/></a>
-                        <div class="gameMenu"><h3><b>Storm</b></h3></div>
-                        <div class="gameMenu"><i>sep 2024 - nov 2024</i></div>
-                        <div class="gameMenu"><p>3D Animation</p></div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">Blender</a>
-                            <a onclick="ToggleTag(this.outerText)">3D</a>
-                            <a onclick="ToggleTag(this.outerText)">Personal</a>
-                        </div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">Artist</a>
-                        </div>
-                    </td>
-                    <td class="picTD" id="n_MalwareDetected" data-date="2025.01.14">
-                        <a href="projects/malwaredetected.html"><img src="projects/MalwareDetected/Malware Detected poster.jpg" class="pixelArt"/></a>
-                        <div class="gameMenu"><h3><b>Malware Detected</b></h3></div>
-                        <div class="gameMenu"><i>nov 2024 - jan 2025</i></div>
-                        <div class="gameMenu"><p>Pixel Art</p></div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">2D</a>
-                            <a onclick="ToggleTag(this.outerText)">Personal</a>
-                            <a onclick="ToggleTag(this.outerText)">Artist</a>
-                        </div>
-                    </td>
-                    <td class="picTD" id="n_ModdedWeapons" data-date="2025.06.15">
-                        <a href="projects/modrl.html"><img src="projects/ModRL/Mod RL poster.png"/></a>
-                        <div class="gameMenu"><h3><b>Modded Weapons</b></h3></div>
-                        <div class="gameMenu"><i>jan 2025 - jun 2025</i></div>
-                        <div class="gameMenu"><p>Board Game</p></div>
-                        <div class="gameTags">
-                            <a onclick="ToggleTag(this.outerText)">2D</a>
-                            <a onclick="ToggleTag(this.outerText)">School</a>
-                            <a onclick="ToggleTag(this.outerText)">Artist</a>
-                        </div>
-                    </td>
-                </tr>
-            </table>
+                </table>
+            </div></a>
+            <!--
+                <a class="mainPicA" style="padding: 0;" href="projects/greatforest.html"><div class="mainPic">
+                    <table style="border-collapse: collapse;" onmouseover="playVideo('video5')" onmouseout="pauseVideo('video5')">
+                        <td class="mainPicImg">
+                            <video id="video5" src="https://media.geeksforgeeks.org/wp-content/uploads/20210810214359/2.mp4" type="video/mp4" muted loop></video>
+                            <img class="overlay" src="projects/Great Forest Takeover/Great Forest poster wide.png"/></td>
+                        <td class="mainPicText">
+                            <h1 style="color: #005e2c;">The Great Forest: Takeover</h1>
+                            <p>Puzzle game with multiple systems</p>
+                            <p>&nbsp;</p>
+                            <p><b>Description:</b> A puzzle game for dutch kids aged 10-12 where they have to save the forest from the evil marten "Martin" </p>
+                            <p><b>Team Role:</b> Lead Programmer, 3D Artist</p>
+                            <p><b>Made with:</b> Unity 2022.3.20f1</p>
+                            <p><b>Dev Time:</b> 4 Months</span></p>
+                        </td>
+                    </table>
+                </div></a>
+            -->
             <p>&nbsp;</p>
             <p>&nbsp;</p>
         </div>
     </div> 
     <div id="shadow"></div> 
+    
 </body>
 </html>
