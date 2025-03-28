@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+    <title>Jonas Valstar | Storm</title>
+    <link rel="icon" type="image/x-icon" href="../a_pictures/favicon.gif">
+    <style>
+        #topBar {   
+            border-top: 5px solid #f49b42 ;
+        }
+
+        .logo > h1 > a {
+            color: #f49b42 ;
+        }
+
+        .navigation > a:hover {
+            border-left: 2vh #f49b42 solid;
+        }
+    </style>
+</head>
+<body onload="loadFunctions();">
+    <div id="container">
+        <div id="topBar"> 
+            <div class="logo">
+                <h1><a href="../index.html">Jonas Valstar</a></h1>
+            </div>
+            <div class="slideshow">
+                <div class="slide"><a>Skylanders Giants Player</a></div>
+                <div class="slide"><a>Hobby Photographer</a></div>
+                <div class="slide"><a>Warhammer 40000 Player</a></div>
+                <div class="slide"><a>Film Enjoyer</a></div>
+                <div class="slide"><a>Magic the Gathering Player</a></div>
+                <div class="slide"><a>Likes Race Cars</a></div>
+                <div class="slide"><a>Dungeons and Dragons Player</a></div>
+                <div class="slide"><a>Model Car Collector</a></div>
+            </div>
+        </div>
+        <div id="sideBar">
+            <div class="navigation">
+                <a href="../index.html">Home</a>
+                <a class="activeNav" href="../projects.html"><b>Projects</b></a>
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact</a>
+            </div>
+            <div class="footer">
+                <div class="links">
+                    <a target="_blank" href="https://github.com/JonasValstar"><img src="../a_pictures/logos/github.png"></a>
+                    <a target="_blank" href="https://jvalstar.itch.io/"><img src="../a_pictures/logos/itchio.png"></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/jonas-valstar-379112243"><img src="../a_pictures/logos/linkedIn.png"></a>
+                </div>
+                <div class="info">
+                    <p><i class="madeBy">site by</i> Jonas Valstar, 2025</p>
+                    <p>background and banner images from Freepik</p>
+                </div>
+            </div>
+        </div>
+        <div id="screenWarning">
+            <h3>Please use a Horizontal Screen</h3>
+            <p>I am still working on adding vertical screen support. For now using vertical screens is possible but will likely look strange</p>
+            <a onclick="this.parentElement.style.display = 'none'">close message</a>
+        </div>
+        <div id="content">
+            <div class="tree">
+                <a href="../index.html">jonasvalstar.github.io</a>
+                <p>/</p>
+                <a href="../projects.html">projects</a>
+                <p>/</p>
+                <a href="storm.html">storm</a>
+                <p>/</p>
+            </div>
+            <table id="gameTable">
+                <td id="descInfo">
+                    <!---->
+                    <video width="100%" autoplay muted controls loop><source src="Terrain Gen/showcase.mp4" type="video/mp4"></video>
+                    <p>
+                        In this project, I wanted to learn VR development. It was the first time I worked with VR, so it was all still new to me. I also wanted to use the mechanics unique to VR in an interesting way based on the Pixel ripped games.
+                    </p>
+                    <br/>
+                    <p>
+                        With this I suggested to my team that we made a puzzle game that would see the player play 2D games that would only be completable by interacting with it in VR.
+                    </p>
+                </td>
+                <td id="techInfo">
+                    <img id="gameLogo" src="storm/Storm logo.png">
+                    <p><b>Engine</b></p>
+                    <a target="_blank" href="https://unity.com/">Unity 2022.3.45f1</a>
+                    <p><b>Development Time</b></p>
+                    <a>2 Months</a>
+                    <p><b>Development Period</b></p>
+                    <a>Sep 2024 - Nov 2024</a>
+                    <p><b>Developed by:</b></p>
+                    <a>Jonas Valstar</a><br />
+                    <a>Ari Cont</a><br />
+                    <a>Felicity Heinkens </a><br />
+                    <p><b>My Role(s):</b></p>
+                    <a>Main Programmer</a>
+                    <a>3D Designer</a>
+                    <p><b>Features</b></p>
+                    <a>Mixed 2D / VR Mechanics</a><br/>
+                    <p><b>Platform</b></p>
+                    <a>Windows</a>
+                </td>
+            </table>
+
+            <button class="collButton" id="mechanics" onclick="openColl(this.id)"><b>Level 1</b></button>
+            <div class="collContent" id="coll_mechanics">
+                <table><tr>
+                    <td style="width: 49%;"><video width="100%" controls loop><source src="storm/Level 1.mp4"></video></td><td style="width: 51%;"></td>
+                </tr>
+                <tr>
+                    <td class="imageDescription" style="width: 49%;"><p>Early version of Level 1 mechanics</p></td><td style="width: 2%;"></td>
+                </tr></table>
+                <br/>
+                <p>
+                    In level 1 I made a system where the player would control a character in a dungeon fighting enemies. The VR aspect here came in the fact that there was a map laid out behind the player that the player could interact with. For example, they had to put a notebook on the bottomless pit, pour a glass of water on a lava-lake or use put a key on a door to open it. This would be seen back in the 2D game causing the player to progress again.
+                </p>
+            </div>
+
+            <button class="collButton" id="controlsOverview" onclick="openColl(this.id)"><b>Level 2</b></button>
+            <div class="collContent" id="coll_controlsOverview">
+                <table>
+                    <tr>
+                        <td class="textImage"><video width="100%" controls loop><source src="storm/Level 2.mp4"></video></td><td style="width: 51%;"></td>
+                    </tr>
+                    <tr>
+                        <td class="imageDescription" style="width: 49%;"><p>Level 2 Design</p></td><td style="width: 2%;"></td>
+                    </tr>
+                </table>
+                <br/>
+                <p>
+                    In level 2 was music concert inspired, so I made a system where the player would play a 2D game on the concert screens. They had to control the lights, smoke- and fire machines to help their 2D character. The player would also have to dodge the concert lasers.
+                </p>
+            </div>
+        </div>
+    </div> 
+    <div id="shadow"></div> 
+    <div id="overlay" onclick="displayPic('turnOff')">
+        <img id="overlayImg" src="#setByScript" alt="Picture might be missing">
+        <p id="overlayTxt">changed in script</p>
+    </div>
+</body>
+</html>
