@@ -1,3 +1,0 @@
-- make all folder names either uppercase or lowercase
-
-- Make videos play on hover

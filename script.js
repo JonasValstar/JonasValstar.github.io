@@ -3,9 +3,9 @@ let contextIndex = 0;
 let autoSlide = true;
 
 let slideContents = [
-    "Has a special place in his heart for Skylanders Giants",
+    "Loves Skylanders Giants",
     "Hobby Photographer",
-    "Warhammer 40000 Player",
+    "Warhammer 40k Player",
     "Film Enjoyer",
     "Likes Race Cars",
     "Dungeons and Dragons Player",
