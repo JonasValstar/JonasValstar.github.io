@@ -5,11 +5,14 @@ let autoSlide = true;
 let slideContents = [
     "Loves Skylanders Giants",
     "Hobby Photographer",
-    "Warhammer 40k Player",
+    "Warhammer Player",
+    "Has multiple Swords at Home",
     "Film Enjoyer",
     "Likes Race Cars",
     "Dungeons and Dragons Player",
-    "Model Car Collector"
+    "Model Car Collector",
+    "Currently worldbuilding a Fantasy Setting",
+    "Occasionally tries to make Short-Films"
 ];
 
 // all functions that should be triggered on load
