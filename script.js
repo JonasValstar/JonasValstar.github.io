@@ -1,5 +1,16 @@
 let slideIndex = 0;
+let contextIndex = 0;
 let autoSlide = true;
+
+let slideContents = [
+    "Has a special place in his heart for Skylanders Giants",
+    "Hobby Photographer",
+    "Warhammer 40000 Player",
+    "Film Enjoyer",
+    "Likes Race Cars",
+    "Dungeons and Dragons Player",
+    "Model Car Collector"
+];
 
 // all functions that should be triggered on load
 function loadFunctions() {
@@ -27,33 +38,33 @@ function wipAlert() {
 
 // change slide
 function showSlide(mode) {
-    i = slideIndex; //? just for easier readable code
     let slides = document.getElementsByClassName('slide');
     if (mode == 0) { // setup first slide
-        slides[i].style.display = "none";
-        let randomIndex = Math.round(Math.random() * (slides.length-1));
-        i = randomIndex;
-        slides[i].style.display = "block";
+        slides[1].style.display = "none";
+        slides[0].style.display = "block";
+        let rand = Math.round(Math.random() * (slideContents.length-1));
+        slides[0].innerHTML = "<a>"+slideContents[rand]+"</a>";
+        slideIndex = 0;
+        contextIndex = rand;
     } else if (mode == 1) { // previous
-        slides[i].style.display = "none";
-        if (i == 0) {
-            i = slides.length - 1;
-        } else {
-            i--;
-        }
-        slides[i].style.display = "block";
-        slides[i].style.animation = 'slideAnim2 1.5s';
-    } else { // next
-        slides[i].style.display = "none";
-        if (i == slides.length - 1) {
-            i = 0;
-        } else {
-            i++;
-        }
-        slides[i].style.display = "block";
-        slides[i].style.animation = 'slideAnim1 1.5s';
+        otherSlide = slideIndex == 0 ? 1 : 0;
+        prevContent = contextIndex == 0 ? slideContents.length - 1 : contextIndex - 1;
+        slides[slideIndex].style.display = "none";
+        slides[otherSlide].style.display = "block";
+        slides[otherSlide].style.animation = 'slideAnim2 1.5s';
+        slides[otherSlide].innerHTML = "<a>"+slideContents[prevContent]+"</a>";
+        slideIndex = otherSlide;
+        contextIndex = prevContent;
+    } else { // mode 2 -> next
+        otherSlide = slideIndex == 0 ? 1 : 0;
+        nextContent = contextIndex == slideContents.length - 1 ? 0 : contextIndex + 1;
+        slides[slideIndex].style.display = "none";
+        slides[otherSlide].style.display = "block";
+        slides[otherSlide].style.animation = 'slideAnim1 1.5s';
+        slides[otherSlide].innerHTML = "<a>"+slideContents[nextContent]+"</a>";
+        slideIndex = otherSlide;
+        contextIndex = nextContent;
     }
-    slideIndex = i;
 }
 
 // auto change slide
