@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
     <title>Jonas Valstar | Blog</title>
     <link rel="icon" type="image/x-icon" href="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/external-link-icon.png">
 </head>
@@ -15,17 +15,8 @@
                 <h1><a href="index.html">Jonas Valstar</a></h1>
             </div>
             <div class="slideshow">
-                <a class="prev" onclick="showSlide(1)">&#10094;</a>
-                <div class="slide">
-                    <a href="#link_to_blogpost_or_sbg_page">Simple Ball Game version 1 released</a> <!--!Make actual link-->
-                </div>
-                <div class="slide">
-                    <a href="#link_to_blogpost_or_sampi_page">Sampi update 1.1 released</a> <!--!Make actual link-->
-                </div>
-                <div class="slide">
-                    <a href="#link_to_blogpost_or_uc_page">Udder Chaos released</a> <!--!Make actual link-->
-                </div>
-                <a class="next" onclick="showSlide(2)">&#10095;</a>
+                <div class="slide"><a>Passionate Game Programmer, Always Keen To Learn</a></div>
+                <div class="slide"><a>Passionate Game Programmer, Always Keen To Learn</a></div>
             </div>
         </div>
         <div id="sideBar">
@@ -37,46 +28,38 @@
             </div>
             <div class="footer">
                 <div class="links">
-                    <a target="_blank" href="https://github.com/JonasValstar"><img src="pictures/logos/github.png"></a>
-                    <a target="_blank" href="https://jvalstar.itch.io/"><img src="pictures/logos/itchio.png"></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/jonas-valstar-379112243"><img src="pictures/logos/linkedIn.png"></a>
+                    <a target="_blank" href="https://github.com/JonasValstar"><img src="../a_pictures/logos/github.png"></a>
+                    <a target="_blank" href="https://jvalstar.itch.io/"><img src="../a_pictures/logos/itchio.png"></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/jonas-valstar-379112243"><img src="../a_pictures/logos/linkedIn.png"></a>
                 </div>
                 <div class="info" onclick="credits()">
-                    <p>&copy;Jonas Valstar, 2023</p>
+                    <p>&copy;Jonas Valstar, 2026</p>
                 </div>
             </div>
         </div>
         <div id="content">
             <div class="tree">
-                <a href="index.html">https://jonasvalstar.github.io</a>
+                <a href="../index.html">jonasvalstar.github.io</a>
                 <p>/</p>
-                <a href="blog.html">blog</a>
+                <a href="../blog.html">blog</a>
+                <p>/</p>
+                <a href="1.html">01-SampiAI</a>
                 <p>/</p>
             </div>
-            <img src="pictures/banners/blog.png">
-            <div class="artShadow"></div> <!--!decide if i want this-->
-            <p>2023</p>
-            <div id="blogPost">
-                <h1>Simple Ball Game version 1 released</h1>
-                <p>Some fancy description text or tags</p>
-            </div>
-            <div id="blogPost">
-                <h1>Sampi update 1.1 released</h1>
-                <p>Some fancy description text or tags</p>
-            </div>
-            <p>2022</p>
-            <div id="blogPost">
-                <h1>Udder Chaos released</h1>
-                <p>Some fancy description text or tags</p>
-            </div>
-            <div id="blogPost">
-                <h1>A nice title of the post</h1>
-                <p>Some fancy description text or tags</p>
-            </div>
-            <div id="blogPost">
-                <h1>A nice title of the post</h1>
-                <p>Some fancy description text or tags</p>
-            </div>
+            <table id="gameTable">
+                <td id="descInfo">
+                    <p>Detailed explanation of the whole process here. Stuff that cannot be put inside of the projects pages</p>
+                </td>
+                <td id="techInfo">
+                    <h2>The inner workings of Sampi's AI</h2>
+                    <p><b>Description</b></p>
+                    <a>Sampi's in game opponent is powered by an AI system that works something like what Google's Deepmind used for AlphaZero</a>
+                    <p><b>Posted</b></p>
+                    <a>2026/09/21</a><br/>
+                    <p><b>Related Project</b></p>
+                    <a href="../projects/sampi.html">Sampi</a>
+                </td>
+            </table>
         </div>
     </div> 
     <div id="shadow"></div> 
