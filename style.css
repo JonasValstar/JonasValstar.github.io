@@ -518,7 +518,7 @@ i {
 
 .mainPic {
     margin: 2vh;
-    margin-right: 4vh;
+    margin-bottom: 0;
     background-color: #202428;
     padding: 0;
 }

@@ -2,7 +2,10 @@ let slideIndex = 0;
 let contextIndex = 0;
 let autoSlide = true;
 
+let latestVideoId = null;
+
 let slideContents = [
+    "Uses no AI-Generated content or code",
     "Loves Skylanders Giants",
     "Hobby Photographer",
     "Warhammer Player",
@@ -118,7 +121,11 @@ function onlyOpenColl(collID) {
 
 function playVideo(video) {
     document.getElementById(video).play();
-    document.getElementById(video).currentTime = 0;
+    if (latestVideoId != video)
+    {
+        document.getElementById(video).currentTime = 0;
+        latestVideoId = video;
+    }
 }
 
 function pauseVideo(video) {

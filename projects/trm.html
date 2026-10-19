@@ -107,7 +107,7 @@
                 </td>
             </table>
 
-            <button class="collButton" id="weapons" onclick="openColl(this.id)"><b>Weapon Mods</b></button>
+            <button class="collButton" id="weapons" onclick="openColl(this.id)"><b>Weapon Modification</b></button>
             <div class="collContent" id="coll_weapons">
                 <table>
                     <tr><td class="textImage"><video width="100%" controls loop><source src="TRM/Mod Change Weapon.mp4"></video></td><td style="width: 51%;"></td></tr>
@@ -123,8 +123,8 @@
                 </p>
             </div>
 
-            <button class="collButton" id="shop" onclick="openColl(this.id)"><b>Level Tree</b></button>
-            <div class="collContent" id="coll_shop">
+            <button class="collButton" id="dungeon" onclick="openColl(this.id)"><b>Dungeon Generation</b></button>
+            <div class="collContent" id="coll_dungeon">
                 <table>
                     <tr><td class="textImage"><video width="100%" controls loop><source src="TRM/Level Tree.mp4"></video></td><td style="width: 51%;"></td></tr>
                     <tr><td class="imageDescription" style="width: 49%;"><p>Level tree unlocking new weapon</p></td><td style="width: 51%;"></td></tr>
@@ -138,7 +138,26 @@
                 </p>
             </div>
 
-            <button class="collButton" id="ui" onclick="openColl(this.id)"><b>Adaptive UI</b></button>
+            <button class="collButton" id="enemy" onclick="openColl(this.id)"><b>Enemy Management</b></button>
+            <div class="collContent" id="coll_enemy">
+                <table><tr>
+                    <td style="width: 49%;"><video width="100%" controls loop><source src="TRM/Mod UI.mp4"></video></td><td style="width: 2%;"></td>
+                    <td style="width: 49%;"><video width="100%" controls loop><source src="TRM/Level UI.mp4"></video></td>
+                </tr>
+                <tr>
+                    <td class="imageDescription" style="width: 49%;"><p>Changeable Mod UI size</p></td><td style="width: 2%;"></td>
+                    <td class="imageDescription" style="width: 49%;"><p>Adaptable Level UI layout</p></td>
+                </tr></table>
+                <p>
+                    The mod UI can be setup by the developer in how many cells wide and high each area is (equipped mods and available mods). It will then automatically calculate the size of each cell and place the mods in these cells.
+                </p>
+                <br/>
+                <P>
+                    The level tree UI checks every node in the list and their children and stores them in a different list based on how deep it the node was found. It then sees which depth (row) has the most nodes and adjusts the size of all nods to fit based on that row and the total amount of rows. After that, it goes along every node again and places lines between them and their children. 
+                </P>
+            </div>
+
+            <button class="collButton" id="ui" onclick="openColl(this.id)"><b>UI Functionality</b></button>
             <div class="collContent" id="coll_ui">
                 <table><tr>
                     <td style="width: 49%;"><video width="100%" controls loop><source src="TRM/Mod UI.mp4"></video></td><td style="width: 2%;"></td>

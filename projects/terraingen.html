@@ -9,15 +9,15 @@
     <link rel="icon" type="image/x-icon" href="../a_pictures/favicon.gif">
     <style>
         #topBar {   
-            border-top: 5px solid #678df0 ;
+            border-top: 5px solid #7c9977 ;
         }
 
         .logo > h1 > a {
-            color: #678df0 ;
+            color: #7c9977 ;
         }
 
         .navigation > a:hover {
-            border-left: 2vh #678df0 solid;
+            border-left: 2vh #7c9977 solid;
         }
     </style>
 </head>
@@ -83,17 +83,17 @@
                     <p><b>Engine</b></p>
                     <a target="_blank" href="https://unity.com/">Unity 2022.3.20f1</a>
                     <p><b>Development Time</b></p>
-                    <a>1 Week</a>
+                    <a> ~2 Months <span style="font-family: ErasLightITC;">(HexGen)</a>
                     <p><b>Development Period</b></p>
                     <a>Mar 2024</a>
                     <p><b>Developed by:</b></p>
                     <a>Jonas Valstar</a><br />
                     <p><b>My Role(s):</b></p>
                     <a>Sole Developer</a>
-                    <p><b>Features</b></p>
-                    <a>Generated Terrain</a><br/>
-                    <a>Generated Trees</a><br/>
-                    <a>Generated Structures</a>
+                    <p><b>Projects</b></p>
+                    <a>Hexagon Terrain</a><br/>
+                    <a>Planet Generator</a><br/>
+                    <a>The First Attempt</a>
                     <p><b>Platform</b></p>
                     <a>Windows</a>       
                     <p><b>Download</b></p>
@@ -101,8 +101,8 @@
                 </td>
             </table>
 
-            <button class="collButton" id="mechanics" onclick="openColl(this.id)"><b>Poisson Disc Sampling</b></button>
-            <div class="collContent" id="coll_mechanics">
+            <button class="collButton" id="hexGen" onclick="openColl(this.id)"><b>Hexagon Terrain Generation</b></button>
+            <div class="collContent" id="coll_hexGen">
                 <table><tr>
                     <td style="width: 49%;"><video width="100%" controls loop><source src="Terrain Gen/tree spawning 1.mp4"></video></td><td style="width: 2%;"></td>
                     <td style="width: 49%;"><video width="100%" controls loop><source src="Terrain Gen/tree spawning 2.mp4"></video></td>
@@ -121,8 +121,8 @@
                 </p>
             </div>
 
-            <button class="collButton" id="controlsOverview" onclick="openColl(this.id)"><b>Terrain Generation</b></button>
-            <div class="collContent" id="coll_controlsOverview">
+            <button class="collButton" id="hexRend" onclick="openColl(this.id)"><b>Hexagon Terrain Rendering</b></button>
+            <div class="collContent" id="coll_hexRend">
                 <table>
                     <tr>
                         <td class="textImage"><video width="100%" controls loop><source src="Terrain Gen/terrain 1.mp4"></video></td><td style="width: 2%;"></td>
@@ -148,14 +148,59 @@
                 </p>
             </div>
 
+            <button class="collButton" id="planet" onclick="openColl(this.id)"><b>Planet Generation</b></button>
+            <div class="collContent" id="coll_planet">
+                <table><tr>
+                    <td style="width: 49%;"><video width="100%" controls loop><source src="Terrain Gen/tree spawning 1.mp4"></video></td><td style="width: 2%;"></td>
+                    <td style="width: 49%;"><video width="100%" controls loop><source src="Terrain Gen/tree spawning 2.mp4"></video></td>
+                </tr>
+                <tr>
+                    <td class="imageDescription" style="width: 49%;"><p>Version 1 - constant distance between points</p></td><td style="width: 2%;"></td>
+                    <td class="imageDescription" style="width: 49%;"><p>Version 2 - random distance between points</p></td>
+                </tr></table>
+                <br/>
+                <p>
+                    For generating the trees, I used an algorithm called Poisson Disc Sampling. The system starts with placing a random tree somewhere and creating possible generation points in a circle around it. Then the system checks all those possible points and sees if it can place a tree there without it being to close to an already existing tree. This is repeated until there are no possible points left. 
+                </p>
+                <br/>
+                <p>
+                    First, I had a constant distance that needed to be between trees. But when making it a random distance it became much less dense and natural looking.
+                </p>
+            </div>
+
+            <button class="collButton" id="firstTry" onclick="openColl(this.id)"><b>My First Attempt</b></button>
+            <div class="collContent" id="coll_firstTry">
+                <table><tr>
+                    <td style="width: 49%;"><video width="100%" controls loop><source src="Terrain Gen/tree spawning 1.mp4"></video></td><td style="width: 2%;"></td>
+                    <td style="width: 49%;"><video width="100%" controls loop><source src="Terrain Gen/tree spawning 2.mp4"></video></td>
+                </tr>
+                <tr>
+                    <td class="imageDescription" style="width: 49%;"><p>Version 1 - constant distance between points</p></td><td style="width: 2%;"></td>
+                    <td class="imageDescription" style="width: 49%;"><p>Version 2 - random distance between points</p></td>
+                </tr></table>
+                <br/>
+                <p>
+                    For generating the trees, I used an algorithm called Poisson Disc Sampling. The system starts with placing a random tree somewhere and creating possible generation points in a circle around it. Then the system checks all those possible points and sees if it can place a tree there without it being to close to an already existing tree. This is repeated until there are no possible points left. 
+                </p>
+                <br/>
+                <p>
+                    First, I had a constant distance that needed to be between trees. But when making it a random distance it became much less dense and natural looking.
+                </p>
+            </div>
+
             <button class="collButton" id="downloads" onclick="openColl(this.id)"><b>Downloads</b></button>
             <div class="collContent" id="coll_downloads">
                 <div class="downloadsTab">
-                    <div><p>Unity Project Files</p></div>
+                    <div><p>Hexagon Terrain - Github</p></div>
+                    <div>
+                        <a class="outgoingLink" href="https://github.com/JonasValstar/TerrainGeneration" target="_blank">github</a>
+                    </div>
+                </div>
+                <div class="downloadsTab">
+                    <div><p>First Attempt - Unity Project Files</p></div>
                     <div>
                         <a href="Terrain Gen/TerrainGeneration.zip" download="TerrainGeneration">download [.zip]</a>
                         <a href="Terrain Gen/TerrainGeneration.7z" download="TerrainGeneration">download [.7z]</a>
-                        <a class="outgoingLink" href="https://github.com/JonasValstar/TerrainGeneration" target="_blank">github</a>
                     </div>
                 </div>
             </div>
