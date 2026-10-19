@@ -54,9 +54,9 @@
             <img src="a_pictures/banners/portfolio.png">
             <div class="artShadow"></div> <!--!decide if i want this-->
             <a class="mainPicA" style="padding: 0;" href="projects/trm.html"><div class="mainPic">
-                <table style="border-collapse: collapse;" onmouseover="playVideo('video4')" onmouseout="pauseVideo('video4')">
+                <table style="border-collapse: collapse;" onmouseover="playVideo('video1')" onmouseout="pauseVideo('video4')">
                     <td class="mainPicImg">
-                        <video id="video4" src="projects/TRM/TRM Showcase Video Cropped.mp4" type="video/mp4" muted loop></video>
+                        <video id="video1" src="projects/TRM/TRM Showcase Video Cropped.mp4" type="video/mp4" muted loop></video>
                         <img class="overlay" src="projects/TRM/TRM Cover.png"/></td>
                     <td class="mainPicText">
                         <h1 style="color: #b3391f;">The Rivercall Monolith</h1>
@@ -70,9 +70,9 @@
                 </table>
             </div></a>
             <a class="mainPicA" style="padding: 0;" href="projects/terraingen.html"><div class="mainPic">
-                <table style="border-collapse: collapse;" onmouseover="playVideo('video3')" onmouseout="pauseVideo('video3')">
+                <table style="border-collapse: collapse;" onmouseover="playVideo('video2')" onmouseout="pauseVideo('video3')">
                     <td class="mainPicImg">
-                        <video id="video3" src="projects/Terrain Gen/TerrainGen Poster Video.mp4" type="video/mp4" muted loop></video>
+                        <video id="video2" src="projects/Terrain Gen/TerrainGen Poster Video.mp4" type="video/mp4" muted loop></video>
                         <img class="overlay" src="projects/Terrain Gen/TerrainGen Poster.png"/></td>
                     <td class="mainPicText">
                         <h1 style="color: #7c9977;">Terrain Generation</h1>
@@ -86,13 +86,13 @@
                 </table>
             </div></a>
             <a class="mainPicA" style="padding: 0;" href="projects/sampi.html"><div class="mainPic">
-                <table style="border-collapse: collapse;" onmouseover="playVideo('video1')" onmouseout="pauseVideo('video2')">
+                <table style="border-collapse: collapse;" onmouseover="playVideo('video3')" onmouseout="pauseVideo('video2')">
                     <td class="mainPicImg" >
-                        <video id="video1" src="projects/sampi/Sampi Poster Video.mp4" type="video/mp4" muted loop></video>
-                        <img class="overlay" src="projects/sampi/Sampi Poster wide.png"/></td>
+                        <video id="video3" src="projects/Sampi/Sampi Poster Video.mp4" type="video/mp4" muted loop></video>
+                        <img class="overlay" src="projects/Sampi/Sampi Poster wide.png"/></td>
                     <td class="mainPicText">
                         <h1 style="color: #2c888a ;">Sampi</h1>
-                        <p>Custom made AI opponent</p>
+                        <p>Self learning Neural Network based opponent</p>
                         <p>&nbsp;</p>
                         <p><b>Description:</b> A digital board game where the objective is to reach the opposite side of the board before you opponent does.</p>
                         <p><b>Team Role:</b> Sole Programmer, Visual Designer</p>
@@ -101,24 +101,70 @@
                     </td>
                 </table>
             </div></a>  
-            <a class="mainPicA" style="padding: 0;" href="projects/sampi.html"><div class="mainPic">
-                <table style="border-collapse: collapse;" onmouseover="playVideo('video1')" onmouseout="pauseVideo('video2')">
+            <a class="mainPicA" style="padding: 0;" href="projects/vulkan.html"><div class="mainPic">
+                <table style="border-collapse: collapse;" onmouseover="playVideo('video4')" onmouseout="pauseVideo('video2')">
                     <td class="mainPicImg" >
-                        <video id="video1" src="projects/sampi/Sampi Poster Video.mp4" type="video/mp4" muted loop></video>
-                        <img class="overlay" src="projects/sampi/Sampi Poster wide.png"/></td>
+                        <video id="video4" src="projects/Vulkan/Vulkan Poster Video.mp4" type="video/mp4" muted loop></video>
+                        <img class="overlay" src="projects/Vulkan/Vulkan Poster.png"/></td>
                     <td class="mainPicText">
-                        <h1 style="color: #9f1d21 ;">Vulkan Game</h1>
-                        <p>Game made without an engine, but with C++ and Vulkan</p>
+                        <h1 style="color: #9f1d21 ;">Vulkan Project</h1>
+                        <p>Game made without an engine, but with C++ and the Vulkan API</p>
                         <p>&nbsp;</p>
                         <p><b>Description:</b> A project I made when I was learning to use the Vulkan graphics API, C++ and writing shaders</p>
                         <p><b>Team Role:</b> Sole Programmer, Visual Designer</p>
-                        <p><b>Made with:</b> Unity 2021.3.13f1</p>
+                        <p><b>Made with:</b> QT Creator & Vulkan</p>
                         <p><b>Dev Time:</b> 2 Weeks</p>
                     </td>
                 </table>
-            </div></a>     
+            </div></a> 
             <p>&nbsp;</p>
             <p><span style="font-family: ErasLightITC;">* Estimation, since it was worked on over a longer period with brakes</span></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <h2 style="margin-left: 2vh; margin-bottom: -1vh;">Other Skills</h2>
+            
+            <button class="projectCollButton" id="vr" onclick="openProjectColl(this.id)"><h3>VR Development</h3></button>
+            <div class="projectCollContent" id="coll_vr">
+                <div><table>
+                    <td style="width: 30vh;">
+                        <video width="100%" src="projects/storm/Storm Showcase.mp4" type="video/mp4" autoplay muted loop></video> 
+                    </td>
+                    <td style="vertical-align:top; padding-left: 1vh;">
+                        <p>Short explanation here about the skill</p>
+                    </td>
+                </table></div>
+            </div>
+
+            <button class="projectCollButton" id="anim" onclick="openProjectColl(this.id)"><h3>Procedural Animation</h3></button>
+            <div class="projectCollContent" id="coll_anim">
+                <div><table>
+                    <td style="width: 30vh;">
+                        <video width="100%" src="projects/storm/Storm Showcase.mp4" type="video/mp4" autoplay muted loop></video> 
+                    </td>
+                    <td style="vertical-align:top; padding-left: 1vh;">
+                        <p>Short explanation here about the skill</p>
+                    </td>
+                </table></div>
+            </div>
+
+            <button class="projectCollButton" id="test" onclick="openProjectColl(this.id)"><h3>These things need some kind of OnHover</h3></button>
+            <div class="projectCollContent" id="coll_test">
+                <div>
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                    <p>6</p>
+                    <p>7</p>
+                    <p>8</p>
+                    <p>9</p>
+                    <p>10</p>
+                    <p>11 - max length</p>
+                </div>
+            </div>
+
+            <p>&nbsp;</p>
             <p>&nbsp;</p>
         </div>
     </div> 

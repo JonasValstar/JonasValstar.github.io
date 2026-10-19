@@ -110,6 +110,16 @@ function openColl(collID) {
     }
 }
 
+function openProjectColl(collID) {
+    coll = document.getElementById('coll_' + collID);
+    callElem = document.getElementById(collID);
+    if (coll.style.maxHeight != "25vh") {
+        coll.style.maxHeight = "25vh";
+    } else {
+        coll.style.maxHeight  = "0vh";
+    }
+}
+
 function onlyOpenColl(collID) {
     coll = document.getElementById('coll_' + collID);
     callElem = document.getElementById(collID);

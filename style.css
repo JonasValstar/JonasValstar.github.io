@@ -712,6 +712,40 @@ i {
     width: 100%;
 }
 
+.projectCollButton {
+    background-color: #202428;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    margin: 2vh;
+    margin-bottom: 0;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.projectCollButton::before {
+    color: white;
+    font-weight: bold;
+    float: left;
+    margin-right: 18px;
+}
+
+.projectCollContent {
+    margin-left: 2vh;
+    margin-right: 2vh;
+    display: block;
+    overflow-y: hidden;
+    max-height: 0vh;
+    transition: max-height 0.25s ease-out;
+    background-color: #282d30;
+}
+
+.projectCollContent > div {
+    margin: 1vh;
+}
+
 .collButton {
     background-color: inherit;
     color: white;

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+    <title>Jonas Valstar | Sampi</title>
+    <link rel="icon" type="image/x-icon" href="../a_pictures/favicon.gif">
+    <style>
+        #topBar {
+            border-top: 5px solid #9f1d21;
+        }
+
+        .logo > h1 > a {
+            color: #9f1d21;
+        }
+
+        .navigation > a:hover {
+            border-left: 2vh #9f1d21 solid;
+        }
+    </style>
+</head>
+<body onload="loadFunctions();">
+    <div id="container">
+        <div id="topBar"> 
+            <div class="logo">
+                <h1><a href="../index.html">Jonas Valstar</a></h1>
+            </div>
+            <div class="slideshow">
+                <div class="slide"><a>Passionate Game Programmer, Always Keen To Learn</a></div>
+                <div class="slide"><a>Passionate Game Programmer, Always Keen To Learn</a></div>
+            </div>
+        </div>
+        <div id="sideBar">
+            <div class="navigation">
+                <a href="../index.html">Home</a>
+                <a class="activeNav" href="../projects.html"><b>Projects</b></a>
+                <a href="../blog.html">Blog</a>
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact</a>
+            </div>
+            <div class="footer">
+                <div class="links">
+                    <a target="_blank" href="https://github.com/JonasValstar"><img src="../a_pictures/logos/github.png"></a>
+                    <a target="_blank" href="https://jvalstar.itch.io/"><img src="../a_pictures/logos/itchio.png"></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/jonas-valstar-379112243"><img src="../a_pictures/logos/linkedIn.png"></a>
+                </div>
+                <div class="info">
+                    <p><i class="madeBy">site by</i> Jonas Valstar, 2026</p>
+                    <p>background and banner images from Freepik</p>
+                </div>
+            </div>
+        </div>
+        <div id="screenWarning">
+            <h3>Please use a Horizontal Screen</h3>
+            <p>I am still working on adding vertical screen support. For now using vertical screens is possible but will likely look strange</p>
+            <a onclick="this.parentElement.style.display = 'none'">close message</a>
+        </div>
+        <div id="content">
+            <div class="tree">
+                <a href="../index.html">jonasvalstar.github.io</a>
+                <p>/</p>
+                <a href="../projects.html">projects</a>
+                <p>/</p>
+                <a href="vulkan.html">vulkan</a>
+                <p>/</p>
+            </div>
+            <table id="gameTable">
+                <td id="descInfo">
+                    <video width="100%" autoplay muted controls loop><source src="sampi/showcase.mp4" type="video/mp4"></video>
+                    <p>
+                        In this project, I wanted to experiment with making an AI opponent for a chess like game. Together with my friend Matthijs, we came up with a new board game for which I would create the AI. This was one of the first projects I did in unity, so it was a great opportunity to learn more about the engine and programming. 
+                    </p>
+                    <br/>
+                    <p>
+                        I decided it would be a good idea to come up with an algorithm for the AI on my own instead of using an existing algorithm that would likely work better. I did this so that instead of copying an algorithm, I would figure out the solution on my own and get a deeper understanding of how and why other algorithms work. 
+                    </p>
+                </td>
+                <td id="techInfo">
+                    <img id="gameLogo" src="../a_pictures/overlay.png">
+                    <p><b>Engine</b></p>
+                    <a target="_blank" href="https://www.qt.io/">QT Creator 20.0.2</a><br/>
+                    <a target="_blank" href="https://vulkan.org/">Vulkan 1.4.335</a>
+                    <p><b>Development Time</b></p>
+                    <a>5 Months</a>
+                    <p><b>Development Period</b></p>
+                    <a>Jan 2022 - May 2026</a>
+                    <p><b>Developed by:</b></p>
+                    <a>Jonas Valstar</a>
+                    <p><b>My Role(s):</b></p>
+                    <a>Sole Developer</a> 
+                    <p><b>Features</b></p>
+                    <a>3D Rendering</a><br/>
+                    <a>Game Logic</a>
+                    <p><b>Platform</b></p>
+                    <a>Windows</a>       
+                    <p><b>Download</b></p>
+                    <a href="#downloads" onclick="onlyOpenColl('downloads')">Direct</a> <br />
+                </td>
+            </table>
+
+            <button class="collButton" id="development" onclick="openColl(this.id)"><b>Game Development</b></button>
+            <div class="collContent" id="coll_development">
+                <table>
+                    <tr><td class="textImage"><video width="100%" controls loop><source src="sampi/testing.mp4"></video></td><td style="width: 51%;"></td></tr>
+                    <tr><td class="imageDescription" style="width: 49%;"><p>Playtesting the game</p></td><td style="width: 51%;"></td></tr>
+                </table>
+                <br/>
+                <p>
+                    The first part after coming up with the concept was making it work in Unity. I made a system that detects where the player is clicking to know if they were clicking on their pieces. It would then detect the possible and legal moves they could make with that piece and display it on the board. It would also check if a piece can capture another piece, and if done remove that other piece from the board. It would also keep track of all the positions for the AI to use later.
+                </p>
+            </div>
+            
+            <button class="collButton" id="sampiAi" onclick="openColl(this.id)"><b>Sampi.AI</b></button>
+            <div class="collContent" id="coll_sampiAi">
+                <table><tr>
+                    <td style="width: 49%;"><video width="100%" controls loop><source src="sampi/ai1.mp4"></video></td><td style="width: 2%;"></td>
+                    <td style="width: 49%;"><video width="100%" controls loop><source src="sampi/ai2.mp4"></video></td>
+                </tr>
+                <tr>
+                    <td class="imageDescription" style="width: 49%;"><p>First version of the AI. It is still slow and makes dumb decisions</p></td><td style="width: 2%;"></td>
+                    <td class="imageDescription" style="width: 49%;"><p>Latest version of the AI. It is significantly faster and doesn't make blunders</p></td>
+                </tr></table>
+                <br/>
+                <p>
+                    To determine the best move to make, the AI first loops through all the pieces on the board, determines every possible move and saves all the board states of what would happen if that move was played. It repeats this for a certain number of times (called “Depth”) and then picks the best result.
+                </p>
+                <br/>
+                <p>
+                    The best result is determined using the piece positions and some tweakable variables (“Weights”). The algorithm determines the value of all the pieces based on their type and position, the average distance from the start and if the pieces cover each other for attacks. This is done for every board state it gathered, and the highest value is picked from that.
+                </p>
+                <br/>
+                <p>
+                    This means that the AI will usually assume the opponent only makes blunders seeing as that results in a better final board state for the AI. To combat this, there are checks to make sure the AI wouldn’t make any blunders, and would always take free pieces. This is still far from perfect, but worked well enough for the time.
+                </p>
+                <br/>
+                <table>
+                    <tr><td class="textImage"><img  onclick="displayPic('../Toast/Toaster Mech quad.png', 'Toast robot posing with 2 swords', '-1', '-1')" style="width: 100%;" src="Toast/Toaster Mech quad.png"></td><td style="width: 51%;"></td></tr>
+                    <tr><td class="imageDescription" style="width: 49%;"><p>The value of pieces based on their position</p></td><td style="width: 51%;"></td></tr>
+                </table>
+            </div>
+
+            <button class="collButton" id="downloads" onclick="openColl(this.id)"><b>Downloads</b></button>
+            <div class="collContent" id="coll_downloads">               
+                <div class="downloadsTab">
+                    <div><p>Sampi - prototype 3 (Nederlands)</p></div>
+                    <div>
+                        <a href="sampi/Prototype-3.zip" download="Sampi v.p3 Nederlands">download [.zip]</a>
+                        <a href="sampi/Prototype-3.7z" download="Sampi v.p3 Nederlands">download [.7z]</a>
+                        <a href="https://jvalstar.itch.io/sampi" target="_blank">itch.io</a>
+                    </div>
+                </div>
+                <div class="downloadsTab">
+                    <div><p>Unity Project Files</p></div>
+                    <div>
+                        <a href="sampi/ProjectFiles.zip" download="Sampi v.p3 Nederlands">download [.zip]</a>
+                        <a href="sampi/ProjectFiles.zip" download="Sampi v.p3 Nederlands">download [.7z]</a>
+                        <a href="https://github.com/JonasValstar/PWSgame-AI" target="_blank">github</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div id="shadow"></div> 
+</body>
+</html>
